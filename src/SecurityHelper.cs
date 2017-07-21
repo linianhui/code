@@ -319,4 +319,43 @@ public static class SecurityHelper
         return encoding.GetString(value);
     }
 
+    /// <summary>
+    /// 基于HMAC-SHA-1的OTP
+    /// </summary>
+    /// <param name="key">密钥</param>
+    /// <param name="counter">计数器</param>
+    /// <param name="length">otp的长度</param>
+    /// <returns></returns>
+    public static string HOTP(byte[] key, byte[] counter, int length = 6)
+    {
+        var hmac = counter.ToHMACSHA1(key);
+
+        var offset = hmac[hmac.Length - 1] & 0xF;
+
+        var b1 = (hmac[offset] & 0x7F) << 24;
+        var b2 = (hmac[offset + 1] & 0xFF) << 16;
+        var b3 = (hmac[offset + 2] & 0xFF) << 8;
+        var b4 = (hmac[offset + 3] & 0xFF);
+
+        var code = b1 | b2 | b3 | b4;
+
+        var value = code % (int)Math.Pow(10, length);
+
+        return value.ToString().PadLeft(length, '0');
+    }
+
+    /// <summary>
+    /// 基于时间的OTP
+    /// </summary>
+    /// <param name="key">密钥</param>
+    /// <param name="step">步长</param>
+    /// <param name="length">otp的长度</param>
+    /// <returns></returns>
+    public static string TOTP(byte[] key, int step = 60, int length = 6)
+    {
+        var unixTime = (DateTime.UtcNow - new DateTime(1970, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc)).TotalSeconds;
+        var counter = ((int)unixTime) / step;
+        var counterBytes = BitConverter.GetBytes(counter);
+        return HOTP(key, counterBytes, length);
+    }
 }
