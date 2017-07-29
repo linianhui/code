@@ -10,7 +10,7 @@ Param(
 )
 
 # global config : alias
-function Git-Set-Global-Config-Alias () {
+function Set-GitGlobalAlias () {
     
     # checkout
     git config --global alias.co checkout
@@ -45,7 +45,7 @@ function Git-Set-Global-Config-Alias () {
 }
 
 # global config
-function Git-Set-Global-Config () {
+function Set-GitGlobalConfig () {
     # gui
     git config --global gui.encoding 'utf-8'
 
@@ -53,11 +53,10 @@ function Git-Set-Global-Config () {
     git config --global user.name $UserName
     git config --global user.email $UserEmail
     
-    # set alias
-    Git-Set-Global-Config-Alias
-
     # show global config
     git config --global --list
 }
 
-Git-Set-Global-Config
+Set-GitGlobalAlias
+
+Set-GitGlobalConfig
