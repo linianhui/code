@@ -1,5 +1,5 @@
 ################################
-# current user powershell profile
+# powershell profile functions
 ################################
 
 function AppendScriptFile-CurrentUserPowerShellProfile ([string] $ScriptFilePath = $(throw "ScriptFilePath is null!") ) {

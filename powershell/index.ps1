@@ -1,6 +1,6 @@
-##################################
-# current user powershell profile
-#################################
+#####################################################
+# current user powershell profile entry script file.
+#####################################################
 
 # params
 Param(
@@ -10,7 +10,7 @@ Param(
 Get-ChildItem "$PSScriptRoot/functions" | Foreach-Object {. $_.FullName}
 
 if ($Reset) {
-    
+
     AppendScriptFile-CurrentUserPowerShellProfile -ScriptFilePath $PSCommandPath
 
     Set-GitGlobalAlias
