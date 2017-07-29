@@ -1,15 +1,8 @@
 ################################
-# set git config
+# git config functions
 ################################
 
-
-# params
-Param(
-    [string]$UserName = "lnh",
-    [string]$UserEmail = 'lnhcode@outlook.com'
-)
-
-# global config : alias
+# set git global config : alias
 function Set-GitGlobalAlias () {
     
     # checkout
@@ -44,19 +37,26 @@ function Set-GitGlobalAlias () {
     
 }
 
-# global config
-function Set-GitGlobalConfig () {
+# set global config
+function Set-GitGlobalConfig (
+    [string] $UserName = $(throw "UserName is null!"), 
+    [string] $userEmail = $(throw "UserEmail is null!")
+) {
     # gui
     git config --global gui.encoding 'utf-8'
 
     # user
     git config --global user.name $UserName
     git config --global user.email $UserEmail
-    
+}
+
+# get global config
+function Get-GitGlobalConfig(){
     # show global config
     git config --global --list
 }
 
-Set-GitGlobalAlias
-
-Set-GitGlobalConfig
+# use git in powershell
+function Use-Git () {
+    Import-Module posh-git
+}
