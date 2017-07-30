@@ -11,7 +11,7 @@ Get-ChildItem "$PSScriptRoot/functions" | Foreach-Object {. $_.FullName}
 
 if ($Reset) {
 
-    AppendScriptFile-CurrentUserPowerShellProfile -ScriptFilePath $PSCommandPath
+    Add-ScriptFileToProfile -ProfilePath $PROFILE -ScriptFilePath $PSCOMMANDPATH
 
     Set-GitGlobalAlias
     
