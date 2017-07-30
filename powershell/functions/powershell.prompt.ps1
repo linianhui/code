@@ -8,7 +8,7 @@ function prompt () {
 
     # show git user.name and user.email 
     if (Get-GitStatus) {
-        Write-Host -NoNewline "`n> $(Get-GitUser) :" -ForegroundColor Gray
+        Write-Host -NoNewline "`nPS> $(Get-GitUser) :" -ForegroundColor Gray
     }
      
     # show git status
@@ -20,5 +20,5 @@ function prompt () {
     # reset last exit code
     $LASTEXITCODE = $originalLastExitCode
 
-    "`n$('>' * ($NestedPromptLevel + 1)) "
+    "`nPS$('>' * ($NestedPromptLevel + 1)) "
 }
