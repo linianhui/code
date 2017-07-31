@@ -44,6 +44,12 @@ function Set-GitGlobalConfig (
 ) {
     # gui
     git config --global gui.encoding 'utf-8'
+    
+    # i18n
+    git config --global i18n.commitencoding 'utf-8'
+    
+    # editor
+    git config --global core.editor "code -w"
 
     # user
     git config --global user.name $UserName
