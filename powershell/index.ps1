@@ -4,7 +4,7 @@
 
 # params
 Param(
-    [bool]$Reset = $False
+    [switch]$Reset = $False
 )
 
 Get-ChildItem "$PSScriptRoot/functions" | Foreach-Object {. $_.FullName}
