@@ -1,5 +1,6 @@
 # platform tools
-https://developer.android.com/studio/releases/platform-tools.html
+1. help page : https://developer.android.com/studio/releases/platform-tools.html
+2. for windows : https://dl.google.com/android/repository/platform-tools-latest-windows.zip
 
 # adb
 `adb reboot bootloader`
