@@ -21,7 +21,7 @@ function Set-GitGlobalAlias () {
     # pull
     git config --global alias.pr 'pull --rebase'
 
-    # pull
+    # merge
     git config --global alias.mnf 'merge --no-ff'
 
     # diff
