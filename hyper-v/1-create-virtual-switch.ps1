@@ -7,4 +7,4 @@
 
 $NetNetAdapter = (Get-NetAdapter)[0]
 
-New-VMSwitch -Name "External Virtual Network Switch" -NetAdapterName $NetNetAdapter.Name -AllowManagementOS $TRUE
+New-VMSwitch -Name 'External Virtual Network Switch' -NetAdapterName $NetNetAdapter.Name -AllowManagementOS $TRUE
