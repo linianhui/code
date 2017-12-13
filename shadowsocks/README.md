@@ -3,6 +3,11 @@ github : https://github.com/shadowsocks
 
 web site : https://shadowsocks.org
 
+# GFW
+https://github.com/gfwlist/gfwlist
+
+https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt
+
 # install
 1. `apt-get install python-gevent python-pip`
 2. `pip install shadowsocks`
