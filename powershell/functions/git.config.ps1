@@ -50,6 +50,10 @@ function Set-GitGlobalConfig (
     
     # editor
     git config --global core.editor "code -w"
+    git config --global core.autocrlf true
+    
+    # color
+    git config --global color.ui true
 
     # user
     git config --global user.name $UserName
