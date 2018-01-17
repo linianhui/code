@@ -50,7 +50,7 @@ function Set-GitGlobalConfig (
     
     # editor
     git config --global core.editor "code -w"
-    git config --global core.autocrlf true
+    git config --global core.autocrlf false
     
     # color
     git config --global color.ui true
