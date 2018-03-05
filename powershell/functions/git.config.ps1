@@ -40,7 +40,7 @@ function Set-GitGlobalAlias () {
 # set global config
 function Set-GitGlobalConfig (
     [string] $UserName = $(throw "UserName is null!"), 
-    [string] $userEmail = $(throw "UserEmail is null!")
+    [string] $UserEmail = $(throw "UserEmail is null!")
 ) {
     # gui
     git config --global gui.encoding 'utf-8'
@@ -51,7 +51,7 @@ function Set-GitGlobalConfig (
     # editor
     git config --global core.editor "code -w"
     git config --global core.autocrlf false
-    
+
     # color
     git config --global color.ui true
 

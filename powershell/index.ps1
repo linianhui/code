@@ -21,3 +21,5 @@ if ($Reset) {
 }
 
 Use-Git
+
+Set-DisplayUI
