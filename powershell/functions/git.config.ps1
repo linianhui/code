@@ -47,6 +47,7 @@ function Set-GitGlobalConfig (
     
     # i18n
     git config --global i18n.commitencoding 'utf-8'
+    git config --global core.quotepath false
     
     # editor
     git config --global core.editor "code -w"
