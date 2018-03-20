@@ -30,4 +30,6 @@ function Set-DisplayUI () {
 
     $Host.UI.RawUI.ForegroundColor = "White";
     $Host.UI.RawUI.BackgroundColor = "Black";
+    
+    $ENV:LC_ALL = 'C.UTF-8';
 }
