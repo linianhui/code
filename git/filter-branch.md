@@ -20,7 +20,7 @@ git for-each-ref --format='delete %(refname)' refs/original | git update-ref --s
 git reflog expire --expire=now --all
 
 # 6. 执行GC（重新打包并删除无用的对象）
-git gc --prune=now
+git gc --prune=now --aggressive
 
 # 7. 强制覆盖远程仓库
 git push --force --all
