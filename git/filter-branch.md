@@ -2,7 +2,7 @@
 
 ```shell
 # 1. 克隆最新的远程仓库
-git clone {repository_url}
+git clone --mirror {repository_url}
 
 # 2. 获取所有的分支数据
 git fetch --all
