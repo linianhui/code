@@ -1,7 +1,7 @@
 # 删除大文件，重写commit历史
 
 ```shell
-# 1. 克隆最新的远程仓库
+# 1. 备份最新的远程仓库
 git clone --mirror {repository_url}
 
 # 2. 获取所有的分支数据
