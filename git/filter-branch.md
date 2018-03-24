@@ -13,13 +13,19 @@ git fetch --all
 #    应用所有的分支（-- --all）；
 git filter-branch --force --index-filter "git rm --cached --ignore-unmatch -r 'big-file-full-path.file'" --prune-empty --tag-name-filter cat -- --all
 
-# 4. 本地执行GC，清理并删除所有的悬空引用
-git gc --prune=0
+# 4. 删除备份的引用
+git for-each-ref --format='delete %(refname)' refs/original | git update-ref --stdin
 
-# 5. 强制覆盖远程仓库
+# 5. 删除所有reflog引用
+git reflog expire --expire=now --all
+
+# 6. 执行GC（重新打包并删除无用的对象）
+git gc --prune=now
+
+# 7. 强制覆盖远程仓库
 git push --force --all
 
-# 6. 强制更新所有的tags
+# 8. 强制更新所有的tags
 git push --force --tags
 ```
 # 参考
