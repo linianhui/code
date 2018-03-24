@@ -1,8 +1,28 @@
-# 删除大文件，重写commit历史
+# 删除Git的Commit历史中大文件
+
+**以下操作会有致命性的破坏作用，请先知晓其带来的影响（重写Commit历史），并于与团队成员达成一致！！！**
+
+**以下操作会有致命性的破坏作用，请先知晓其带来的影响（重写Commit历史），并于与团队成员达成一致！！！**
+
+**以下操作会有致命性的破坏作用，请先知晓其带来的影响（重写Commit历史），并于与团队成员达成一致！！！**
+
+## 备份最新的远程仓库，非常重要！！！
+
+**以免后续操作过程中出错，请先备份！！！**
+
+**以免后续操作过程中出错，请先备份！！！**
+
+**以免后续操作过程中出错，请先备份！！！**
 
 ```shell
-# 1. 备份最新的远程仓库
-git clone --mirror {repository_url}
+git clone --mirror {repository_url} xxx-back
+```
+
+## 删除大文件步骤
+
+```shell
+# 1. 克隆最新的仓库
+git clone {repository_url} xxx
 
 # 2. 获取所有的分支数据
 git fetch --all
@@ -13,7 +33,7 @@ git fetch --all
 #    应用所有的分支（-- --all）；
 git filter-branch --force --index-filter "git rm --cached --ignore-unmatch -r 'big-file-full-path.file'" --prune-empty --tag-name-filter cat -- --all
 
-# 4. 删除备份的引用
+# 4. 删除备份的引用（Widows上使用Git Bash操作，PowerShell无法运行）
 git for-each-ref --format='delete %(refname)' refs/original | git update-ref --stdin
 
 # 5. 删除所有reflog引用
