@@ -18,6 +18,19 @@
 git clone --mirror {repository_url} xxx-back
 ```
 
+## 查找大文件
+
+从大到小列出仓库中的前`20`个文件：
+```shell
+git rev-list --objects --all \
+| git cat-file --batch-check='%(objecttype) %(objectname) %(objectsize) %(rest)' \
+| awk '/^blob/ {print substr($0,6)}' \
+| sort --numeric-sort --key=2 -r \
+| cut --complement --characters=13-40 \
+| numfmt --field=2 --to=iec-i --suffix=B --padding=7 --round=nearest \
+| sed -n '1,20p'
+```
+
 ## 删除大文件步骤
 
 ```shell
