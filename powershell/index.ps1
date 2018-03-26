@@ -4,14 +4,14 @@
 
 # params
 Param(
-    [switch]$Reset = $False
+    [switch]$Init = $False
 )
 
 Get-ChildItem "$PSScriptRoot/functions" | Foreach-Object {. $_.FullName}
 
 Get-ChildItem "$PSScriptRoot/me.*.ps1"  | Foreach-Object {. $_.FullName}
 
-if ($Reset) {
+if ($Init) {
 
     Add-ScriptFileToProfile -ProfilePath $PROFILE -ScriptFilePath $PSCOMMANDPATH
 
