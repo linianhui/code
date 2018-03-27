@@ -37,6 +37,9 @@ function Set-GitGlobalAlias () {
     
     # count-objects
     git config --global alias.size 'count-objects -v -H'
+    
+    # reflog
+    git config --global alias.rl "reflog --format='%cd %h %gs' --date=format:'%Y-%m-%d %H:%M:%S'"
 }
 
 # set global config
