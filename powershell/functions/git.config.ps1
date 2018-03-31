@@ -13,7 +13,7 @@ function Set-GitGlobalAlias () {
     git config --global alias.alc 'commit --amend --no-edit'
     
     # status
-    git config --global alias.st status
+    git config --global alias.st 'status --short --branch'
 
     # branch
     git config --global alias.br branch
