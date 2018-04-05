@@ -1,5 +1,5 @@
 ################################
-# powershell common functions
+# powershell ui functions
 ################################
 
 function script:Test-Administrator {  
