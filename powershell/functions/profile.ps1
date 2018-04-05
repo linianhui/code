@@ -2,7 +2,7 @@
 # powershell profile functions
 ################################
 
-function script:New-Profile(
+function script:Profile-New(
     [string] $ProfilePath = $(throw "ProfilePath is null!")
 ) {
     if (Test-Path $ProfilePath) {
@@ -14,11 +14,11 @@ function script:New-Profile(
     }
 }
 
-function Add-ScriptExpressionToProfile (
+function Profile-AddScriptExpression (
     [string] $ProfilePath = $(throw "ProfilePath is null!"), 
     [string] $ScriptExpression = $(throw "ScriptExpression is null!") 
 ) {
-    New-Profile -ProfilePath $ProfilePath
+    Profile-New -ProfilePath $ProfilePath
 
     $ProfileContent = Get-Content -Path $ProfilePath
     if ($ProfileContent -contains $ScriptExpression) {
@@ -30,7 +30,7 @@ function Add-ScriptExpressionToProfile (
     }
 }
 
-function Add-ScriptFileToProfile (
+function Profile-AddScriptFile (
     [string] $ProfilePath = $(throw "ProfilePath is null!"),
     [string] $ScriptFilePath = $(throw "ScriptFilePath is null!")
 ) {
@@ -38,5 +38,5 @@ function Add-ScriptFileToProfile (
         throw "$ScriptFilePath not found."
     }
 
-    Add-ScriptExpressionToProfile -ProfilePath $ProfilePath -ScriptExpression ". ""$ScriptFilePath"""
+    Profile-AddScriptExpression -ProfilePath $ProfilePath -ScriptExpression ". ""$ScriptFilePath"""
 }

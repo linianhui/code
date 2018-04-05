@@ -13,15 +13,15 @@ Get-ChildItem "$PSScriptRoot/i.*.ps1"  | Foreach-Object {. $_.FullName}
 
 if ($Init) {
 
-    Add-ScriptFileToProfile -ProfilePath $PROFILE -ScriptFilePath $PSCOMMANDPATH
+    Profile-AddScriptFile -ProfilePath $PROFILE -ScriptFilePath $PSCOMMANDPATH
 
-    Set-GitGlobalAlias
+    Git-SetGlobalAlias
     
-    Set-GitGlobalConfig -UserName 'lnh' -UserEmail 'lnhcode@outlook.com'
+    Git-SetGlobalConfig -UserName 'lnh' -UserEmail 'lnhcode@outlook.com'
 
-    Get-GitGlobalConfig
+    Git-GetGlobalConfig
 }
 
-Use-Git
+Git-ImportPosh
 
-Set-DisplayUI
+UI-SetDisplayOptions

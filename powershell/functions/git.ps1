@@ -3,11 +3,11 @@
 ################################
 
 # get git user.name and user.email
-function Get-GitUser () {
+function Git-GetUser () {
     return "$(git config user.name)/$(git config user.email)"
 }
 
 # use git in powershell
-function Use-Git () {
+function Git-ImportPosh () {
     Import-Module posh-git
 }

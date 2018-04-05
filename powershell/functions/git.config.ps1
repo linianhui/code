@@ -3,7 +3,7 @@
 ################################
 
 # set git global config : alias
-function Set-GitGlobalAlias () {
+function Git-SetGlobalAlias () {
     
     # checkout
     git config --global alias.co checkout
@@ -43,7 +43,7 @@ function Set-GitGlobalAlias () {
 }
 
 # set global config
-function Set-GitGlobalConfig (
+function Git-SetGlobalConfig (
     [string] $UserName = $(throw "UserName is null!"), 
     [string] $UserEmail = $(throw "UserEmail is null!")
 ) {
@@ -67,7 +67,7 @@ function Set-GitGlobalConfig (
 }
 
 # get global config
-function Get-GitGlobalConfig() {
+function Git-GetGlobalConfig() {
     # show global config
     git config --global --list
 }

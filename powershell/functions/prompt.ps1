@@ -10,14 +10,14 @@ function prompt () {
     if (Get-GitStatus) {
 
         # show git user.name and user.email 
-        Write-Host -NoNewline "`nPS> $(Get-GitUser) :" -ForegroundColor Gray
+        Write-Host -NoNewline "`nPS> $(Git-GetUser) :" -ForegroundColor Gray
         
         # show git status
         Write-VcsStatus
     }
      
     # show current work directory in window title
-    $Host.UI.RawUI.WindowTitle = "$(Get-DisplayUserName) $(Get-Location)"
+    $Host.UI.RawUI.WindowTitle = "$(UI-GetDisplayUserName) $(Get-Location)"
 
     # reset last exit code
     $LASTEXITCODE = $originalLastExitCode

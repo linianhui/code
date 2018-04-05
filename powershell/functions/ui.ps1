@@ -2,12 +2,12 @@
 # powershell common functions
 ################################
 
-function Test-Administrator {  
+function script:Test-Administrator {  
     $CurrentUser = [Security.Principal.WindowsIdentity]::GetCurrent();
     (New-Object Security.Principal.WindowsPrincipal $CurrentUser).IsInRole([Security.Principal.WindowsBuiltinRole]::Administrator)  
 }
 
-function Get-DisplayUserName() {
+function UI-GetDisplayUserName() {
     $DisplayUserName = "[$ENV:USERNAME]"
     if (Test-Administrator) {
         $DisplayUserName = "[$ENV:USERNAME : admin]"
@@ -15,7 +15,7 @@ function Get-DisplayUserName() {
     return $DisplayUserName;
 }
 
-function Set-DisplayUI () {
+function UI-SetDisplayOptions () {
     $Host.UI.RawUI.WindowPosition.X = 0;
     $Host.UI.RawUI.WindowPosition.Y = 0;
 
