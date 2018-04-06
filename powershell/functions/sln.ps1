@@ -2,7 +2,7 @@
 # powershell open visual studio sln file
 ########################################
 
-function Get-SlnFiles() {
+function script:Sln-GetFiles() {
   $currentPath = Get-Location
   Write-Host '当前目录：' $currentPath -ForegroundColor Green
 
@@ -11,7 +11,7 @@ function Get-SlnFiles() {
   return $slnFiles
 }
 
-function script:Select-SlnFile($slnFiles){
+function script:Sln-SelectFile($slnFiles){
   if ($slnFiles.Count -eq 0) {
     throw '没有找到sln文件。'
   }
@@ -31,8 +31,8 @@ function script:Select-SlnFile($slnFiles){
 }
 
 function sln() {
-  $slnFiles = Get-SlnFiles
-  $slnFile  = Select-SlnFile $slnFiles
+  $slnFiles = Sln-GetFiles
+  $slnFile  = Sln-SelectFile $slnFiles
   Write-Host '正在打开：' $slnFile -ForegroundColor Green
   Invoke-Item $slnFile
 }
