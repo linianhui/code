@@ -1,4 +1,4 @@
-# Github仓库的根目录
+﻿# Github仓库的根目录
 $GitHubReposPath      = 'd:\.github\'
 
 # 我的仓库的根目录
