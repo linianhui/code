@@ -1,5 +1,5 @@
 ﻿################################
-# gradle functions
+# spring functions
 ################################
 Param(
     [string]$SpringBootCliBinPath = 'd:\.java\.spring-boot-cli\bin'
