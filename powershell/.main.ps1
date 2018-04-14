@@ -9,7 +9,7 @@ Param(
 
 Get-ChildItem "$PSScriptRoot/functions" | Foreach-Object {. $_.FullName}
 
-Get-ChildItem "$PSScriptRoot/i.*.ps1"  | Foreach-Object {. $_.FullName}
+Get-ChildItem "$PSScriptRoot/lnh.*.ps1"  | Foreach-Object {. $_.FullName}
 
 if ($Init) {
 
