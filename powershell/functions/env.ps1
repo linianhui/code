@@ -49,10 +49,33 @@ function Env-TryAppendPathVariable ([string]$Value = $(throw "Value is null!")) 
     Env-SetVariable -Variable $Variable -Value $NewValue
 }
 
-function Env-SetPuttyEnvironmentVariable() {
-    Env-TryAppendPathVariable -Value 'd:\.app\putty'
+function Env-SetPuttyEnvironmentVariable([string]$PuttyPath = 'd:\.app\putty') {
+    Env-TryAppendPathVariable -Value PuttyPath
 }
 
-function Env-SetILSpyEnvironmentVariable() {
-    Env-TryAppendPathVariable -Value 'd:\.app\ilspy'
+function Env-SetILSpyEnvironmentVariable([string]$ILSpyPath = 'd:\.app\ilspy') {
+    Env-TryAppendPathVariable -Value ILSpyPath
+}
+
+function Env-SetJavaEnvironmentVariable([string]$JavaPath = 'C:\Program Files\Java\jdk1.8.0_162') {
+    Env-SetVariable -Variable 'JAVA_HOME' -Value $JavaPath
+    Env-SetVariable -Variable 'CLASSPATH' -Value ".;$JavaPath\lib;$JavaPath\lib\tools.jar"
+    Env-TryAppendPathVariable -Value "$JavaPath\bin"
+}
+
+function Env-SetMavenEnvironmentVariable([string]$MavenPath = 'd:\.java\.maven') {
+    Env-SetVariable -Variable 'MAVEN_HOME' -Value $MavenPath
+    Env-TryAppendPathVariable -Value "$MavenPath\bin"
+}
+
+function Env-SetGradleEnvironmentVariable([string]$GradlePath = 'd:\.java\.gradle',
+    [string]$GradleLocalRepositoryPath = 'd:\.java\.gradle-local-repository'
+) {
+    Env-SetVariable -Variable 'GRADLE_HOME' -Value $GradlePath
+    Env-SetVariable -Variable 'GRADLE_USER_HOME' -Value $GradleLocalRepositoryPath
+    Env-TryAppendPathVariable -Value "$GradlePath\bin"
+}
+
+function Env-SetSpringBootCliEnvironmentVariable([string]$SpringBootCliPath = 'd:\.java\.spring-boot-cli') {
+    Env-TryAppendPathVariable -Value "$SpringBootCliPath\bin"
 }
