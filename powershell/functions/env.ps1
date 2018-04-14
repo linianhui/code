@@ -50,11 +50,11 @@ function Env-TryAppendPathVariable ([string]$Value = $(throw "Value is null!")) 
 }
 
 function Env-SetPuttyEnvironmentVariable([string]$PuttyPath = 'd:\.app\putty') {
-    Env-TryAppendPathVariable -Value PuttyPath
+    Env-TryAppendPathVariable -Value $PuttyPath
 }
 
 function Env-SetILSpyEnvironmentVariable([string]$ILSpyPath = 'd:\.app\ilspy') {
-    Env-TryAppendPathVariable -Value ILSpyPath
+    Env-TryAppendPathVariable -Value $ILSpyPath
 }
 
 function Env-SetJavaEnvironmentVariable([string]$JavaPath = 'C:\Program Files\Java\jdk1.8.0_162') {
