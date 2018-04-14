@@ -79,3 +79,8 @@ function Env-SetGradleEnvironmentVariable([string]$GradlePath = 'd:\.java\.gradl
 function Env-SetSpringBootCliEnvironmentVariable([string]$SpringBootCliPath = 'd:\.java\.spring-boot-cli') {
     Env-TryAppendPathVariable -Value "$SpringBootCliPath\bin"
 }
+
+function Env-SetGoEnvironmentVariable([string]$GoRoot = 'd:\.go\.sdk') {
+    Env-SetVariable -Variable 'GOROOT' -Value $GoRoot
+    Env-TryAppendPathVariable -Value "$GoRoot\bin"
+}
