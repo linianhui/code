@@ -48,3 +48,11 @@ function Env-TryAppendPathVariable ([string]$Value = $(throw "Value is null!")) 
 
     Env-SetVariable -Variable $Variable -Value $NewValue
 }
+
+function Env-SetPuttyEnvironmentVariable() {
+    Env-TryAppendPathVariable -Value 'd:\.app\putty'
+}
+
+function Env-SetILSpyEnvironmentVariable() {
+    Env-TryAppendPathVariable -Value 'd:\.app\ilspy'
+}
