@@ -61,6 +61,14 @@ function Env-SetNugetEnvironmentVariable([string]$NugetPath = 'd:\.app\nuget') {
     Env-TryAppendPathVariable -Value $NugetPath
 }
 
+function Env-SetRedisEnvironmentVariable([string]$RedisPath = 'd:\.app\redis') {
+    Env-TryAppendPathVariable -Value $RedisPath
+}
+
+function Env-SetMongoDBEnvironmentVariable([string]$MongoDBPath = 'd:\.app\mongodb') {
+    Env-TryAppendPathVariable -Value $MongoDBPath
+}
+
 function Env-SetJavaEnvironmentVariable([string]$JavaPath = 'c:\program files\java\jdk1.8.0_162') {
     Env-SetVariable -Variable 'JAVA_HOME' -Value $JavaPath
     Env-SetVariable -Variable 'CLASSPATH' -Value ".;$JavaPath\lib;$JavaPath\lib\tools.jar"
