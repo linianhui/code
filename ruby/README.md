@@ -9,7 +9,7 @@
     ```
 3. 查看版本信息：
     ```powershell
-    ruby v
+    ruby -v
     ```
 
 # 参考
