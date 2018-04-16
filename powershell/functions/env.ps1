@@ -57,7 +57,7 @@ function Env-SetILSpyEnvironmentVariable([string]$ILSpyPath = 'd:\.app\ilspy') {
     Env-TryAppendPathVariable -Value $ILSpyPath
 }
 
-function Env-SetJavaEnvironmentVariable([string]$JavaPath = 'C:\program files\java\jdk1.8.0_162') {
+function Env-SetJavaEnvironmentVariable([string]$JavaPath = 'c:\program files\java\jdk1.8.0_162') {
     Env-SetVariable -Variable 'JAVA_HOME' -Value $JavaPath
     Env-SetVariable -Variable 'CLASSPATH' -Value ".;$JavaPath\lib;$JavaPath\lib\tools.jar"
     Env-TryAppendPathVariable -Value "$JavaPath\bin"
