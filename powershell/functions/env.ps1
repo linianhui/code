@@ -49,24 +49,28 @@ function Env-TryAppendPathVariable ([string]$Value = $(throw "Value is null!")) 
     Env-SetVariable -Variable $Variable -Value $NewValue
 }
 
-function Env-SetPuttyEnvironmentVariable([string]$PuttyPath = 'd:\.app\putty') {
+function Env-SetPuttyEnvironmentVariable([string]$PuttyPath = 'd:\.app\.putty\') {
     Env-TryAppendPathVariable -Value $PuttyPath
 }
 
-function Env-SetILSpyEnvironmentVariable([string]$ILSpyPath = 'd:\.app\ilspy') {
+function Env-SetILSpyEnvironmentVariable([string]$ILSpyPath = 'd:\.app\.ilspy\') {
     Env-TryAppendPathVariable -Value $ILSpyPath
 }
 
-function Env-SetNugetEnvironmentVariable([string]$NugetPath = 'd:\.app\nuget') {
+function Env-SetNugetEnvironmentVariable([string]$NugetPath = 'd:\.app\.nuget\') {
     Env-TryAppendPathVariable -Value $NugetPath
 }
 
-function Env-SetRedisEnvironmentVariable([string]$RedisPath = 'd:\.app\redis') {
+function Env-SetRedisEnvironmentVariable([string]$RedisPath = 'd:\.app\.redis\') {
     Env-TryAppendPathVariable -Value $RedisPath
 }
 
-function Env-SetMongoDBEnvironmentVariable([string]$MongoDBPath = 'd:\.app\mongodb') {
+function Env-SetMongoDBEnvironmentVariable([string]$MongoDBPath = 'd:\.app\.mongodb\') {
     Env-TryAppendPathVariable -Value $MongoDBPath
+}
+
+function Env-SetADBEnvironmentVariable([string]$ADBPath = 'd:\.app\.adb\') {
+    Env-TryAppendPathVariable -Value $ADBPath
 }
 
 function Env-SetJavaEnvironmentVariable([string]$JavaPath = 'c:\program files\java\jdk1.8.0_162') {
