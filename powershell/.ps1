@@ -7,9 +7,7 @@ Param(
     [switch]$Init = $False
 )
 
-Get-ChildItem "$PSScriptRoot/functions" | Foreach-Object {. $_.FullName}
-
-Get-ChildItem "$PSScriptRoot/lnh.*.ps1"  | Foreach-Object {. $_.FullName}
+Get-ChildItem -Path "$PSScriptRoot/functions/" -Recurse -File | Foreach-Object { . $_.FullName }
 
 if ($Init) {
 
