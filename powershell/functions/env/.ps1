@@ -11,8 +11,7 @@ function script:Env-TrySetVariable ([string]$Variable = $(throw "Variable is nul
     Write-Host "[$Target][$Variable] 旧值:" $OldValue -ForegroundColor Gray
 
     if ($OldValue -eq $Value) {
-        Write-Host "[$Target][$Variable] 新值:" $Value -ForegroundColor Green
-        Write-Host "检测到未发送变化，跳过设置。" -ForegroundColor Yellow
+        Write-Host "[$Target][$Variable] 新值:" $Value -ForegroundColor Yellow
         return
     }
 
@@ -21,7 +20,6 @@ function script:Env-TrySetVariable ([string]$Variable = $(throw "Variable is nul
     
     # 输出新值
     [string]$NewValue = [System.Environment]::GetEnvironmentVariable($Variable, $Target);
-    Write-Host "[$Target][$Variable] 设置成功！" -ForegroundColor Green
     Write-Host "[$Target][$Variable] 新值:" $NewValue -ForegroundColor Green
 }
 
@@ -47,4 +45,13 @@ function script:Env-TryAppendPathVariable ([string]$Value = $(throw "Value is nu
     }
 
     Env-TrySetVariable -Variable $Variable -Value $NewValue
+}
+
+
+function Env-TrySetAll() {
+    Get-Command -Name 'Env-Set*EnvironmentVariable' -CommandType Function | ForEach-Object {
+      Write-Host "执行: $($_.Name)" -ForegroundColor Gray
+      Invoke-Expression -Command $_.Name
+      Write-Host
+    }
 }

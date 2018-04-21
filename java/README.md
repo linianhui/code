@@ -17,12 +17,12 @@
 
 >Maven 官方网站：https://maven.apache.org/
 
-1. 下载二进制包：`apache-maven-3.5.3-bin.zip`解压至`d:\.java\.maven\`目录下。
+1. 下载二进制包：`apache-maven-3.5.3-bin.zip`解压至`d:\.app\.tools\.maven\`目录下。
 2. 设置环境变量：
     ```powershell
     Env-SetMavenEnvironmentVariable
     ```
-3. 设置仓库信息：`maven\setting.xml`替换`d:\.java\.maven\conf\settings.xml`配置文件。
+3. 设置仓库信息：`maven\setting.xml`替换`d:\.app\.tools\.maven\conf\settings.xml`配置文件。
 4. 查看版本信息：
     ```powershell
     mvn -v
@@ -32,7 +32,7 @@
 
 >Gradle 官方网站：https://gradle.org/releases/
 
-1. 下载二进制包：`gradle-4.6-bin.zip`解压至`d:\.java\.gradle\`目录下。
+1. 下载二进制包：`gradle-4.6-bin.zip`解压至`d:\.app\.tools\.gradle\`目录下。
 2. 设置环境变量：
     ```powershell
     Env-SetGradleEnvironmentVariable
@@ -46,7 +46,7 @@
 
 >Spring Boot 官方网站：https://projects.spring.io/spring-boot/
 
-1. 下载二进制包：`spring-boot-cli-2.0.1.RELEASE-bin.zip`解压至`d:\.java\.spring-boot-cli\`目录下。
+1. 下载二进制包：`spring-boot-cli-2.0.1.RELEASE-bin.zip`解压至`d:\.app\.tools\.spring-boot-cli\`目录下。
 2. 设置环境变量：
     ```powershell
     Env-SetSpringBootCliEnvironmentVariable
