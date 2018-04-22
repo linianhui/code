@@ -20,6 +20,6 @@ if ($Init) {
     Git-GetGlobalConfig
 }
 
-Git-ImportPosh
+Git-ImportPoshGit
 
 UI-SetDisplayOptions

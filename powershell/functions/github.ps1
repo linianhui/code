@@ -1,7 +1,7 @@
 ﻿# Github仓库的根目录
 $GitHubReposPath = 'd:\.github\'
 
-# 我的仓库的
+# 我的仓库的根目录
 $LnhGitHubReposPath = $GitHubReposPath + '.lnh\'
 
 $LnhGitHubReposPathAlias = @{
