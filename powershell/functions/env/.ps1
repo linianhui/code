@@ -55,3 +55,7 @@ function Env-TrySetAll() {
       Write-Host
     }
 }
+
+function Env-GetAllVariable() {
+    Get-ChildItem ENV:
+}

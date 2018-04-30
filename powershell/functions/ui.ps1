@@ -4,15 +4,29 @@
 
 function script:Test-Administrator {  
     $CurrentUser = [Security.Principal.WindowsIdentity]::GetCurrent();
-    (New-Object Security.Principal.WindowsPrincipal $CurrentUser).IsInRole([Security.Principal.WindowsBuiltinRole]::Administrator)  
+    $CurrentPrincipal = New-Object Security.Principal.WindowsPrincipal $CurrentUser;
+    return $CurrentPrincipal.IsInRole([Security.Principal.WindowsBuiltinRole]::Administrator)  
 }
 
-function UI-GetDisplayUserName() {
-    $DisplayUserName = "[$ENV:USERNAME]"
+function script:UI-GetUserName() {
+    return $ENV:USERNAME
+}
+
+function UI-GetUserPrompt() {
+    $Role = '$'
+    $UserName = $ENV:USERNAME
+    $ComputerName = $ENV:COMPUTERNAME.ToLower()
+    $CurrentPath = $(Get-Location).ToString().ToLower()
     if (Test-Administrator) {
-        $DisplayUserName = "[$ENV:USERNAME : admin]"
+        $Role = '#'
     }
-    return $DisplayUserName;
+
+    return @{
+        Prefix       = $Role;
+        UserName     = $UserName;
+        ComputerName = $ComputerName;
+        Text         = "$Role $UserName@$ComputerName $CurrentPath"
+    }
 }
 
 function UI-SetDisplayOptions () {

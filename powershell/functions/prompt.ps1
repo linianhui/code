@@ -6,21 +6,33 @@ function prompt () {
     # hold last exit code
     $originalLastExitCode = $LASTEXITCODE
 
+    $UserPrompt = UI-GetUserPrompt
+    $UserPromptPrefix = $UserPrompt.Prefix
+    $UserPromptText = $UserPrompt.Text
+
+    Write-Host "`n$UserPromptText" -ForegroundColor Gray
+
     # if working directory is git repository
     if (Get-GitStatus) {
 
-        # show git user.name and user.email 
-        Write-Host -NoNewline "`nPS> $(Git-GetUser) :" -ForegroundColor Gray
+        # get git user.name and user.email
+        $GitUser = Git-GetUser
+
+        # show git user.name and user.email
+        Write-Host -NoNewline "$UserPromptPrefix $GitUser :" -ForegroundColor Gray
         
         # show git status
         Write-VcsStatus
+
+        Write-Host -NoNewline "`n"
     }
      
     # show current work directory in window title
-    $Host.UI.RawUI.WindowTitle = "$(UI-GetDisplayUserName) $(Get-Location)"
+    $Host.UI.RawUI.WindowTitle = $UserPromptText
 
     # reset last exit code
     $LASTEXITCODE = $originalLastExitCode
 
-    "`nPS$('>' * ($NestedPromptLevel + 1)) "
+
+    return "$UserPromptPrefix "
 }
