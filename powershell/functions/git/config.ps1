@@ -60,6 +60,9 @@ function Git-SetGlobalConfig (
 
     # color
     git config --global color.ui true
+    
+    # branch pager
+    git config --global pager.branch false
 
     # user
     git config --global user.name $UserName
