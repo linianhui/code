@@ -14,10 +14,12 @@ if ($Init) {
     Profile-AddScriptFile -ProfilePath $PROFILE -ScriptFilePath $PSCOMMANDPATH
 
     Git-SetGlobalAlias
-    
-    Git-SetGlobalConfig -UserName 'lnh' -UserEmail 'lnhcode@outlook.com'
 
-    Git-GetGlobalConfig
+    Git-SetGlobalConfig
+
+    Git-SetGlobalUser -UserName 'lnh' -UserEmail 'lnhcode@outlook.com'
+
+    Git-GetConfig
 }
 
 Git-ImportPoshGit

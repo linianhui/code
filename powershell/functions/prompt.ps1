@@ -16,7 +16,7 @@ function prompt () {
     if (Get-GitStatus) {
 
         # get git user.name and user.email
-        $GitUser = Git-GetUser
+        $GitUser = Git-GetCurrentUser
 
         # show git user.name and user.email
         Write-Host -NoNewline "$UserPromptPrefix $GitUser :" -ForegroundColor Gray
@@ -26,13 +26,12 @@ function prompt () {
 
         Write-Host -NoNewline "`n"
     }
-     
+
     # show current work directory in window title
     $Host.UI.RawUI.WindowTitle = $UserPromptText
 
     # reset last exit code
     $LASTEXITCODE = $originalLastExitCode
-
 
     return "$UserPromptPrefix "
 }

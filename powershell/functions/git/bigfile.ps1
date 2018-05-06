@@ -16,7 +16,7 @@ function script:Git-ConvertToPSObject ($object) {
         size = [int]($row[2]);
         path = $row[3];
     }
-  
+
     return $gitObject
 }
 
