@@ -13,9 +13,9 @@ $LnhGitHubReposPathAlias = @{
     c   = $LnhGitHubReposPath + 'code';
     cg  = $LnhGitHubReposPath + 'code.guide';
     d   = $LnhGitHubReposPath + 'dockerfiles';
-    gt  = $LnhGitHubReposPath + 'git.test';
     ns  = $LnhGitHubReposPath + 'nuget.server';
     oe  = $LnhGitHubReposPath + 'oidc.example';
+    gw  = $LnhGitHubReposPath + 'git.web';
 }
 
 function cdg () {
