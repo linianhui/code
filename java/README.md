@@ -2,7 +2,12 @@
 
 ## 1 安装Java
 
->JDK8下载地址：http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
+>JDK下载地址  
+  http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html  
+
+>Open JDK:  
+  http://openjdk.java.net/install/  
+  https://github.com/ojdkbuild/ojdkbuild
 
 1. 设置环境变量：
     ```powershell

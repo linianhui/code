@@ -3,8 +3,10 @@
 ################################
 
 # http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
+# https://github.com/ojdkbuild/ojdkbuild
+# http://openjdk.java.net/install/
 function Env-SetJavaEnvironmentVariable() {
-    $JavaSdkPath = 'd:\.app\.sdk\.java\jdk1.8.0_162\'
+    $JavaSdkPath = 'd:\.app\.sdk\.java\jdk\'
 
     Env-TrySetVariable -Variable 'JAVA_HOME' -Value $JavaSdkPath
     Env-TrySetVariable -Variable 'CLASSPATH' -Value ".;$JavaSdkPath\lib;$JavaSdkPath\lib\tools.jar"
@@ -29,3 +31,13 @@ function Env-SetRubyEnvironmentVariable() {
     Env-TryAppendPathVariable -Value "$RubySdkPath\bin\"
 }
 
+# https://nodejs.org/en/download/
+function Env-SetNodeEnvironmentVariable() {
+    $NodeSdkPath = 'd:\.app\.sdk\.node\'
+    $NodeCachePath = 'd:\.cache\.node\'
+
+    Env-TrySetVariable -Variable 'NODE_PATH' -Value "$NodeSdkPath\node_modules\" 
+    Env-TryAppendPathVariable -Value $NodeSdkPath
+
+    npm config set cache $NodeCachePath
+}
