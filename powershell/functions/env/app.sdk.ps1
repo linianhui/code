@@ -41,3 +41,11 @@ function Env-SetNodeEnvironmentVariable() {
 
     npm config set cache $NodeCachePath
 }
+
+
+# https://kotlinlang.org/docs/tutorials/command-line.html
+function Env-SetKotlinEnvironmentVariable() {
+    $KotlinSdkPath = 'd:\.app\.sdk\.kotlin\'
+
+    Env-TryAppendPathVariable -Value "$KotlinSdkPath\bin\"
+}
