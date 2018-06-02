@@ -47,6 +47,7 @@ function Env-SetNginxEnvironmentVariable() {
 function Env-SetMavenEnvironmentVariable() {
     $MavenPath = 'd:\.app\.tools\.maven\'
 
+    Env-TrySetVariable -Variable 'M2_HOME' -Value $MavenPath
     Env-TrySetVariable -Variable 'MAVEN_HOME' -Value $MavenPath
     Env-TryAppendPathVariable -Value "$MavenPath\bin\"
 }
