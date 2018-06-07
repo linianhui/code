@@ -49,3 +49,12 @@ function Env-SetKotlinEnvironmentVariable() {
 
     Env-TryAppendPathVariable -Value "$KotlinSdkPath\bin\"
 }
+
+
+# https://dotnet.github.io/
+function Env-SetNetEnvironmentVariable() {
+
+    # Disable Telemetry.
+    # https://docs.microsoft.com/en-us/dotnet/core/tools/telemetry
+    Env-TrySetVariable -Variable 'DOTNET_CLI_TELEMETRY_OPTOUT' -Value "true" 
+}
