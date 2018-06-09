@@ -2,11 +2,6 @@
 # powershell env functions
 ################################
 
-# https://www.putty.org/
-function Env-SetPuttyEnvironmentVariable() {
-    Env-TryAppendPathVariable -Value 'd:\.app\.tools\.putty\'
-}
-
 # https://github.com/icsharpcode/ILSpy/releases
 function Env-SetILSpyEnvironmentVariable() {
     Env-TryAppendPathVariable -Value 'd:\.app\.tools\.ilspy\'
