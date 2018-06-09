@@ -23,6 +23,21 @@ function Env-SetADBEnvironmentVariable() {
     Env-TryAppendPathVariable -Value 'd:\.app\.tools\.adb\'
 }
 
+# https://www.cpuid.com/softwares/cpu-z.html
+function Env-SetCPUEnvironmentVariable() {
+    Env-TryAppendPathVariable -Value 'd:\.app\.tools\.cpu\'
+}
+
+# https://www.techpowerup.com/gpuz/
+function Env-SetGPUEnvironmentVariable() {
+    Env-TryAppendPathVariable -Value 'd:\.app\.tools\.gpu\'
+}
+
+# http://www.superpi.net/Download/
+function Env-SetPIEnvironmentVariable() {
+    Env-TryAppendPathVariable -Value 'd:\.app\.tools\.pi\'
+}
+
 # https://maven.apache.org/
 function Env-SetMavenEnvironmentVariable() {
     $MavenPath = 'd:\.app\.tools\.maven\'
