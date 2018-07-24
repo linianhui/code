@@ -40,6 +40,10 @@ function Git-SetGlobalAlias () {
 
     # reflog
     git config --global alias.rl "reflog --format='%cd %h %gs' --date=format:'%Y-%m-%d %H:%M:%S'"
+    
+    # gc 
+    git config --global alias.warn-expire-reflog "reflog expire --expire=now --all"
+    git config --global alias.warn-gc-now "gc --prune=now --aggressive"
 }
 
 # set global config
