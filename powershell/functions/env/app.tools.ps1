@@ -9,7 +9,9 @@ function Env-SetILSpyEnvironmentVariable() {
 
 # https://www.nuget.org/downloads 
 function Env-SetNugetEnvironmentVariable() {
+    # https://docs.microsoft.com/en-us/nuget/tools/cli-ref-environment-variables
     Env-TrySetVariable -Variable 'NUGET_PACKAGES' -Value 'd:\.cache\.nuget\'
+    
     Env-TryAppendPathVariable -Value 'd:\.app\.tools\.nuget\'
 }
 
@@ -37,8 +39,12 @@ function Env-SetPIEnvironmentVariable() {
 function Env-SetMavenEnvironmentVariable() {
     $MavenPath = 'd:\.app\.tools\.maven\'
 
-    Env-TrySetVariable -Variable 'M2_HOME' -Value $MavenPath
+    # for maven 1
     Env-TrySetVariable -Variable 'MAVEN_HOME' -Value $MavenPath
+    
+    # for maven 2 or 3
+    Env-TrySetVariable -Variable 'M2_HOME' -Value $MavenPath
+
     Env-TryAppendPathVariable -Value "$MavenPath\bin\"
 }
 
@@ -47,8 +53,12 @@ function Env-SetGradleEnvironmentVariable() {
     $GradlePath = 'd:\.app\.tools\.gradle\'
     $GradleCachePath = 'd:\.cache\.gradle\'
 
+    # https://docs.gradle.org/current/userguide/installation.html
     Env-TrySetVariable -Variable 'GRADLE_HOME' -Value $GradlePath
+
+    # https://docs.gradle.org/current/userguide/build_environment.html#sec:gradle_environment_variables
     Env-TrySetVariable -Variable 'GRADLE_USER_HOME' -Value $GradleCachePath
+
     Env-TryAppendPathVariable -Value "$GradlePath\bin\"
 }
 
