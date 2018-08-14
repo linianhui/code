@@ -2,6 +2,7 @@
 
 1. help : https://developer.android.com/studio/releases/platform-tools.html
 2. windows : https://dl.google.com/android/repository/platform-tools-latest-windows.zip
+3. windows usb driver: https://developer.android.com/studio/run/win-usb
 
 # adb command
 
