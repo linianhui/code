@@ -26,6 +26,6 @@ fastboot flash logo logo.bin
 # 7.0
 settings put global captive_portal_server captive.v2ex.co
 
-# 7.1
+# 7.1+
 settings put global captive_portal_https_url https://captive.v2ex.co/generate_204
 ```
