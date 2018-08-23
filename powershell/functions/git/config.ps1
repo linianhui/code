@@ -44,6 +44,10 @@ function Git-SetGlobalAlias () {
     # gc 
     git config --global alias.warn-expire-reflog "reflog expire --expire=now --all"
     git config --global alias.warn-gc-now "gc --prune=now --aggressive"
+
+    # chmod +/- x
+    git config --global alias.chmod644 "update-index --chmod=-x"
+    git config --global alias.chmod755 "update-index --chmod=+x"
 }
 
 # set global config
