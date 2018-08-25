@@ -59,3 +59,12 @@ function Env-SetNetEnvironmentVariable() {
     # https://docs.microsoft.com/en-us/dotnet/core/tools/telemetry
     Env-TrySetVariable -Variable 'DOTNET_CLI_TELEMETRY_OPTOUT' -Value "true" 
 }
+
+# https://www.python.org/downloads/windows/
+# Windows x86-64 embeddable zip file
+function Env-SetPythonEnvironmentVariable() {
+    $PythonSdkPath = 'd:\.app\.sdk\.python\'
+
+    Env-TryAppendPathVariable -Value "$PythonSdkPath"
+    Env-TryAppendPathVariable -Value "$PythonSdkPath\scripts\"
+}
