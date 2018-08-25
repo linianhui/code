@@ -39,7 +39,8 @@ function Env-SetNodeEnvironmentVariable() {
     Env-TrySetVariable -Variable 'NODE_PATH' -Value "$NodeSdkPath\node_modules\" 
     Env-TryAppendPathVariable -Value $NodeSdkPath
 
-    npm config set cache $NodeCachePath
+    npm config set cache $NodeCachePath --global
+    npm config set registry "https://registry.npm.taobao.org" --global
 }
 
 
