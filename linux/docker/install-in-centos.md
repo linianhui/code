@@ -1,7 +1,7 @@
 # 安装Docker-CE
 
 1. 卸载旧版本
-    ```shell
+    ```sh
     sudo yum remove docker \
                     docker-client \
                     docker-client-latest \
@@ -14,19 +14,19 @@
                     docker-engine
     ```
 2. 安装必要的工具
-    ```shell
+    ```sh
     sudo yum install -y yum-utils \
                         device-mapper-persistent-data \
                         lvm2
     ```
 3. 添加docker源
-    ```shell
+    ```sh
     sudo yum-config-manager \
          --add-repo \
          https://download.docker.com/linux/centos/docker-ce.repo
     ```
 4. 安装docker
-    ```shell
+    ```sh
     sudo yum install docker-ce
     sudo systemctl start docker
     ```
@@ -37,12 +37,12 @@
     }
     ```
 6. 添加docker用户组，并把当前用户添加到docker组中。
-    ```shell
+    ```sh
     sudo groupadd docker
     sudo usermod -aG docker lnh
     ```
 7. 运行hello-world
-    ```shell
+    ```sh
     docker run hello-world
     ```
 

@@ -5,7 +5,7 @@
 function File-GetBigFiles ([int]$top = 20) {
     $begin = Get-Date
     Write-Host "begin..." $begin -ForegroundColor Green
-    
+
     Get-ChildItem -Path $(Get-Location) -File -Recurse |
         Sort-Object Length -Descending |
         Select-Object -First $top |

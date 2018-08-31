@@ -12,7 +12,7 @@ https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt
 
 # install
 
-```shell
+```sh
 apt-get install python-gevent python-pip
 pip install shadowsocks
 apt-get install python-m2crypto
@@ -20,7 +20,7 @@ apt-get install python-m2crypto
 
 # config
 
-```shell
+```sh
 vi /etc/ss.json
 ```
 
@@ -37,6 +37,6 @@ vi /etc/ss.json
 
 # start
 
-```shell
+```sh
 ssserver -c /etc/ss.json -d start
 ```

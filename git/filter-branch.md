@@ -14,14 +14,14 @@
 
 **以免后续操作过程中出错，请先备份！！！**
 
-```shell
+```sh
 git clone --mirror {repository_url} xxx-back
 ```
 
 ## 查找大文件
 
 从大到小列出仓库中的前`20`个文件：
-```shell
+```sh
 git rev-list --objects --all \
 | git cat-file --batch-check='%(objecttype) %(objectname) %(objectsize) %(rest)' \
 | awk '/^blob/ {print substr($0,6)}' \
@@ -33,7 +33,7 @@ git rev-list --objects --all \
 
 ## 删除大文件步骤
 
-```shell
+```sh
 # 1. 克隆最新的仓库
 git clone {repository_url} xxx
 

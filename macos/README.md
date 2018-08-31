@@ -15,6 +15,6 @@ pwsh
 
 # Language
 
-```shell
+```sh
 defaults write com.google.Chrome AppleLanguages "(zh-CN,en-US)"
 ```

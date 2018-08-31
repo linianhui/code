@@ -22,7 +22,7 @@ fastboot flash logo logo.bin
 
 # wifi captive
 
-```shell
+```sh
 # 7.0
 settings put global captive_portal_server captive.v2ex.co
 
