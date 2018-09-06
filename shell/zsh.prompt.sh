@@ -1,4 +1,3 @@
-
 # zsh              http://www.zsh.org/
 # precmd           http://zsh.sourceforge.net/Doc/Release/Functions.html#Hook-Functions
 # __posh_git_echo  https://github.com/lyze/posh-git-sh
