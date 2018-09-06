@@ -20,6 +20,8 @@ if ($Init) {
     Git-SetGlobalUser -UserName 'lnh' -UserEmail 'lnhcode@outlook.com'
 
     Git-GetConfig
+
+    Update-Help
 }
 
 Git-ImportPoshGit

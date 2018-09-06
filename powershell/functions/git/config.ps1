@@ -86,7 +86,7 @@ function Git-GetCurrentUser () {
 
     $UserName = git config user.name
     $UserEmail = git config user.email
-    return "$UserName<$UserEmail>"
+    return "$UserName@<$UserEmail>"
 }
 
 # git get config
