@@ -26,9 +26,11 @@ export KUBECTL_HOME=$MY_APP_TOOL_HOME/.kubectl
 export KUBECONFIG=$MY_APP_CONFIG_HOME/.kubectl/config
 export KUBECONFIG_SAVED=$KUBECONFIG
 
-# mimikube
+# https://kubernetes.io/docs/tasks/tools/install-minikube/
 export MINIKUBE_HOME=$MY_APP_TOOL_HOME/.minikube
 
-# path
-export PATH=$GRADLE_HOME_BIN:$M2_HOME_BIN:$SPRING_BOOT_CLI_HOME_BIN:$KUBECTL_HOME:$MINIKUBE_HOME:$PATH
+# https://docs.helm.sh/using_helm/#installing-helm
+export HELM_HOME=$MY_APP_TOOL_HOME/.helm
 
+# path
+export PATH=$GRADLE_HOME_BIN:$M2_HOME_BIN:$SPRING_BOOT_CLI_HOME_BIN:$KUBECTL_HOME:$MINIKUBE_HOME:$HELM_HOME:$PATH
