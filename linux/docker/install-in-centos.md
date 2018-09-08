@@ -33,7 +33,7 @@
 5. 镜像加速：编辑`/etc/docker/daemon.json`文件，添加如下的配置信息：
     ```json
     {
-      "registry-mirrors": ["https://registry.docker-cn.com"]
+      "registry-mirrors": ["http://hub-mirror.c.163.com","https://registry.docker-cn.com"]
     }
     ```
 6. 添加docker用户组，并把当前用户添加到docker组中。

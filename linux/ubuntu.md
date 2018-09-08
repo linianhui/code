@@ -1,7 +1,5 @@
 # 替换源
 
->http://mirrors.163.com/.help/ubuntu.html
-
 1. 备份`sources.list`
     ```sh
     sudo mv /etc/apt/sources.list /etc/apt/sources.list.backup
@@ -21,8 +19,13 @@
     deb-src http://mirrors.163.com/ubuntu/ $(lsb_release -cs)-updates main multiverse restricted universe" | \
     sudo tee /etc/apt/sources.list
     ```
-3. 更新
+3. 更新源
     ```sh
     sudo apt-get update -y
     sudo apt-get upgrade -y
     ```
+
+
+# 参考
+
+http://mirrors.163.com/.help/ubuntu.html
