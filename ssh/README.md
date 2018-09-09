@@ -11,7 +11,7 @@ ssh lnh@ubts -p 22
 ssh-keygen -t rsa
 
 # 2. Append to remote server.
-scp ~/.ssh/id_rsa.pub lnh@ubts:/home/lnh/lnh_id_rsa.pub
+scp -P 22 ~/.ssh/id_rsa.pub lnh@ubts:/home/lnh/lnh_id_rsa.pub
 
 # 3. Login remote server, and append `lnh_id_rsa.pub` to `~/.ssh/authorized_keys`.
 cat lnh_id_rsa.pub >> ./.ssh/authorized_keys
