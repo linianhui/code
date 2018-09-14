@@ -1,8 +1,13 @@
 # my app root home
-export MY_APP_HOME=~/.app
+export MY_APP_HOME=$HOME/.app
 export MY_APP_TOOL_HOME=$MY_APP_HOME/.tools
 export MY_APP_CACHE_HOME=$MY_APP_HOME/.cache
 export MY_APP_CONFIG_HOME=$MY_APP_HOME/.config
+
+# https://docs.microsoft.com/en-us/dotnet/core/tools/telemetry
+# https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-tool-install
+export DOTNET_CLI_TELEMETRY_OPTOUT=false
+export DOTNET_TOOLS_HOME=$HOME/.dotnet/tools
 
 # https://gradle.org/releases/ 
 export GRADLE_HOME=$MY_APP_TOOL_HOME/.gradle
@@ -17,7 +22,7 @@ export M2_HOME_BIN=$M2_HOME/bin
 export SPRING_BOOT_CLI_HOME=$MY_APP_TOOL_HOME/.spring-boot-cli
 export SPRING_BOOT_CLI_HOME_BIN=$SPRING_BOOT_CLI_HOME/bin
 
-# mono
+# https://www.mono-project.com/
 export MONO_HOME=/Library/Frameworks/Mono.framework/Versions/5.0.1
 export MONO_HOME_BIN=$MONO_HOME/bin
 
@@ -33,4 +38,4 @@ export MINIKUBE_HOME=$MY_APP_TOOL_HOME/.minikube
 export HELM_HOME=$MY_APP_TOOL_HOME/.helm
 
 # path
-export PATH=$GRADLE_HOME_BIN:$M2_HOME_BIN:$SPRING_BOOT_CLI_HOME_BIN:$KUBECTL_HOME:$MINIKUBE_HOME:$HELM_HOME:$PATH
+export PATH=$GRADLE_HOME_BIN:$M2_HOME_BIN:$SPRING_BOOT_CLI_HOME_BIN:$KUBECTL_HOME:$MINIKUBE_HOME:$HELM_HOME:$DOTNET_TOOLS_HOME:$PATH
