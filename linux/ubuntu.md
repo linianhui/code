@@ -28,4 +28,6 @@
 
 # 参考
 
+http://releases.ubuntu.com/
+
 http://mirrors.163.com/.help/ubuntu.html

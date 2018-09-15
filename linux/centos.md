@@ -16,4 +16,6 @@
 
 # 参考
 
+http://vault.centos.org/
+
 http://mirrors.163.com/.help/centos.html
