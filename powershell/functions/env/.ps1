@@ -21,6 +21,7 @@ function script:Env-TrySetVariable ([string]$Variable = $(throw "Variable is nul
     # 输出新值
     [string]$NewValue = [System.Environment]::GetEnvironmentVariable($Variable, $Target);
     Write-Host "[$Target][$Variable] 新值:" $NewValue -ForegroundColor Green
+    Write-Host
 }
 
 function script:Env-TryAppendPathVariable ([string]$Value = $(throw "Value is null!")) {
@@ -31,10 +32,12 @@ function script:Env-TryAppendPathVariable ([string]$Value = $(throw "Value is nu
 
     # 检测是否已经存在
     if ($OldValue.Split(';').Contains($Value)) {
-        Write-Host "[$Target][$Variable]中已经包含需要追加的值：$Value" -ForegroundColor Yellow
+        Write-Host "[$Target][$Variable] 已存在：$Value" -ForegroundColor Yellow
         return
     }
-    
+
+    Write-Host "[$Target][$Variable] 追加：$Value" -ForegroundColor Green
+
     # 追加新值
     [string]$NewValue = $OldValue;
     if ($OldValue.EndsWith(';')) {
@@ -53,9 +56,14 @@ function Env-TrySetAll() {
       Write-Host "执行: $($_.Name)" -ForegroundColor Gray
       Invoke-Expression -Command $_.Name
       Write-Host
+      Write-Host
     }
 }
 
 function Env-GetAllVariable() {
     Get-ChildItem ENV:
+}
+
+function Env-GetPathVariavle() {
+    $ENV:PATH.Split(';')
 }
