@@ -25,9 +25,27 @@
     sudo apt-get upgrade -y
     ```
 
+# 安装deepin桌面
+
+```sh
+# 1. 添加 PPA Repository https://launchpad.net/~leaeasy/+archive/ubuntu/dde
+sudo add-apt-repository ppa:leaeasy/dde
+
+# 2. 安装
+sudo apt install dde dde-file-manager deepin-icon-theme
+
+# 3. 启动
+sudo lightdm start
+```
 
 # 参考
 
 http://releases.ubuntu.com/
 
+http://old-releases.ubuntu.com/
+
+http://cdimage.ubuntu.com/
+
 http://mirrors.163.com/.help/ubuntu.html
+
+https://www.deepin.org/original/deepin-boot-maker/
