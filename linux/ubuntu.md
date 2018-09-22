@@ -25,6 +25,28 @@
     sudo apt-get upgrade -y
     ```
 
+# 固定IP
+
+编辑`/etc/netplan/50-cloud-init.yaml`(18.04)配置文件.
+```yaml
+network:
+    ethernets:
+        eth0:
+            dhcp4: no
+            dhcp6: no
+            addresses: [192.168.0.101/24]
+            gateway4: 192.168.0.1
+    version: 2
+```
+
+```sh
+# 启用配置
+sudo netplan apply
+
+# 查看网络
+ip a
+```
+
 # 安装deepin桌面
 
 ```sh
