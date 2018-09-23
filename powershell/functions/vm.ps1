@@ -2,31 +2,24 @@
 # powershell vm(hyper-v) functions
 ################################
 
-function vm () {
-    Get-VM
+function vm ([string] $name) {
+    if ([String]::IsNullOrEmpty($name)) {
+        Get-VM
+    }
+    else {
+        Get-VM -Name $name
+    }
 }
 
 function vm-run ([string] $name) {
     Get-VM -Name $name | Start-VM
-
-    Get-VM -Name $name
 }
 
 function vm-stop ([string] $name) {
     Get-VM -Name $name | Stop-VM
-
-    Get-VM -Name $name
 }
 
-function ubts () {
-    run-vm-and-open-ssh -username lnh -hostname ubts
-}
-
-function ceos () {
-    run-vm-and-open-ssh -username lnh -hostname ceos
-}
-
-function run-vm-and-open-ssh (
+function vm-ssh (
     [string]$username,
     [string]$hostname,
     [string]$port = 22) {
@@ -36,4 +29,12 @@ function run-vm-and-open-ssh (
 
     Write-Host "ssh $username@$hostname -p $port" -ForegroundColor Green
     ssh "$username@$hostname" -p $port
+}
+
+function ubts () {
+    vm-ssh -username lnh -hostname ubts
+}
+
+function ceos () {
+    vm-ssh -username lnh -hostname ceos
 }
