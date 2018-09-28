@@ -33,6 +33,9 @@ export KUBECONFIG_SAVED=$KUBECONFIG
 
 # https://kubernetes.io/docs/tasks/tools/install-minikube/
 export MINIKUBE_HOME=$MY_APP_TOOL_HOME/.minikube
+export MINIKUBE_WANTUPDATENOTIFICATION=false
+export MINIKUBE_WANTREPORTERRORPROMPT=false
+export CHANGE_MINIKUBE_NONE_USER=true
 
 # https://docs.helm.sh/using_helm/#installing-helm
 export HELM_HOME=$MY_APP_TOOL_HOME/.helm

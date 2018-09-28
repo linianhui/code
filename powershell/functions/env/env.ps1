@@ -203,3 +203,23 @@ function Env-SetNginxEnvironmentVariable() {
 
     Env-TryAppendPathVariable -Value $APP_NGINX_PATH
 }
+
+# https://kubernetes.io/docs/tasks/tools/install-kubectl
+function Env-SetKubectlEnvironmentVariable() {
+    $APP_KUBECTL_PATH = $APP_PATH + '.kubectl\';
+    $APP_KUBECTL_CONFIG_FILE = $APP_KUBECTL_PATH + 'kubectl.config';
+
+    Env-TrySetVariable -Variable 'KUBECONFIG' -Value $APP_KUBECTL_CONFIG_FILE
+    Env-TryAppendPathVariable -Value $APP_KUBECTL_PATH
+}
+
+# https://github.com/kubernetes/minikube/releases
+function Env-SetMinikubeEnvironmentVariable() {
+    $APP_MINIKUBE_PATH = $APP_PATH + '.minikube\';
+
+    Env-TrySetVariable -Variable 'MINIKUBE_HOME' -Value $APP_MINIKUBE_PATH
+    Env-TrySetVariable -Variable 'MINIKUBE_WANTUPDATENOTIFICATION' -Value 'false'
+    Env-TrySetVariable -Variable 'MINIKUBE_WANTREPORTERRORPROMPT' -Value 'false'
+    Env-TrySetVariable -Variable 'CHANGE_MINIKUBE_NONE_USER' -Value 'true'
+    Env-TryAppendPathVariable -Value $APP_MINIKUBE_PATH
+}
