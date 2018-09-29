@@ -18,8 +18,8 @@ https://storage.googleapis.com/kubernetes-release/release/v1.12.0/bin/linux/amd6
 ```sh
 curl -Lo kubectl https://storage.googleapis.com/kubernetes-release/release/v1.12.0/bin/linux/amd64/kubectl \
 && chmod +x kubectl \
-&& mkdir -p $HOME/.app/.tools/.kubectl \
-&& mv kubectl $HOME/.app/.tools/.kubectl
+&& mkdir -p $HOME/_apps/_kubectl \
+&& mv kubectl $HOME/_apps/_kubectl
 ```
 
 ## 1.3 maxOS
@@ -29,8 +29,8 @@ https://storage.googleapis.com/kubernetes-release/release/v1.12.0/bin/darwin/amd
 ```sh
 curl -Lo kubectl https://storage.googleapis.com/kubernetes-release/release/v1.12.0/bin/darwin/amd64/kubectl \
 && chmod +x kubectl \
-&& mkdir -p $HOME/.app/.tools/.kubectl \
-&& mv kubectl $HOME/.app/.tools/.kubectl
+&& mkdir -p $HOME/_apps/_kubectl \
+&& mv kubectl $HOME/_apps/_kubectl
 ```
 
 # 2 参考

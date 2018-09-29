@@ -15,8 +15,8 @@ https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
 ```sh
 curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64 \
 && chmod +x minikube \
-&& mkdir -p $HOME/.app/.tools/.minikube \
-&& mv minikube $HOME/.app/.tools/.minikube
+&& mkdir -p $HOME/_apps/_minikube \
+&& mv minikube $HOME/_apps/_minikube
 ```
 
 ## 1.3 maxOS
@@ -26,8 +26,8 @@ https://storage.googleapis.com/minikube/releases/latest/minikube-darwin-amd64
 ```sh
 curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/minikube-darwin-amd64 \
 && chmod +x minikube \
-&& mkdir -p $HOME/.app/.tools/.minikube \
-&& mv minikube $HOME/.app/.tools/.minikube
+&& mkdir -p $HOME/_apps/_minikube \
+&& mv minikube $HOME/_apps/_minikube
 ```
 
 # 2 安装`driver`
