@@ -9,14 +9,22 @@ function script:Test-Administrator {
 }
 
 function script:UI-GetUserName() {
-    return $ENV:USERNAME
+    $UserName = $ENV:USERNAME.ToLower();
+    if($UserName -eq 'administrator'){
+        return 'admin';
+    }
+    return $UserName;
+}
+
+function script:UI-GetComputerName() {
+    return $ENV:COMPUTERNAME.ToLower();
 }
 
 function UI-GetUserPrompt() {
-    $Role = '$'
-    $UserName = $ENV:USERNAME
-    $ComputerName = $ENV:COMPUTERNAME.ToLower()
-    $CurrentPath = $(Get-Location).ToString().ToLower()
+    $Role = '$';
+    $UserName = UI-GetUserName
+    $ComputerName = UI-GetComputerName
+    $CurrentPath = $(Get-Location).ToString().ToLower();
     if (Test-Administrator) {
         $Role = '#'
     }
