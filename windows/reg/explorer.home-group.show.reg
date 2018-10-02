@@ -1,0 +1,6 @@
+Windows Registry Editor Version 5.00
+
+;显示[资源管理器/家庭组]
+
+[HKEY_CLASSES_ROOT\CLSID\{B4FB3F98-C1EA-428d-A78A-D1F5659CBA93}\ShellFolder]
+"Attributes"=dword:b084010c

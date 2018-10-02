@@ -1,5 +1,7 @@
 Windows Registry Editor Version 5.00
 
+;右键添加[清空回收站]的菜单
+
 [HKEY_CLASSES_ROOT\Directory\Background\shell\EmptyRecycleBin]
 "CommandStateHandler"="{c9298eef-69dd-4cdd-b153-bdbc38486781}"
 "Description"="@shell32.dll,-31332"
