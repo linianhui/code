@@ -20,7 +20,7 @@ fastboot flash recovery recovery.img
 fastboot flash logo logo.bin
 ```
 
-# wifi captive
+# WLAN captive
 
 ```sh
 # 7.0

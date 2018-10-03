@@ -7,10 +7,10 @@
 
 ## 2.1 Windows
 
-Windows中需要开启Hyper-V, 并添加一个外部的虚拟交换机：`WiFi-Switch`。
+Windows中需要开启Hyper-V, 并添加一个外部的虚拟交换机：`WLAN-SWITCH`。
 
 ```sh
-minikube start --vm-driver=hyperv --memory=4096 --hyperv-virtual-switch=WiFi-Switch --registry-mirror=https://registry.docker-cn.com --v=9
+minikube start --vm-driver=hyperv --memory=4096 --hyperv-virtual-switch=WLAN-SWITCH --registry-mirror=https://registry.docker-cn.com --v=9
 ```
 
 ## 2.2 macOS
