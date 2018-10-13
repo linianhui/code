@@ -5,6 +5,7 @@ $GitHubReposPath = 'd:\.github\'
 $LnhGitHubReposPath = $GitHubReposPath + '.lnh\'
 
 $LnhGitHubReposPathAlias = @{
+    g   = $GitHubReposPath;
     ae  = $LnhGitHubReposPath + 'aspnetcore.example';
     ce  = $LnhGitHubReposPath + 'cake.example';
     c9d = $LnhGitHubReposPath + 'channel9.downloader';
@@ -18,12 +19,7 @@ $LnhGitHubReposPathAlias = @{
     gw  = $LnhGitHubReposPath + 'git.web';
 }
 
-function cdg () {
-    Write-Host "cd $GitHubReposPath" -ForegroundColor Green
-    Set-Location $GitHubReposPath
-}
-
-function cdi ([string] $Alias) {
+function c ([string] $Alias) {
     $TargetPath = $LnhGitHubReposPath
     
     if ($Alias) {
@@ -32,4 +28,15 @@ function cdi ([string] $Alias) {
 
     Write-Host "cd $TargetPath" -ForegroundColor Green
     Set-Location $TargetPath
+}
+
+function cc ([string] $Alias) {
+    $TargetPath = $LnhGitHubReposPath
+    
+    if ($Alias) {
+        $TargetPath= $LnhGitHubReposPathAlias[$Alias]
+    }
+
+    Write-Host "code $TargetPath" -ForegroundColor Green
+    code $TargetPath
 }
