@@ -1,4 +1,6 @@
-# 替换源
+# 1. 安装
+
+## 1. 替换源
 
 1. 备份`sources.list`
     ```sh
@@ -25,7 +27,7 @@
     sudo apt-get upgrade -y
     ```
 
-# 固定IP
+## 2. 固定IP
 
 编辑`/etc/netplan/50-cloud-init.yaml`(18.04)配置文件.
 ```yaml
@@ -47,7 +49,7 @@ sudo netplan apply
 ip a
 ```
 
-# 安装deepin桌面
+## 3. 安装deepin桌面
 
 ```sh
 # 1. 添加 PPA Repository https://launchpad.net/~leaeasy/+archive/ubuntu/dde
@@ -59,6 +61,9 @@ sudo apt install dde dde-file-manager deepin-icon-theme
 # 3. 启动
 sudo lightdm start
 ```
+# 2. Cloud Image
+
+http://cloud-images.ubuntu.com/bionic/current/
 
 # 参考
 
