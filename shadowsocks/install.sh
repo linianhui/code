@@ -6,8 +6,8 @@ pip install shadowsocks
 
 apt-get install python-m2crypto
 
-cp shadowsocks.json /etc/shadowsocks.json
+cp ss.json /etc/ss.json
 
-ssserver -c /etc/shadowsocks.json -d stop
+ssserver -c /etc/ss.json -d stop
 
-ssserver -c /etc/shadowsocks.json -d start
+ssserver -c /etc/ss.json -d start

@@ -25,7 +25,7 @@ apt-get install python-m2crypto
 https://github.com/shadowsocks/shadowsocks/wiki/Configuration-via-Config-File
 
 ```sh
-vi /etc/shadowsocks.json
+vi /etc/ss.json
 ```
 
 ```json
@@ -44,5 +44,5 @@ vi /etc/shadowsocks.json
 # start
 
 ```sh
-ssserver -c /etc/shadowsocks.json -d start
+ssserver -c /etc/ss.json -d start
 ```
