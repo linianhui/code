@@ -223,3 +223,11 @@ function Env-SetMinikubeEnvironmentVariable() {
     Env-TrySetVariable -Variable 'CHANGE_MINIKUBE_NONE_USER' -Value 'true'
     Env-TryAppendPathVariable -Value $APP_MINIKUBE_PATH
 }
+
+# https://docs.docker.com/compose
+# https://docs.docker.com/machine
+function Env-SetDockerEnvironmentVariable() {
+    $APP_DOCKER_PATH = $APP_PATH + '.docker\';
+
+    Env-TryAppendPathVariable -Value $APP_DOCKER_PATH
+}
