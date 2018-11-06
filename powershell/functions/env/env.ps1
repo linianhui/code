@@ -229,7 +229,7 @@ function Env-SetMinikubeEnvironmentVariable() {
 # https://docs.docker.com/machine
 function Env-SetDockerEnvironmentVariable() {
     $APP_DOCKER_PATH = $APP_PATH + '.docker\';
-    $CACHE_DOCKER_PATH = $CACHE_PATH + '.docker\';
+    $CACHE_DOCKER_PATH = 'e:\.docker\';
 
     Env-TrySetVariable -Variable 'MACHINE_STORAGE_PATH' -Value $CACHE_DOCKER_PATH
     Env-TryAppendPathVariable -Value $APP_DOCKER_PATH
