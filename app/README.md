@@ -27,6 +27,10 @@
     * MacOS : https://github.com/shadowsocks/ShadowsocksX-NG
 2. Putty ：https://www.putty.org/
     * https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html
+3. Wireshark : https://github.com/wireshark/wireshark
+    * https://1.na.dl.wireshark.org/win32/WiresharkPortable_2.6.4.paf.exe
+4. Fiddler : https://www.telerik.com/fiddler
+    * https://www.telerik.com/download/fiddler
 
 
 # Book
