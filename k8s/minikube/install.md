@@ -2,7 +2,7 @@
 
 ## 1.1 Windows
 
-https://storage.googleapis.com/minikube/releases/latest/minikube-windows-amd64
+http://kubernetes.oss-cn-hangzhou.aliyuncs.com/minikube/releases/v0.30.0/minikube-windows-amd64.exe
 
 ```powershell
 Env-SetMinikubeEnvironmentVariable
@@ -10,10 +10,10 @@ Env-SetMinikubeEnvironmentVariable
 
 ## 1.2 Linux
 
-https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+http://kubernetes.oss-cn-hangzhou.aliyuncs.com/minikube/releases/v0.30.0/minikube-linux-amd64
 
 ```sh
-curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64 \
+curl -Lo minikube http://kubernetes.oss-cn-hangzhou.aliyuncs.com/minikube/releases/v0.30.0/minikube-linux-amd64 \
 && chmod +x minikube \
 && mkdir -p $HOME/_apps/_minikube \
 && mv minikube $HOME/_apps/_minikube
@@ -21,10 +21,10 @@ curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/miniku
 
 ## 1.3 maxOS
 
-https://storage.googleapis.com/minikube/releases/latest/minikube-darwin-amd64
+http://kubernetes.oss-cn-hangzhou.aliyuncs.com/minikube/releases/v0.30.0/minikube-darwin-amd64
 
 ```sh
-curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/minikube-darwin-amd64 \
+curl -Lo minikube http://kubernetes.oss-cn-hangzhou.aliyuncs.com/minikube/releases/v0.30.0/minikube-darwin-amd64 \
 && chmod +x minikube \
 && mkdir -p $HOME/_apps/_minikube \
 && mv minikube $HOME/_apps/_minikube
@@ -62,7 +62,10 @@ curl -Lo docker-machine-driver-hyperkit https://storage.googleapis.com/minikube/
 
 http://storage.googleapis.com/minikube
 
-https://github.com/kubernetes/minikube/releases
+https://github.com/kubernetes/minikube/releases  
+  1. https://storage.googleapis.com/minikube/releases/latest/minikube-windows-amd64  
+  1. https://storage.googleapis.com/minikube/releases/latest/minikube-darwin-amd64  
+  1. https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64  
 
 https://kubernetes.io/docs/setup/minikube/
 

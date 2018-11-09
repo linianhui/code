@@ -216,7 +216,7 @@ function Env-SetKubectlEnvironmentVariable() {
 # https://github.com/kubernetes/minikube/releases
 function Env-SetMinikubeEnvironmentVariable() {
     $APP_MINIKUBE_PATH = $APP_PATH + '.minikube\';
-    $CACHE_MINIKUBE_PATH = $CACHE_PATH + '.minikube\';
+    $CACHE_MINIKUBE_PATH = 'e:\.minikube\';
 
     Env-TrySetVariable -Variable 'MINIKUBE_HOME' -Value $CACHE_MINIKUBE_PATH
     Env-TrySetVariable -Variable 'MINIKUBE_WANTUPDATENOTIFICATION' -Value 'false'
