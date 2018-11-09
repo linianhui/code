@@ -234,3 +234,11 @@ function Env-SetDockerEnvironmentVariable() {
     Env-TrySetVariable -Variable 'MACHINE_STORAGE_PATH' -Value $CACHE_DOCKER_PATH
     Env-TryAppendPathVariable -Value $APP_DOCKER_PATH
 }
+
+# https://docs.helm.sh
+# https://github.com/helm/helm/releases
+function Env-SetHelmEnvironmentVariable() {
+    $APP_HLEM_PATH = $APP_PATH + '.helm\';
+
+    Env-TryAppendPathVariable -Value $APP_HLEM_PATH
+}
