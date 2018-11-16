@@ -17,6 +17,7 @@ $LnhGitHubReposPathAlias = @{
     ns  = $LnhGitHubReposPath + 'nuget.server';
     oe  = $LnhGitHubReposPath + 'oidc.example';
     gw  = $LnhGitHubReposPath + 'git.web';
+    n   = $LnhGitHubReposPath + 'network';
 }
 
 function c ([string] $Alias) {
