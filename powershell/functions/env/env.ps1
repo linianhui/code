@@ -96,6 +96,7 @@ function Env-SetKotlinEnvironmentVariable() {
 # https://docs.microsoft.com/en-us/dotnet/core/tools/telemetry
 function Env-SetNetEnvironmentVariable() {
     Env-TrySetVariable -Variable 'DOTNET_CLI_TELEMETRY_OPTOUT' -Value "true" 
+    Env-TryAppendPathVariable -Value 'C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\'
 }
 
 # https://www.python.org/downloads/windows/
