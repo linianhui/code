@@ -1,30 +1,29 @@
 ﻿# Github仓库的根目录
-$GitHubReposPath = 'd:\.github\'
+$GITHUB_PATH = 'e:\.github\';
+# 我的Github仓库的根目录
+$MY_GITHUB_PATH = 'd:\.github\';
 
-# 我的仓库的根目录
-$LnhGitHubReposPath = $GitHubReposPath + '.lnh\'
-
-$LnhGitHubReposPathAlias = @{
-    g   = $GitHubReposPath;
-    ae  = $LnhGitHubReposPath + 'aspnetcore.example';
-    ce  = $LnhGitHubReposPath + 'cake.example';
-    c9d = $LnhGitHubReposPath + 'channel9.downloader';
-    ces = $LnhGitHubReposPath + 'chrome.extensions';
-    ct  = $LnhGitHubReposPath + 'cnblogs.theme';
-    c   = $LnhGitHubReposPath + 'code';
-    cg  = $LnhGitHubReposPath + 'code.guide';
-    d   = $LnhGitHubReposPath + 'dockerfiles';
-    ns  = $LnhGitHubReposPath + 'nuget.server';
-    oe  = $LnhGitHubReposPath + 'oidc.example';
-    gw  = $LnhGitHubReposPath + 'git.web';
-    n   = $LnhGitHubReposPath + 'network';
+$GITHUB_PATH_ALIAS = @{
+    g   = $GITHUB_PATH;
+    ae  = $MY_GITHUB_PATH + 'aspnetcore.example';
+    ce  = $MY_GITHUB_PATH + 'cake.example';
+    c9d = $MY_GITHUB_PATH + 'channel9.downloader';
+    ces = $MY_GITHUB_PATH + 'chrome.extensions';
+    ct  = $MY_GITHUB_PATH + 'cnblogs.theme';
+    c   = $MY_GITHUB_PATH + 'code';
+    cg  = $MY_GITHUB_PATH + 'code.guide';
+    d   = $MY_GITHUB_PATH + 'dockerfiles';
+    ns  = $MY_GITHUB_PATH + 'nuget.server';
+    oe  = $MY_GITHUB_PATH + 'oidc.example';
+    gw  = $MY_GITHUB_PATH + 'git.web';
+    n   = $MY_GITHUB_PATH + 'network';
 }
 
 function c ([string] $Alias) {
-    $TargetPath = $LnhGitHubReposPath
+    $TargetPath = $MY_GITHUB_PATH
     
     if ($Alias) {
-        $TargetPath= $LnhGitHubReposPathAlias[$Alias]
+        $TargetPath= $GITHUB_PATH_ALIAS[$Alias]
     }
 
     Write-Host "cd $TargetPath" -ForegroundColor Green
@@ -32,10 +31,10 @@ function c ([string] $Alias) {
 }
 
 function cc ([string] $Alias) {
-    $TargetPath = $LnhGitHubReposPath
+    $TargetPath = $MY_GITHUB_PATH
     
     if ($Alias) {
-        $TargetPath= $LnhGitHubReposPathAlias[$Alias]
+        $TargetPath= $GITHUB_PATH_ALIAS[$Alias]
     }
 
     Write-Host "code $TargetPath" -ForegroundColor Green
