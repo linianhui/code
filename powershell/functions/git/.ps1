@@ -43,3 +43,11 @@ function Git-Warn-GC-Recurse () {
         Set-Location -Path ..
     }
 }
+
+function Git-Size-Recurse () {
+    Get-ChildItem -Attributes Directory -Path (Get-Location) | ForEach-Object {
+        $Path = $_.FullName.ToLower()
+        Write-Host "`ngit -C '$Path' count-objects -v -H" -ForegroundColor Green
+        git -C "$Path" size
+    }
+}
