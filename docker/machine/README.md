@@ -4,7 +4,7 @@
 
 1. 下载最新的Docker Machine
     ```sh
-    sudo curl -L https://github.com/docker/machine/releases/download/v0.15.0/docker-machine-$(uname -s)-$(uname -m) -o /usr/local/bin/docker-machine
+    sudo curl -L https://github.com/docker/machine/releases/download/v0.16.0/docker-machine-$(uname -s)-$(uname -m) -o /usr/local/bin/docker-machine
     ```
 2. 添加可执行权限
     ```sh
@@ -17,7 +17,7 @@
 
 ## Windows
 
-https://github.com/docker/machine/releases/download/v0.15.0/docker-machine-Windows-x86_64.exe
+https://github.com/docker/machine/releases/download/v0.16.0/docker-machine-Windows-x86_64.exe
 
 ```powershell
 ## 设置环境变量
@@ -28,7 +28,7 @@ docker-machine -v
 
 # 创建docker vm
 
-https://github.com/boot2docker/boot2docker/releases/download/v18.06.1-ce/boot2docker.iso
+https://github.com/boot2docker/boot2docker/releases/download/v18.09.0/boot2docker.iso
 
 ## Hyper-V
 
