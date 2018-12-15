@@ -5,7 +5,7 @@ https://storage.googleapis.com/kubernetes-release/release/stable.txt
 
 ## 1.1 Windows
 
-https://storage.googleapis.com/kubernetes-release/release/v1.12.2/bin/windows/amd64/kubectl.exe
+https://storage.googleapis.com/kubernetes-release/release/v1.13.1/bin/windows/amd64/kubectl.exe
 
 ```powershell
 Env-SetKubectlEnvironmentVariable
@@ -13,10 +13,10 @@ Env-SetKubectlEnvironmentVariable
 
 ## 1.2 Linux
 
-https://storage.googleapis.com/kubernetes-release/release/v1.12.2/bin/linux/amd64/kubectl
+https://storage.googleapis.com/kubernetes-release/release/v1.13.1/bin/linux/amd64/kubectl
 
 ```sh
-curl -Lo kubectl https://storage.googleapis.com/kubernetes-release/release/v1.12.2/bin/linux/amd64/kubectl \
+curl -Lo kubectl https://storage.googleapis.com/kubernetes-release/release/v1.13.1/bin/linux/amd64/kubectl \
 && chmod +x kubectl \
 && mkdir -p $HOME/_apps/_kubectl \
 && mv kubectl $HOME/_apps/_kubectl
@@ -24,10 +24,10 @@ curl -Lo kubectl https://storage.googleapis.com/kubernetes-release/release/v1.12
 
 ## 1.3 maxOS
 
-https://storage.googleapis.com/kubernetes-release/release/v1.12.2/bin/darwin/amd64/kubectl
+https://storage.googleapis.com/kubernetes-release/release/v1.13.1/bin/darwin/amd64/kubectl
 
 ```sh
-curl -Lo kubectl https://storage.googleapis.com/kubernetes-release/release/v1.12.2/bin/darwin/amd64/kubectl \
+curl -Lo kubectl https://storage.googleapis.com/kubernetes-release/release/v1.13.1/bin/darwin/amd64/kubectl \
 && chmod +x kubectl \
 && mkdir -p $HOME/_apps/_kubectl \
 && mv kubectl $HOME/_apps/_kubectl
