@@ -37,7 +37,7 @@ function Env-SetShadowsocksEnvironmentVariable() {
 # https://github.com/ojdkbuild/ojdkbuild
 # http://openjdk.java.net/install/
 function Env-SetJavaEnvironmentVariable() {
-    $APP_JAVA_JDK_PATH          = $APP_PATH + '.java\jdk\';
+    $APP_JAVA_JDK_PATH          = $APP_PATH + '.java\';
     $APP_JAVA_JDK_BIN_PATH      = $APP_JAVA_JDK_PATH + 'bin\';
     $APP_JAVA_JDK_LIB_PATH      = $APP_JAVA_JDK_PATH + 'lib\';
     $APP_JAVA_JDK_LIB_TOOLS_JAR = $APP_JAVA_JDK_LIB_PATH + 'tools.jar';
