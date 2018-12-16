@@ -1,17 +1,6 @@
 
-mv /etc/apt/sources.list /etc/apt/sources.list.backup
+cp /etc/apt/sources.list /etc/apt/sources.list.bak
 
-echo "\
-deb http://mirrors.163.com/ubuntu/ $(lsb_release -cs) main multiverse restricted universe
-deb http://mirrors.163.com/ubuntu/ $(lsb_release -cs)-backports main multiverse restricted universe
-deb http://mirrors.163.com/ubuntu/ $(lsb_release -cs)-proposed main multiverse restricted universe
-deb http://mirrors.163.com/ubuntu/ $(lsb_release -cs)-security main multiverse restricted universe
-deb http://mirrors.163.com/ubuntu/ $(lsb_release -cs)-updates main multiverse restricted universe
-deb-src http://mirrors.163.com/ubuntu/ $(lsb_release -cs) main multiverse restricted universe
-deb-src http://mirrors.163.com/ubuntu/ $(lsb_release -cs)-backports main multiverse restricted universe
-deb-src http://mirrors.163.com/ubuntu/ $(lsb_release -cs)-proposed main multiverse restricted universe
-deb-src http://mirrors.163.com/ubuntu/ $(lsb_release -cs)-security main multiverse restricted universe
-deb-src http://mirrors.163.com/ubuntu/ $(lsb_release -cs)-updates main multiverse restricted universe" | \
-tee /etc/apt/sources.list
-
-apt-get update -y && apt-get upgrade -y
+cat /etc/apt/sources.list
+sed -i 's/archive.ubuntu.com/mirrors.163.com/g' /etc/apt/sources.list
+cat /etc/apt/sources.list

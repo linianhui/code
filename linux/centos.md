@@ -2,7 +2,7 @@
 
 1. 备份`CentOS-Base.repo`
     ```sh
-    mv /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.backup
+    mv /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.bak
     ```
 2. 添加163源
     ```sh

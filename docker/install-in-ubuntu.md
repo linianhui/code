@@ -17,11 +17,11 @@
     ```
 3. 添加docker源
     ```sh
-    curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+    curl -fsSL http://mirrors.aliyun.com/docker-ce/linux/ubuntu/gpg | sudo apt-key add -
     
     sudo apt-key fingerprint 0EBFCD88
     
-    sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+    sudo add-apt-repository "deb [arch=amd64] http://mirrors.aliyun.com/docker-ce/linux/ubuntu $(lsb_release -cs) stable"
 4. 安装docker
     ```sh
     sudo apt-get update
@@ -37,7 +37,7 @@
 6. 添加docker用户组，并把当前用户添加到docker组中。
     ```sh
     sudo groupadd docker
-    sudo usermod -aG docker lnh
+    sudo usermod -aG docker $USER
     ```
 7. 运行hello-world
     ```sh
@@ -49,3 +49,5 @@
 https://docs.docker.com/install/linux/docker-ce/ubuntu/
 
 https://www.docker-cn.com/registry-mirror
+
+https://opsx.alibaba.com/mirror

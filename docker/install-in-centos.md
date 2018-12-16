@@ -23,7 +23,7 @@
     ```sh
     sudo yum-config-manager \
          --add-repo \
-         https://download.docker.com/linux/centos/docker-ce.repo
+         http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo
     ```
 4. 安装docker
     ```sh
@@ -39,7 +39,7 @@
 6. 添加docker用户组，并把当前用户添加到docker组中。
     ```sh
     sudo groupadd docker
-    sudo usermod -aG docker lnh
+    sudo usermod -aG docker $USER
     ```
 7. 运行hello-world
     ```sh
@@ -50,5 +50,6 @@
 
 https://docs.docker.com/install/linux/docker-ce/centos/
 
-
 https://www.docker-cn.com/registry-mirror
+
+https://opsx.alibaba.com/mirror
