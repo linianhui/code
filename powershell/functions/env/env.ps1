@@ -228,11 +228,19 @@ function Env-SetMinikubeEnvironmentVariable() {
 
 # https://docs.docker.com/compose
 # https://docs.docker.com/machine
+# https://docs.docker.com/machine/drivers/hyper-v/
 function Env-SetDockerEnvironmentVariable() {
     $APP_DOCKER_PATH = $APP_PATH + '.docker\';
     $CACHE_DOCKER_PATH = 'e:\.docker\';
+    $BOOT2DOCKER_ISO_PATH = 'file://e:\.docker\boot2docker.iso';
 
     Env-TrySetVariable -Variable 'MACHINE_STORAGE_PATH' -Value $CACHE_DOCKER_PATH
+    Env-TrySetVariable -Variable 'MACHINE_NATIVE_SSH' -Value 1
+    Env-TrySetVariable -Variable 'HYPERV_BOOT2DOCKER_URL' -Value $BOOT2DOCKER_ISO_PATH
+    Env-TrySetVariable -Variable 'HYPERV_VIRTUAL_SWITCH' -Value 'HVS'
+    Env-TrySetVariable -Variable 'HYPERV_CPU_COUNT' -Value 1
+    Env-TrySetVariable -Variable 'HYPERV_MEMORY' -Value 1024
+    Env-TrySetVariable -Variable 'HYPERV_DISK_SIZE' -Value 10240
     Env-TryAppendPathVariable -Value $APP_DOCKER_PATH
 }
 
