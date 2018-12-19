@@ -4,6 +4,9 @@ alias ...='cd ../..'
 
 alias d='docker'
 alias dc='docker-compose'
+alias dm='docker-machine'
+alias k8s='kubectl'
+alias mk='minikube'
 
 alias g='git'
 
