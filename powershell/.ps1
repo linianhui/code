@@ -7,7 +7,23 @@ Param(
     [switch]$Init = $False
 )
 
-Get-ChildItem -Path "$PSScriptRoot/functions/" -Recurse -File | Foreach-Object { . $_.FullName }
+@(
+    '/env.ps1',
+    '/env-set.ps1',
+    '/file.ps1',
+    '/git.ps1',
+    '/git-config.ps1',
+    '/git-bigfile.ps1',
+    '/github.ps1',
+    '/gui.ps1',
+    '/hosts.ps1',
+    '/profile.ps1',
+    '/prompt.ps1',
+    '/sln.ps1',
+    '/ui.ps1',
+    '/vm.ps1',
+    '/alias.ps1'
+) | Foreach-Object { . "$PSScriptRoot$_" }
 
 if ($Init) {
 

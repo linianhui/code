@@ -19,7 +19,7 @@ $GITHUB_PATH_ALIAS = @{
     n   = $MY_GITHUB_PATH + 'network';
 }
 
-function c ([string] $Alias) {
+function Github-ChangeDirectory ([string] $Alias) {
     $TargetPath = $MY_GITHUB_PATH
     
     if ($Alias) {
@@ -30,7 +30,7 @@ function c ([string] $Alias) {
     Set-Location $TargetPath
 }
 
-function cc ([string] $Alias) {
+function Github-UseVsCodeOpenDirectory ([string] $Alias) {
     $TargetPath = $MY_GITHUB_PATH
     
     if ($Alias) {

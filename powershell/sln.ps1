@@ -30,7 +30,7 @@ function script:Sln-SelectFile($slnFiles) {
     return $slnFiles[$index]
 }
 
-function sln() {
+function Sln() {
     $slnFiles = Sln-GetFiles
     $slnFile = Sln-SelectFile $slnFiles
     Write-Host '正在打开：' $slnFile -ForegroundColor Green
