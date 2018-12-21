@@ -5,6 +5,7 @@ $MY_GITHUB_PATH = 'd:\.github\';
 
 $GITHUB_PATH_ALIAS = @{
     g   = $GITHUB_PATH;
+    ps  = 'd:\.powershell\';
     ae  = $MY_GITHUB_PATH + 'aspnetcore.example';
     ce  = $MY_GITHUB_PATH + 'cake.example';
     c9d = $MY_GITHUB_PATH + 'channel9.downloader';
