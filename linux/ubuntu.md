@@ -57,6 +57,8 @@ http://cloud-images.ubuntu.com/bionic/current/
 
 # 参考
 
+[/shell/ubuntu/163.sh]
+
 http://releases.ubuntu.com/
 
 http://old-releases.ubuntu.com/
@@ -66,3 +68,5 @@ http://cdimage.ubuntu.com/
 http://mirrors.163.com/.help/ubuntu.html
 
 https://www.deepin.org/original/deepin-boot-maker/
+
+[/shell/ubuntu/163.sh]:../shell/ubuntu/163.sh

@@ -16,6 +16,10 @@
 
 # 参考
 
+[/shell/centos/163.sh]
+
 http://vault.centos.org/
 
 http://mirrors.163.com/.help/centos.html
+
+[/shell/centos/163.sh]:../shell/centos/163.sh

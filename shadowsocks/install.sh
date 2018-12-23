@@ -1,4 +1,4 @@
-#!/bin/bash
+set -x
 
 apt-get install python-gevent python-pip
 
