@@ -21,8 +21,6 @@ yum-config-manager \
 
 yum install -y docker-ce
 
-systemctl start docker
-
 tee /etc/docker/daemon.json << EOF
 {
   "registry-mirrors": [
@@ -33,8 +31,13 @@ EOF
 
 cat /etc/docker/daemon.json
 
-groupadd docker && usermod -aG docker $USER
+groupadd docker 
+usermod -aG docker lnh
 
-systemctl enable docker && systemctl daemon-reload && systemctl restart docker
+systemctl enable docker
+systemctl daemon-reload
+systemctl restart docker
+
+docker version
 
 docker run hello-world

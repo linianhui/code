@@ -1,6 +1,6 @@
 set -x
 
-apt-get remove -y \ 
+apt-get remove -y \
         docker \
         docker-engine \
         docker.io
@@ -13,13 +13,14 @@ apt-get install -y \
         curl \
         software-properties-common
 
-curl -fsSL http://mirrors.aliyun.com/docker-ce/linux/ubuntu/gpg | sudo apt-key add -
+curl -fsSL http://mirrors.aliyun.com/docker-ce/linux/ubuntu/gpg | apt-key add -
 
 apt-key fingerprint 0EBFCD88
 
 add-apt-repository "deb [arch=amd64] http://mirrors.aliyun.com/docker-ce/linux/ubuntu $(lsb_release -cs) stable"
 
-apt-get update -y && apt-get install -y docker-ce
+apt-get update -y
+apt-get install -y docker-ce
 
 tee /etc/docker/daemon.json << EOF
 {
@@ -31,8 +32,13 @@ EOF
 
 cat /etc/docker/daemon.json
 
-groupadd docker && usermod -aG docker $USER
+groupadd docker
+usermod -aG docker lnh
 
-systemctl enable docker && systemctl daemon-reload && systemctl restart docker
+systemctl enable docker
+systemctl daemon-reload
+systemctl restart docker
+
+docker version
 
 docker run hello-world
