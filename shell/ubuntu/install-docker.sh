@@ -19,7 +19,13 @@ add-apt-repository "deb [arch=amd64] http://mirrors.aliyun.com/docker-ce/linux/u
 
 apt-get update -y && apt-get install -y docker-ce
 
-echo '{"registry-mirrors": ["https://registry.docker-cn.com"]}' | tee /etc/docker/daemon.json
+tee /etc/docker/daemon.json << EOF
+{
+  "registry-mirrors": [
+    "https://registry.docker-cn.com"
+  ]
+}
+EOF
 
 groupadd docker && usermod -aG docker $USER
 
