@@ -29,6 +29,8 @@ tee /etc/docker/daemon.json << EOF
 }
 EOF
 
+cat /etc/docker/daemon.json
+
 groupadd docker && usermod -aG docker $USER
 
 systemctl enable docker && systemctl daemon-reload && systemctl restart docker
