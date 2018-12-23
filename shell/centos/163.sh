@@ -1,3 +1,5 @@
+set -x
+
 cat /etc/yum.repos.d/CentOS-Base.repo
 
 mv /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.bak

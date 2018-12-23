@@ -1,3 +1,5 @@
+set -x
+
 apt-get remove -y \ 
         docker \
         docker-engine \

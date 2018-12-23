@@ -1,3 +1,5 @@
+set -x
+
 cat /etc/apt/sources.list
 
 cp /etc/apt/sources.list /etc/apt/sources.list.bak
