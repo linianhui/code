@@ -21,7 +21,7 @@ yum-config-manager \
 
 yum install -y docker-ce
 
-tee /etc/docker/daemon.json << EOF
+cat <<EOF > /etc/docker/daemon.json
 {
   "registry-mirrors": [
     "https://registry.docker-cn.com"

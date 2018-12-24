@@ -22,7 +22,7 @@ add-apt-repository "deb [arch=amd64] http://mirrors.aliyun.com/docker-ce/linux/u
 apt-get update -y
 apt-get install -y docker-ce
 
-tee /etc/docker/daemon.json << EOF
+cat <<EOF > /etc/docker/daemon.json
 {
   "registry-mirrors": [
     "https://registry.docker-cn.com"
