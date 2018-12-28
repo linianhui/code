@@ -22,6 +22,7 @@ Param(
     '/sln.ps1',
     '/ui.ps1',
     '/vm.ps1',
+    '/http.ps1',
     '/alias.ps1'
 ) | Foreach-Object { . "$PSScriptRoot$_" }
 

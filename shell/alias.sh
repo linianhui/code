@@ -31,3 +31,5 @@ alias ping='ping -c 5'
 
 alias ipe='curl http://ifconfig.me/ip'
 alias ipl='ipconfig getifaddr en0'
+
+alias hs='caddy -port 2015 browse markdown'

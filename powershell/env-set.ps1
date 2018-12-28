@@ -251,3 +251,13 @@ function Env-SetHelmEnvironmentVariable() {
 
     Env-TryAppendPathVariable -Value $APP_HLEM_PATH
 }
+
+# https://github.com/mholt/caddy
+# https://caddyserver.com/docs/cli
+function Env-SetCaddyEnvironmentVariable() {
+    $APP_CADDY_PATH = $APP_PATH + '.caddy\';
+    $CACHE_CADDY_PATH = $CACHE_PATH + '.caddy\';
+
+    Env-TrySetVariable -Variable 'CADDYPATH' -Value $CACHE_CADDY_PATH
+    Env-TryAppendPathVariable -Value $APP_CADDY_PATH
+}
