@@ -15,10 +15,10 @@ minikube start --vm-driver=hyperv --memory=4096 --hyperv-virtual-switch=HVS --re
 
 ## 2.2 macOS
 
-macOS需要`hyperkit`或者`virtualbox`
+macOS需要`virtualbox`或者`hyperkit`
 
 ```sh
-minikube start --vm-driver=hyperkit --registry-mirror=https://registry.docker-cn.com --v=9
+minikube start --vm-driver=virtualbox --registry-mirror=https://registry.docker-cn.com --v=9
 ```
 
 # 3 参考
