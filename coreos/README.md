@@ -24,15 +24,15 @@ sudo coreos-install -d /dev/sda -c cloud-config.yaml -C stable
 
 | 说明                 | 本地的HTTP地址                                                  |
 | -------------------- | --------------------------------------------------------------- |
-| 配置文件             | http://192.168.2.2/cloud-config.yaml                            |
-| 版本信息             | http://192.168.2.2/current/version.txt                          |
-| 安装的镜像文件       | http://192.168.2.2/1911.5.0/coreos_production_image.bin.bz2     |
-| 安装的镜像文件的签名 | http://192.168.2.2/1911.5.0/coreos_production_image.bin.bz2.sig |
+| 配置文件             | http://192.168.2.2:2015/cloud-config.yaml                            |
+| 版本信息             | http://192.168.2.2:2015/current/version.txt                          |
+| 安装的镜像文件       | http://192.168.2.2:2015/1911.5.0/coreos_production_image.bin.bz2     |
+| 安装的镜像文件的签名 | http://192.168.2.2:2015/1911.5.0/coreos_production_image.bin.bz2.sig |
 
 ```sh
-wget http://192.168.2.2/cloud-config.yaml
+wget http://192.168.2.2:2015/cloud-config.yaml
 
-sudo coreos-install -d /dev/sda -c cloud-config.yaml -b  http://192.168.2.2
+sudo coreos-install -d /dev/sda -c cloud-config.yaml -b  http://192.168.2.2:2015
 ```
 
 # 参考
@@ -47,3 +47,5 @@ https://coreos.com/os/docs/latest/cloud-config.html
   * https://coreos.com/os/docs/1911.5.0/cloud-config.html
 
 https://coreos.com/validate/
+
+HTTP服务器：https://github.com/mholt/caddy
