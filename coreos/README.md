@@ -6,12 +6,12 @@
 sudo coreos-install -d /dev/sda -C stable
 
 # 自定义配置
-sudo coreos-install -d /dev/sda -c cloud-config.yaml -C stable
+sudo coreos-install -d /dev/sda -C stable -i ignition.json
 ```
 
 ## 1.2 本地安装
 
-下载最新的安装文件：
+### 1.2.1 下载最新的安装文件：
 
 | 说明                 | 下载地址                                                                                 |
 | -------------------- | ---------------------------------------------------------------------------------------- |
@@ -20,32 +20,43 @@ sudo coreos-install -d /dev/sda -c cloud-config.yaml -C stable
 | 安装的镜像文件       | https://stable.release.core-os.net/amd64-usr/current/coreos_production_image.bin.bz2     |
 | 安装的镜像文件的签名 | https://stable.release.core-os.net/amd64-usr/current/coreos_production_image.bin.bz2.sig |
 
-搭建本地`HTTP服务器`托管以下四个文件(`1911.5.0`为version中的`COREOS_VERSION`)：
+### 1.2.2 转换`ignition.yaml`
 
-| 说明                 | 本地的HTTP地址                                                  |
-| -------------------- | --------------------------------------------------------------- |
-| 配置文件             | http://192.168.2.2:2015/cloud-config.yaml                            |
+转换工具 : https://github.com/coreos/container-linux-config-transpiler/releases
+```sh
+container-linux-config-transpiler -strict -pretty -platform custom -in-file ignition.yaml -out-file ignition.json
+```
+### 1.2.3 搭建本地的`HTTP服务器`
+
+HTTP服务器：https://github.com/mholt/caddy/releases
+
+本地`HTTP服务器`托管以下四个文件(`1911.5.0`为version中的`COREOS_VERSION`)：
+
+| 说明                 | 本地的HTTP地址                                                       |
+| -------------------- | -------------------------------------------------------------------- |
+| 配置文件             | http://192.168.2.2:2015/ignition.json                                |
 | 版本信息             | http://192.168.2.2:2015/current/version.txt                          |
 | 安装的镜像文件       | http://192.168.2.2:2015/1911.5.0/coreos_production_image.bin.bz2     |
 | 安装的镜像文件的签名 | http://192.168.2.2:2015/1911.5.0/coreos_production_image.bin.bz2.sig |
 
+### 1.2.4 安装
 ```sh
-wget http://192.168.2.2:2015/cloud-config.yaml
+wget http://192.168.2.2:2015/ignition.json
 
-sudo coreos-install -d /dev/sda -c cloud-config.yaml -b  http://192.168.2.2:2015
+sudo coreos-install -d /dev/sda -i ignition.json -b http://192.168.2.2:2015
 ```
 
 # 参考
 
-https://coreos.com/os/docs/latest/booting-with-iso.html
-  * https://coreos.com/os/docs/1911.5.0/booting-with-iso.html
+https://coreos.com/releases/#1911.5.0
 
-https://coreos.com/os/docs/latest/installing-to-disk.html
-  * https://coreos.com/os/docs/1911.5.0/installing-to-disk.html
+https://coreos.com/os/docs/1911.5.0/booting-with-iso.html
 
-https://coreos.com/os/docs/latest/cloud-config.html
-  * https://coreos.com/os/docs/1911.5.0/cloud-config.html
+https://coreos.com/os/docs/1911.5.0/installing-to-disk.html
 
 https://coreos.com/validate/
 
-HTTP服务器：https://github.com/mholt/caddy
+
+container-linux-config-transpiler : https://github.com/coreos/container-linux-config-transpiler/releases
+
+HTTP服务器 : https://github.com/mholt/caddy/releases

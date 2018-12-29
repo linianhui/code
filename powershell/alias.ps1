@@ -21,3 +21,5 @@ Set-Alias -Name hs -Value http-server
 Set-Alias -Name env -Value Env-GetAllVariable
 
 Set-Alias -Name path -Value Env-GetPathVariavle
+
+Set-Alias -Name ct -Value container-linux-config-transpiler

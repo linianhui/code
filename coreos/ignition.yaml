@@ -1,0 +1,54 @@
+# https://coreos.com/releases/#1911.5.0
+# https://coreos.com/os/docs/1911.5.0/configuration.html
+# https://coreos.com/os/docs/1911.5.0/clc-examples.html
+# https://coreos.com/os/docs/1911.5.0/migrating-to-clcs.html
+# https://coreos.com/ignition/docs/latest/
+# https://coreos.com/validate/
+
+passwd:
+  users:
+    - name: core
+      # 1234 : openssl passwd -1
+      password_hash: $1$IpVXUffu$o6M893N4VTur5nLIfQJrm1
+      ssh_authorized_keys :
+        - ssh-rsa you-ssh-rsa-pub-key
+    - name: root
+      password_hash: $1$IpVXUffu$o6M893N4VTur5nLIfQJrm1
+
+update:
+  group: stable
+
+docker:
+  flags:
+    - --registry-mirror=https://registry.docker-cn.com
+
+networkd:
+  units:
+    - name: static.network
+      contents: |
+        [Match]
+        Name=eth0
+
+        [Network]
+        Address=192.168.2.211/24
+        Gateway=192.168.2.1
+
+storage:
+  files:
+    - path: /etc/hostname
+      filesystem: root
+      mode: 0644
+      contents:
+        inline: coreos
+    - path: /etc/hosts
+      filesystem: root
+      mode: 0644
+      contents:
+        inline: |
+          127.0.0.1 localhost
+          ::1  localhost
+    - path: /etc/resolv.conf
+      filesystem: root
+      mode: 0644
+      contents:
+        inline: nameserver 192.168.2.1

@@ -261,3 +261,11 @@ function Env-SetCaddyEnvironmentVariable() {
     Env-TrySetVariable -Variable 'CADDYPATH' -Value $CACHE_CADDY_PATH
     Env-TryAppendPathVariable -Value $APP_CADDY_PATH
 }
+
+# https://coreos.com/os/docs/1911.5.0/overview-of-ct.html
+# https://github.com/coreos/container-linux-config-transpiler
+function Env-SetCoreOSEnvironmentVariable() {
+    $APP_COREOS_PATH = $APP_PATH + '.coreos\';
+
+    Env-TryAppendPathVariable -Value $APP_COREOS_PATH
+}
