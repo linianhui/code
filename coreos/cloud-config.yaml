@@ -8,24 +8,24 @@ hostname: coreos
 
 coreos:
   units:
-    - name: "docker.service"
-      command: "start"
-    - name: "etcd2.service"
-      command: "start"
-    - name: "fleet.service"
-      command: "start"
+    - name: docker.service
+      command: start
+    - name: etcd2.service
+      command: start
+    - name: fleet.service
+      command: start
 
 users:
-  - name: "core"
+  - name: core
     # sudo apt install whois
     # mkpasswd --method=SHA-512 --rounds=4096
     # 1234
-    passwd: "$6$rounds=4096$daVGcr9L0J.VU$TIm4XQIfms9lhae2M0U35eF6AJcSyY90Z.0x2ZcolqLnRDPRpvcRKHeBL1wXr38OYnsnINem4fVySoldEM7ay0"
+    passwd: $6$rounds=4096$daVGcr9L0J.VU$TIm4XQIfms9lhae2M0U35eF6AJcSyY90Z.0x2ZcolqLnRDPRpvcRKHeBL1wXr38OYnsnINem4fVySoldEM7ay0
     ssh-authorized-keys:
-        - "you-ssh-rsa-pub-key"
+        - ssh-rsa you-ssh-rsa-pub-key
     groups:
-      - "sudo"
-      - "root"
-      - "docker"
+      - sudo
+      - root
+      - docker
 
-manage_etc_hosts: "localhost"
+manage_etc_hosts: localhost
