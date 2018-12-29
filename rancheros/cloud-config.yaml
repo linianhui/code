@@ -1,0 +1,21 @@
+#cloud-config
+
+# https://rancher.com/docs/os/v1.x/en/installation/configuration/
+
+hostname: rancheros
+
+ssh_authorized_keys:
+  - ssh-rsa you-ssh-rsa-pub-key
+
+rancher:
+  console: alpine
+  ssh:
+    port: 10022
+  system_docker:
+    registry_mirror: https://registry.docker-cn.com
+  bootstrap_docker:
+    registry_mirror: https://registry.docker-cn.com
+  docker:
+    storage_driver: overlay
+    debug: true
+    registry_mirror: https://registry.docker-cn.com
