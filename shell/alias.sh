@@ -33,3 +33,8 @@ alias ipe='curl http://ifconfig.me/ip'
 alias ipl='ipconfig getifaddr en0'
 
 alias hs='caddy -port 2015 browse markdown'
+
+alias env='env | sort'
+
+# https://www.gnu.org/software/bash/manual/html_node/Shell-Parameter-Expansion.html
+alias path='echo "${PATH//:/\n}"'
