@@ -1,6 +1,6 @@
-# 安装Docker Machine
+# 1 安装Docker Machine
 
-## Linux
+## 1.1 Linux
 
 1. 下载最新的Docker Machine
     ```sh
@@ -15,7 +15,7 @@
     docker-machine --version
     ```
 
-## Windows
+## 1.2 Windows
 
 https://github.com/docker/machine/releases/download/v0.16.0/docker-machine-Windows-x86_64.exe
 
@@ -26,19 +26,21 @@ Env-SetDockerEnvironmentVariable
 docker-machine -v
 ```
 
-# 创建docker vm
+# 2 创建docker vm
 
-https://github.com/boot2docker/boot2docker/releases/download/v18.09.0/boot2docker.iso
+https://github.com/boot2docker/boot2docker/releases/download/v18.09.1-rc1/boot2docker.iso
 
-## Hyper-V
+>Windows下使用`git bash`（管理员模式）执行一下命令。
 
-```powershell
+## 2.1 Hyper-V
+
+```sh
 docker-machine --debug create --driver hyperv default
 ```
 
-## Virtual Box
+## 2.2 Virtual Box
 
-```powershell
+```sh
 docker-machine --debug create --driver virtualbox default
 ```
 
