@@ -4,7 +4,7 @@
 
 function script:Sln-GetFiles() {
     $currentPath = Get-Location
-    Write-Host '当前目录：' $currentPath -ForegroundColor Green
+    Log-Debug '当前目录：' $currentPath
 
     $slnFiles = Get-ChildItem -Path $currentPath -File -Filter *.sln
 
@@ -33,7 +33,7 @@ function script:Sln-SelectFile($slnFiles) {
 function Sln() {
     $slnFiles = Sln-GetFiles
     $slnFile = Sln-SelectFile $slnFiles
-    Write-Host '正在打开：' $slnFile -ForegroundColor Green
+    Log-Debug '正在打开：' $slnFile
     Invoke-Item $slnFile
 }
 

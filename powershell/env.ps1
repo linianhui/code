@@ -8,10 +8,10 @@ function script:Env-TrySetVariable ([string]$Variable = $(throw "Variable is nul
 
     # 输出旧值
     [string]$OldValue = [System.Environment]::GetEnvironmentVariable($Variable, $Target);
-    Write-Host "[$Target][$Variable] 旧值:" $OldValue -ForegroundColor Gray
+    Log-Info "[$Target][$Variable] 旧值:" $OldValue
 
     if ($OldValue -eq $Value) {
-        Write-Host "[$Target][$Variable] 新值:" $Value -ForegroundColor Yellow
+        Log-Warn "[$Target][$Variable] 新值:" $Value
         return
     }
 
@@ -20,7 +20,7 @@ function script:Env-TrySetVariable ([string]$Variable = $(throw "Variable is nul
     
     # 输出新值
     [string]$NewValue = [System.Environment]::GetEnvironmentVariable($Variable, $Target);
-    Write-Host "[$Target][$Variable] 新值:" $NewValue -ForegroundColor Green
+    Log-Debug "[$Target][$Variable] 新值:" $NewValue
     Write-Host
 }
 
@@ -32,11 +32,11 @@ function script:Env-TryAppendPathVariable ([string]$Value = $(throw "Value is nu
 
     # 检测是否已经存在
     if ($OldValue.Split(';').Contains($Value)) {
-        Write-Host "[$Target][$Variable] 已存在：$Value" -ForegroundColor Yellow
+        Log-Warn "[$Target][$Variable] 已存在：$Value"
         return
     }
 
-    Write-Host "[$Target][$Variable] 追加：$Value" -ForegroundColor Green
+    Log-Debug "[$Target][$Variable] 追加：$Value"
 
     # 追加新值
     [string]$NewValue = $OldValue;
@@ -53,10 +53,10 @@ function script:Env-TryAppendPathVariable ([string]$Value = $(throw "Value is nu
 
 function Env-TrySetAll() {
     Get-Command -Name 'Env-Set*EnvironmentVariable' -CommandType Function | ForEach-Object {
-      Write-Host "执行: $($_.Name)" -ForegroundColor Gray
-      Invoke-Expression -Command $_.Name
-      Write-Host
-      Write-Host
+        Log-Info "执行: $($_.Name)"
+        Invoke-Expression -Command $_.Name
+        Write-Host
+        Write-Host
     }
 }
 

@@ -1,5 +1,5 @@
 
 function Http-Server() {
-    Write-Host "caddy -port 2015 browse markdown $Args" -ForegroundColor Green
+    Log-Debug "caddy -port 2015 browse markdown $Args"
     caddy -port 2015 browse markdown $Args
 }

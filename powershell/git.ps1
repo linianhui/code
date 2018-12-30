@@ -16,9 +16,9 @@ function Git-InstallPoshGit () {
 function Git-Pull-Rebase-Recurse () {
     Get-ChildItem -Attributes Directory -Path (Get-Location) | ForEach-Object {
         $Path = $_.FullName.ToLower()
-        Write-Host "`ncd $Path" -ForegroundColor Green
+        Log-Debug "`ncd $Path"
         Set-Location $Path
-        Write-Host "git pull --rebase" -ForegroundColor Green
+        Log-Debug "git pull --rebase"
         git pull --rebase
         Set-Location -Path ..
     }
@@ -26,18 +26,18 @@ function Git-Pull-Rebase-Recurse () {
 
 
 function Git-Warn-GC () {
-    Write-Host "git reflog expire --expire=now --all" -ForegroundColor Green
+    Log-Debug "git reflog expire --expire=now --all"
     git warn-expire-reflog
-    Write-Host "git gc --prune=now --aggressive" -ForegroundColor Green
+    Log-Debug "git gc --prune=now --aggressive"
     git warn-gc-now
-    Write-Host "git count-objects -v -H" -ForegroundColor Green
+    Log-Debug "git count-objects -v -H"
     git size
 }
 
 function Git-Warn-GC-Recurse () {
     Get-ChildItem -Attributes Directory -Path (Get-Location) | ForEach-Object {
         $Path = $_.FullName.ToLower()
-        Write-Host "`ncd $Path" -ForegroundColor Green
+        Log-Debug "`ncd $Path"
         Set-Location $Path
         Git-Warn-GC
         Set-Location -Path ..
@@ -47,7 +47,7 @@ function Git-Warn-GC-Recurse () {
 function Git-Size-Recurse () {
     Get-ChildItem -Attributes Directory -Path (Get-Location) | ForEach-Object {
         $Path = $_.FullName.ToLower()
-        Write-Host "`ngit -C '$Path' count-objects -v -H" -ForegroundColor Green
+        Log-Debug "`ngit -C '$Path' count-objects -v -H"
         git -C "$Path" size
     }
 }

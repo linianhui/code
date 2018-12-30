@@ -33,7 +33,7 @@ function script:Git-GetAllBlobObjects () {
 
 function Git-GetBigFiles([int]$top = 20) {
     $begin = Get-Date
-    Write-Host "begin..." $begin -ForegroundColor Green
+    Log-Debug "begin..." $begin
 
     Git-GetAllBlobObjects | 
         Sort-Object size -Descending | 
@@ -41,6 +41,6 @@ function Git-GetBigFiles([int]$top = 20) {
         Format-Table -Property sha, @{Label = "size"; Expression = {($_.size / 1MB).ToString(('0.000')) + 'MB'} }, path -Wrap
 
     $end = Get-Date
-    Write-Host "end..." $end -ForegroundColor Green
-    Write-Host "elapsed times" ($end - $begin) -ForegroundColor Green
+    Log-Debug "end..." $end
+    Log-Debug "elapsed times" ($end - $begin)
 }

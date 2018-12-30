@@ -1,5 +1,5 @@
 
 function Gui-OpenExplorer () {
-    Write-Host "explorer $Args" -ForegroundColor Green
+    Log-Debug "explorer $Args"
     explorer $Args
 }

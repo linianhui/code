@@ -24,10 +24,10 @@ function vm-ssh (
     [string]$hostname,
     [string]$port = 22) {
 
-    Write-Host "run [$hostname] hyper-v vm" -ForegroundColor Green
+    Log-Debug "run [$hostname] hyper-v vm"
     vm-run -name $hostname
 
-    Write-Host "ssh $username@$hostname -p $port" -ForegroundColor Green
+    Log-Debug "ssh $username@$hostname -p $port"
     ssh "$username@$hostname" -p $port
 }
 

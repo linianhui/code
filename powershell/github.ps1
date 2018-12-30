@@ -27,7 +27,7 @@ function Github-ChangeDirectory ([string] $Alias) {
         $TargetPath= $GITHUB_PATH_ALIAS[$Alias]
     }
 
-    Write-Host "cd $TargetPath" -ForegroundColor Green
+    Log-Debug "cd $TargetPath"
     Set-Location $TargetPath
 }
 
@@ -38,6 +38,6 @@ function Github-UseVsCodeOpenDirectory ([string] $Alias) {
         $TargetPath= $GITHUB_PATH_ALIAS[$Alias]
     }
 
-    Write-Host "code $TargetPath" -ForegroundColor Green
+    Log-Debug "code $TargetPath"
     code $TargetPath
 }
