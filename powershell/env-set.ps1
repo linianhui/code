@@ -269,3 +269,8 @@ function Env-SetCoreOSEnvironmentVariable() {
 
     Env-TryAppendPathVariable -Value $APP_COREOS_PATH
 }
+
+# https://docs.microsoft.com/en-us/powershell/scripting/overview?view=powershell-6
+function Env-SetPowerShellEnvironmentVariable() {
+    Env-TrySetVariable -Variable 'POWERSHELL_TELEMETRY_OPTOUT' -Value 'true'
+}
