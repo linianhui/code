@@ -80,6 +80,7 @@ function Env-SetNodeEnvironmentVariable() {
 
     npm config set cache $CACHE_NODE_PATH --global
     npm config set registry "https://registry.npm.taobao.org" --global
+    npm install -g cnpm --registry=https://registry.npm.taobao.org
 }
 
 

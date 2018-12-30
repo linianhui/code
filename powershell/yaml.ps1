@@ -1,3 +1,6 @@
+# https://github.com/jeremyfa/yaml.js
+# cnpm install -yamljs -g
+
 function Yaml-ToJson() {
     Log-Debug "yaml2json --pretty --indentation 2" $Args
 
