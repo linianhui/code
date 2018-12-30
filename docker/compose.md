@@ -21,4 +21,4 @@ https://docs.docker.com/compose/install
 
 https://github.com/docker/compose/releases
 
-[/shell/docker/install-docker-compose.sh]:../../shell/docker/install-docker-compose.sh
+[/shell/docker/install-docker-compose.sh]:../shell/docker/install-docker-compose.sh

@@ -54,4 +54,4 @@ https://github.com/docker/machine/releases/
 
 https://github.com/boot2docker/boot2docker/releases
 
-[/shell/docker/install-docker-machine.sh]:../../shell/docker/install-docker-machine.sh
+[/shell/docker/install-docker-machine.sh]:../shell/docker/install-docker-machine.sh
