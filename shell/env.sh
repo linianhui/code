@@ -33,8 +33,9 @@ export PATH=$PATH:$MONO_HOME_BIN
 
 # https://docs.docker.com/machine/
 # https://docs.docker.com/machine/drivers/virtualbox/
+export DOCKER_HOME=$MY_APP_HOME/_docker
+export VIRTUALBOX_BOOT2DOCKER_URL=$DOCKER_HOME/boot2docker.iso
 export MACHINE_STORAGE_PATH=$MY_CACHE_HOME/_docker
-export VIRTUALBOX_BOOT2DOCKER_URL=$MACHINE_STORAGE_PATH/boot2docker.iso
 export VIRTUALBOX_UI_TYPE=headless
 export VIRTUALBOX_CPU_COUNT=1
 export VIRTUALBOX_MEMORY_SIZE=512

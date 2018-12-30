@@ -232,8 +232,8 @@ function Env-SetMinikubeEnvironmentVariable() {
 # https://docs.docker.com/machine/drivers/hyper-v/
 function Env-SetDockerEnvironmentVariable() {
     $APP_DOCKER_PATH = $APP_PATH + '.docker\';
+    $BOOT2DOCKER_ISO_PATH = 'file://' + $APP_DOCKER_PATH + 'boot2docker.iso';
     $CACHE_DOCKER_PATH = 'e:\.docker\';
-    $BOOT2DOCKER_ISO_PATH = 'file://e:\.docker\boot2docker.iso';
 
     Env-TrySetVariable -Variable 'MACHINE_STORAGE_PATH' -Value $CACHE_DOCKER_PATH
     Env-TrySetVariable -Variable 'MACHINE_NATIVE_SSH' -Value 1
