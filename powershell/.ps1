@@ -8,6 +8,7 @@ Param(
 )
 
 @(
+    '/log.ps1',
     '/env.ps1',
     '/env-set.ps1',
     '/file.ps1',
@@ -23,6 +24,7 @@ Param(
     '/ui.ps1',
     '/vm.ps1',
     '/http.ps1',
+    '/yaml.ps1',
     '/alias.ps1'
 ) | Foreach-Object { . "$PSScriptRoot$_" }
 

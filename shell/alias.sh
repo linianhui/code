@@ -38,3 +38,7 @@ alias env='env | sort'
 
 # https://www.gnu.org/software/bash/manual/html_node/Shell-Parameter-Expansion.html
 alias path='echo "${PATH//:/\n}"'
+
+alias yj='yaml2json --pretty --indentation 2'
+
+alias jy='json2yaml --depth 64 --indentation 2'
