@@ -1,5 +1,5 @@
 
 function Gui-OpenExplorer () {
-    Log-Debug "explorer $Args"
+    Log-Debug "explorer" $Args
     explorer $Args
 }
