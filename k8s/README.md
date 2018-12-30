@@ -9,8 +9,14 @@
 
 Windows中需要开启Hyper-V, 并添加一个外部的虚拟交换机：`HVS`(Hyper-V Virtual Switch)。
 
-```sh
-minikube start --vm-driver=hyperv --memory=4096 --hyperv-virtual-switch=HVS --registry-mirror=https://registry.docker-cn.com --v=9
+```powershell
+minikube start `
+         --vm-driver=hyperv `
+         --memory=4096 `
+         --hyperv-virtual-switch=HVS `
+         --registry-mirror=https://registry.docker-cn.com `
+         --kubernetes-version v1.12.1 `
+         --v=9
 ```
 
 ## 2.2 macOS
@@ -18,7 +24,11 @@ minikube start --vm-driver=hyperv --memory=4096 --hyperv-virtual-switch=HVS --re
 macOS需要`virtualbox`或者`hyperkit`
 
 ```sh
-minikube start --vm-driver=virtualbox --registry-mirror=https://registry.docker-cn.com --v=9
+minikube start \
+         --vm-driver=virtualbox \
+         --registry-mirror=https://registry.docker-cn.com \
+         --kubernetes-version v1.12.1 \
+         --v=9
 ```
 
 # 3 参考
