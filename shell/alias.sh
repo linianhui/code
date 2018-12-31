@@ -36,6 +36,8 @@ alias hs='caddy -port 2015 browse markdown'
 
 alias env='env | sort'
 
+alias penv='proc_env'
+
 # https://www.gnu.org/software/bash/manual/html_node/Shell-Parameter-Expansion.html
 alias path='echo "${PATH//:/\n}"'
 
