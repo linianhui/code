@@ -1,7 +1,10 @@
 # wget https://raw.githubusercontent.com/linianhui/code/master/shell/ubuntu/install-v2ray.sh
-# sudo bash install-v2ray.sh vmss_port vmss_userid ss_port ss_password
+# sudo bash install-v2ray.sh VMESS_PORT VMESS_CLIENT_ID
 
 set -x
+
+VMESS_PORT=$1
+VMESS_CLIENT_ID=$2
 
 bash <(wget -O - https://install.direct/go.sh)
 
@@ -12,22 +15,14 @@ cat <<-EOF > /etc/v2ray/config.json
   "inbounds": [
     {
       "protocol": "vmess",
-      "port": $1,
+      "listen": "127.0.0.1",
+      "port": $VMESS_PORT,
       "settings": {
         "clients": [
           {
-            "id": "$2"
+            "id": "$VMESS_CLIENT_ID"
           }
         ]
-      }
-    },
-    {
-      "protocol": "shadowsocks",
-      "port": $3,
-      "settings": {
-        "method": "aes-256-cfb",
-        "password": "$4",
-        "network": "tcp,udp"
       }
     }
   ],
@@ -42,11 +37,13 @@ EOF
 
 cat /etc/v2ray/config.json
 
-service v2ray restart
+service v2ray stop
 
-lsof -i:$1
+service v2ray start
 
-lsof -i:$3
+service v2ray status
+
+lsof -i:$VMESS_PORT
 
 # https://github.com/v2ray/v2ray-core
 # https://www.v2ray.com/chapter_02
