@@ -275,3 +275,10 @@ function Env-SetCoreOSEnvironmentVariable() {
 function Env-SetPowerShellEnvironmentVariable() {
     Env-TrySetVariable -Variable 'POWERSHELL_TELEMETRY_OPTOUT' -Value 'true'
 }
+
+# https://github.com/v2ray/v2ray-core
+function Env-SetV2RayEnvironmentVariable() {
+    $APP_V2RAY_PATH = $APP_PATH + '.v2ray\';
+
+    Env-TryAppendPathVariable -Value $APP_V2RAY_PATH
+}

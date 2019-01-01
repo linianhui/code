@@ -64,3 +64,7 @@ export PATH=$PATH:$HELM_HOME
 export CADDY_HOME=$MY_APP_HOME/_caddy
 export CADDYPATh=$MY_CACHE_HOME/_caddy
 export PATH=$PATH:$CADDY_HOME
+
+# https://github.com/v2ray/v2ray-core
+export V2RAY_HOME=$MY_APP_HOME/_v2ray
+export PATH=$PATH:$V2RAY_HOME
