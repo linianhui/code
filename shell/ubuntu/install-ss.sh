@@ -1,5 +1,5 @@
 # wget https://raw.githubusercontent.com/linianhui/code/master/shell/ubuntu/install-ss.sh
-# sudo bash install-ss.sh you_port you_password
+# sudo bash install-ss.sh ss_port ss_password
 
 set -x
 
