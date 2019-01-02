@@ -38,6 +38,8 @@ alias env='env | sort'
 
 alias penv='proc_env'
 
+alias penv2='proc_env2'
+
 # https://www.gnu.org/software/bash/manual/html_node/Shell-Parameter-Expansion.html
 alias path='echo "${PATH//:/\n}"'
 

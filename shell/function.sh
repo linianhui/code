@@ -18,3 +18,7 @@ function git_warn_gc () {
 function proc_env(){
   cat /proc/$1/environ | tr '\0' '\n'
 }
+
+function proc_env2(){
+  ps ewww -o command $1 | tr ' ' '\n'
+}
