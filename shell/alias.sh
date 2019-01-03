@@ -52,3 +52,5 @@ alias jy='json2yaml --depth 64 --indentation 2'
 alias shell='echo $SHELL'
 
 alias shells='cat /etc/shells'
+
+alias i18n='locale'
