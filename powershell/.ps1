@@ -10,7 +10,6 @@ Param(
 @(
     '/log.ps1',
     '/env.ps1',
-    '/env-set.ps1',
     '/file.ps1',
     '/git.ps1',
     '/git-config.ps1',

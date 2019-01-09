@@ -50,4 +50,4 @@ https://github.com/kubernetes/minikube/blob/master/docs/drivers.md
 
 [env.sh]:../shell/env.sh
 
-[env.ps1]:../powershell/functions/env/env.ps1
+[env.ps1]:../powershell/env.ps1

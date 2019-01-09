@@ -43,6 +43,6 @@ https://github.com/kubernetes/kubectl
 
 https://kubernetes.io/docs/tasks/tools/install-kubectl
 
-[env.ps1]:../powershell/functions/env/env.ps1
+[env.ps1]:../powershell/env.ps1
 
 [env.sh]:../shell/env.sh
