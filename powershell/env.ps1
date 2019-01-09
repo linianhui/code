@@ -1,4 +1,4 @@
-################################
+﻿################################
 # powershell env functions
 ################################
 
@@ -351,4 +351,9 @@ function Env-SetV2RayEnvironmentVariable() {
     $APP_V2RAY_PATH = $APP_PATH + '.v2ray\';
 
     Env-TryAppendPathVariable -Value $APP_V2RAY_PATH
+}
+
+function Env-SetLocaleEnvironmentVariable() {
+    Env-TrySetVariable -Variable 'LC_ALL' -Value 'zh_CN.UTF-8'
+    Env-TrySetVariable -Variable 'LANG' -Value 'C.UTF-8'
 }
