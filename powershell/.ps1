@@ -12,8 +12,6 @@ Param(
     '/env.ps1',
     '/file.ps1',
     '/git.ps1',
-    '/git-config.ps1',
-    '/git-bigfile.ps1',
     '/github.ps1',
     '/gui.ps1',
     '/hosts.ps1',
