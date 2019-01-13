@@ -18,8 +18,16 @@ function Git-Pull-Rebase-Recurse () {
         $Path = $_.FullName.ToLower()
         Log-Debug "`ncd $Path"
         Set-Location $Path
+
+        Log-Debug 'git remote get-url --all origin'
+        git remote get-url --all origin
+
+        Log-Debug 'git symbolic-ref HEAD'
+        git symbolic-ref HEAD
+        
         Log-Debug "git pull --rebase"
         git pull --rebase
+        
         Set-Location -Path ..
     }
 }
