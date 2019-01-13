@@ -19,8 +19,8 @@ function Git-Pull-Rebase-Recurse () {
         Log-Debug "`ncd $Path"
         Set-Location $Path
 
-        Log-Debug 'git remote get-url --all origin'
-        git remote get-url --all origin
+        Log-Debug 'git remote -v'
+        git remote -v
 
         Log-Debug 'git symbolic-ref HEAD'
         git symbolic-ref HEAD
@@ -148,6 +148,9 @@ function Git-SetGlobalAlias () {
     # chmod +/- x
     git config --global alias.chmod644 "update-index --chmod=-x"
     git config --global alias.chmod755 "update-index --chmod=+x"
+
+    # head
+    git config --global alias.head 'symbolic-ref HEAD'
 }
 
 # set global config
