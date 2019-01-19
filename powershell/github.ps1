@@ -17,7 +17,7 @@ $GITHUB_PATH_ALIAS = @{
     ns  = $MY_GITHUB_PATH + 'nuget.server';
     oe  = $MY_GITHUB_PATH + 'oidc.example';
     gw  = $MY_GITHUB_PATH + 'git.web';
-    n   = $MY_GITHUB_PATH + 'network';
+    n   = $MY_GITHUB_PATH + 'networking';
 }
 
 function Github-ChangeDirectory ([string] $Alias) {
