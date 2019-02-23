@@ -4,7 +4,7 @@
 
 1. 下载最新的Docker Machine
     ```sh
-    sudo curl -L https://github.com/docker/machine/releases/download/v0.16.0/docker-machine-$(uname -s)-$(uname -m) -o /usr/local/bin/docker-machine
+    sudo curl -L https://github.com/docker/machine/releases/download/v0.16.1/docker-machine-$(uname -s)-$(uname -m) -o /usr/local/bin/docker-machine
     ```
 2. 添加可执行权限
     ```sh
@@ -17,7 +17,7 @@
 
 ## 1.2 Windows
 
-https://github.com/docker/machine/releases/download/v0.16.0/docker-machine-Windows-x86_64.exe
+https://github.com/docker/machine/releases/download/v0.16.1/docker-machine-Windows-x86_64.exe
 
 ```powershell
 ## 设置环境变量
