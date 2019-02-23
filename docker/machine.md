@@ -28,7 +28,7 @@ docker-machine -v
 
 # 2 创建docker vm
 
-https://github.com/boot2docker/boot2docker/releases/download/v18.09.1-rc1/boot2docker.iso
+https://github.com/boot2docker/boot2docker/releases/download/v18.09.2/boot2docker.iso
 
 >Windows下使用`git bash`（管理员模式）执行一下命令。
 
