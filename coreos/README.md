@@ -30,14 +30,14 @@ container-linux-config-transpiler -strict -pretty -platform custom -in-file igni
 
 HTTP服务器：https://github.com/mholt/caddy/releases
 
-本地`HTTP服务器`托管以下四个文件(`2023.4.0`为`version.txt`中的`COREOS_VERSION`)：
+本地`HTTP服务器`托管以下四个文件(`2023.5.0`为`version.txt`中的`COREOS_VERSION`)：
 
 | 说明                 | 本地的HTTP地址                                                       |
 | -------------------- | -------------------------------------------------------------------- |
 | 配置文件             | http://192.168.2.2:2015/ignition.json                                |
 | 版本信息             | http://192.168.2.2:2015/current/version.txt                          |
-| 安装的镜像文件       | http://192.168.2.2:2015/2023.4.0/coreos_production_image.bin.bz2     |
-| 安装的镜像文件的签名 | http://192.168.2.2:2015/2023.4.0/coreos_production_image.bin.bz2.sig |
+| 安装的镜像文件       | http://192.168.2.2:2015/2023.5.0/coreos_production_image.bin.bz2     |
+| 安装的镜像文件的签名 | http://192.168.2.2:2015/2023.5.0/coreos_production_image.bin.bz2.sig |
 
 ### 1.2.4 安装
 ```sh

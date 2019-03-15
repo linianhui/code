@@ -1,7 +1,7 @@
-# https://coreos.com/releases/#1911.5.0
-# https://coreos.com/os/docs/1911.5.0/configuration.html
-# https://coreos.com/os/docs/1911.5.0/clc-examples.html
-# https://coreos.com/os/docs/1911.5.0/migrating-to-clcs.html
+# https://coreos.com/releases
+# https://coreos.com/os/docs/latest/configuration.html
+# https://coreos.com/os/docs/latest/clc-examples.html
+# https://coreos.com/os/docs/latest/migrating-to-clcs.html
 # https://coreos.com/ignition/docs/latest/
 # https://coreos.com/validate/
 
@@ -10,8 +10,11 @@ passwd:
     - name: core
       # 1234 : openssl passwd -1
       password_hash: $1$IpVXUffu$o6M893N4VTur5nLIfQJrm1
-      ssh_authorized_keys :
+      ssh_authorized_keys:
         - ssh-rsa you-ssh-rsa-pub-key
+      groups:
+        - sudo
+        - docker
     - name: root
       password_hash: $1$IpVXUffu$o6M893N4VTur5nLIfQJrm1
 
@@ -21,6 +24,18 @@ update:
 docker:
   flags:
     - --registry-mirror=https://registry.docker-cn.com
+
+etcd:
+  name: '{HOSTNAME}'
+  advertise_client_urls: '{PRIVATE_IPV4}:2379'
+  initial_advertise_peer_urls: '{PRIVATE_IPV4}:2380'
+  listen_client_urls: 'http://0.0.0.0:2379'
+  listen_peer_urls: 'http://{PRIVATE_IPV4}:2380'
+  initial_cluster: '%m=http://{PRIVATE_IPV4}:2380'
+
+flannel:
+  version: 0.7.0
+  etcd_prefix: '/coreos.com/network2'
 
 networkd:
   units:
