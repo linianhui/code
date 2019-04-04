@@ -3,8 +3,8 @@
 ################################
 
 
-Set-Alias -Name c -Value Github-ChangeDirectory
-Set-Alias -Name cc -Value Github-UseVsCodeOpenDirectory
+Set-Alias -Name c -Value Code-ChangeDirectory
+Set-Alias -Name cc -Value Code-UseVsCodeOpenDirectory
 
 Set-Alias -Name d -Value docker
 Set-Alias -Name dc -Value docker-compose

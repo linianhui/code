@@ -4,7 +4,9 @@
 
 # params
 Param(
-    [switch]$Init = $False
+    [switch]$Init = $False,
+    [string]$GitUserName = 'lnh',
+    [string]$GitUserEmail = 'lnhcode@outlook.com'
 )
 
 @(
@@ -12,7 +14,7 @@ Param(
     '/env.ps1',
     '/file.ps1',
     '/git.ps1',
-    '/github.ps1',
+    '/code.ps1',
     '/gui.ps1',
     '/hosts.ps1',
     '/profile.ps1',
@@ -33,7 +35,7 @@ if ($Init) {
 
     Git-SetGlobalConfig
 
-    Git-SetGlobalUser -UserName 'lnh' -UserEmail 'lnhcode@outlook.com'
+    Git-SetGlobalUser -UserName $GitUserName -UserEmail $GitUserEmail
 
     Git-GetConfig
 
