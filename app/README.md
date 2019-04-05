@@ -4,16 +4,16 @@
     * https://download.microsoft.com/download/C/4/8/C48F6E20-FE20-41C6-8C1C-408FE7B49A3A/Windows7-USB-DVD-Download-Tool-Installer-en-US.exe
 
 2. Rufus ：https://github.com/pbatard/rufus
-    * https://rufus.ie/downloads/rufus-3.3p.exe
+    * https://github.com/pbatard/rufus/releases/download/v3.5/rufus-3.5p.exe
 
 4. Etcher ：https://github.com/resin-io/etcher
     * https://github.com/resin-io/etcher/releases/download/v1.4.4/Etcher-Portable-1.4.4-x86.exe
 
 5. 7z ：https://www.7-zip.org/download.html
-    * https://www.7-zip.org/a/7z1805-x64.exe
+    * https://www.7-zip.org/a/7z1900-x64.exe
 
 6. CPU-Z ：https://www.cpuid.com/softwares/cpu-z.html
-    * http://download.cpuid.com/cpu-z/cpu-z_1.86-cn.zip
+    * http://download.cpuid.com/cpu-z/cpu-z_1.88-cn.zip
 
 7. GPU-Z ：https://www.techpowerup.com/gpuz/
     * http://us1-dl.techpowerup.com/files/5_FKMNerfjsrEW2JgFv5gQ/1537790917/GPU-Z.2.11.0.exe
@@ -25,7 +25,7 @@
 # Disk
 
 1. CrystalDiskInfo ：https://crystalmark.info/en/download
-    * http://pumath.dl.osdn.jp/crystaldiskinfo/69917/CrystalDiskInfo7_7_0.zip
+    * https://mirrors.gigenet.com/OSDN//crystaldiskinfo/70295/CrystalDiskInfo8_0_0.zip
     
 2. AS SSD Benchmark ：https://www.alex-is.de/PHP/fusion/downloads.php?cat_id=4&download_id=9
     * https://www.alex-is.de/progs/AS%20SSD%20Benchmark.zip
@@ -33,7 +33,8 @@
 3. Spacesniffer : http://www.uderzo.it
     * http://www.uderzo.it/main_products/space_sniffer/
     * https://www.fosshub.com/SpaceSniffer.html?dwl=spacesniffer_1_3_0_2.zip
-    
+
+
 # Download
 
 1. Free Download Manager : https://www.freedownloadmanager.org/

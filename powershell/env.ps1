@@ -206,17 +206,17 @@ function Env-SetADBEnvironmentVariable() {
 }
 
 # https://www.cpuid.com/softwares/cpu-z.html
-function Env-SetCPUEnvironmentVariable() {
-    $APP_CPU_PATH = $APP_PATH + '.cpu\';
+function Env-SetCPUZEnvironmentVariable() {
+    $APP_CPU_Z_PATH = $APP_PATH + '.cpu-z\';
 
-    Env-TryAppendPathVariable -Value $APP_CPU_PATH
+    Env-TryAppendPathVariable -Value $APP_CPU_Z_PATH
 }
 
 # https://www.techpowerup.com/gpuz/
-function Env-SetGPUEnvironmentVariable() {
-    $APP_GPU_PATH = $APP_PATH + '.gpu\';
+function Env-SetGPUZEnvironmentVariable() {
+    $APP_GPU_Z_PATH = $APP_PATH + '.gpu-z\';
 
-    Env-TryAppendPathVariable -Value $APP_GPU_PATH
+    Env-TryAppendPathVariable -Value $APP_GPU_Z_PATH
 }
 
 # http://www.superpi.net/Download/
@@ -356,4 +356,25 @@ function Env-SetV2RayEnvironmentVariable() {
 function Env-SetLocaleEnvironmentVariable() {
     Env-TrySetVariable -Variable 'LC_ALL' -Value 'zh_CN.UTF-8'
     Env-TrySetVariable -Variable 'LANG' -Value 'C.UTF-8'
+}
+
+# https://www.alex-is.de/PHP/fusion/downloads.php?cat_id=4&download_id=9
+function Env-SetASSSDBenchmarkEnvironmentVariable() {
+    $APP_AS_SSD_BENCHMARK_PATH = $APP_PATH + '.as-ssd-benchmark\';
+
+    Env-TryAppendPathVariable -Value $APP_AS_SSD_BENCHMARK_PATH
+}
+
+# https://crystalmark.info/en/download/
+function Env-SetDiskInfoEnvironmentVariable() {
+    $APP_DISK_INFO_PATH = $APP_PATH + '.disk-info\';
+
+    Env-TryAppendPathVariable -Value $APP_DISK_INFO_PATH
+}
+
+# https://github.com/pbatard/rufus
+function Env-SetRufusEnvironmentVariable() {
+    $APP_RUFUS_PATH = $APP_PATH + '.rufus\';
+
+    Env-TryAppendPathVariable -Value $APP_RUFUS_PATH
 }
