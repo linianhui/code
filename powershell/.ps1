@@ -24,7 +24,8 @@ Param(
     '/vm.ps1',
     '/http.ps1',
     '/yaml.ps1',
-    '/alias.ps1'
+    '/alias.ps1',
+    '/ip.ps1'
 ) | Foreach-Object { . "$PSScriptRoot$_" }
 
 if ($Init) {
