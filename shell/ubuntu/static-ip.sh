@@ -1,4 +1,9 @@
+# wget https://raw.githubusercontent.com/linianhui/code/master/shell/ubuntu/static-ip.sh
+# sudo bash static-ip.sh 201
+
 set -x
+
+IP=$1
 
 ip a
 
@@ -12,7 +17,7 @@ network:
   ethernets:
     eth0:
       addresses:
-        - 192.168.2.201/24
+        - 192.168.2.$IP/24
       dhcp4: no
       dhcp6: no
       gateway4: 192.168.2.1
