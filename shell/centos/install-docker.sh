@@ -1,3 +1,6 @@
+# wget https://raw.githubusercontent.com/linianhui/code/master/shell/centos/install-docker.sh
+# sudo bash install-docker.sh
+
 set -x
 
 yum remove -y docker \
