@@ -1,4 +1,9 @@
+# wget https://raw.githubusercontent.com/linianhui/code/master/shell/centos/static-ip.sh
+# sudo bash static-ip.sh 202
+
 set -x
+
+IP=$1
 
 ip a
 
@@ -11,7 +16,7 @@ NAME=eth0
 DEVICE=eth0
 ONBOOT=yes
 BOOTPROTO=static
-IPADDR=192.168.2.202
+IPADDR=192.168.2.$IP
 NETMASK=255.255.255.0
 GATEWAY=192.168.2.1
 PROXY_METHOD=none
