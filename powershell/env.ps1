@@ -297,10 +297,18 @@ function Env-SetMinikubeEnvironmentVariable() {
     Env-TryAppendPathVariable -Value $APP_MINIKUBE_PATH
 }
 
-# https://docs.docker.com/compose
+# https://docs.docker.com/engine/reference/commandline/cli/#environment-variables
+# https://docs.docker.com/engine/reference/commandline/dockerd/#daemon-socket-option
+function Env-SetDockerEnvironmentVariable() {
+    $APP_DOCKER_PATH = $APP_PATH + '.docker\';
+
+    Env-TrySetVariable -Variable 'DOCKER_HOST' -Value 'tcp://0.0.0.0:2375'
+    Env-TryAppendPathVariable -Value $APP_DOCKER_PATH
+}
+
 # https://docs.docker.com/machine
 # https://docs.docker.com/machine/drivers/hyper-v/
-function Env-SetDockerEnvironmentVariable() {
+function Env-SetDockerMachineEnvironmentVariable() {
     $APP_DOCKER_PATH = $APP_PATH + '.docker\';
     $BOOT2DOCKER_ISO_PATH = 'file://' + $APP_DOCKER_PATH + 'boot2docker.iso';
     $CACHE_DOCKER_PATH = 'e:\.docker\';
@@ -312,6 +320,7 @@ function Env-SetDockerEnvironmentVariable() {
     Env-TrySetVariable -Variable 'HYPERV_CPU_COUNT' -Value 1
     Env-TrySetVariable -Variable 'HYPERV_MEMORY' -Value 1024
     Env-TrySetVariable -Variable 'HYPERV_DISK_SIZE' -Value 10240
+
     Env-TryAppendPathVariable -Value $APP_DOCKER_PATH
 }
 
