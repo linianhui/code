@@ -18,6 +18,7 @@ $CODE_PATH_ALIAS = @{
     oe  = $MY_CODE_PATH + 'oidc.example';
     gw  = $MY_CODE_PATH + 'git.web';
     n   = $MY_CODE_PATH + 'networking';
+    hb  = $MY_CODE_PATH + 'http.benchmark';
 }
 
 function Code-ChangeDirectory ([string] $Alias) {
