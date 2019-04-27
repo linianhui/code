@@ -1,9 +1,9 @@
-# Install Visual Studio 2017
+# Install Visual Studio 2019
 
 下载离线安装包 : 
 ```powershell
 ./vs_community.exe `
-  --layout f:\vs_community_2017 `
+  --layout d:\vs_community_2019 `
   --lang en-US `
   --includeRecommended `
   --includeOptional `
@@ -25,10 +25,12 @@
 
 # 参考
 
-vs_community.exe : https://aka.ms/vs/15/release/vs_community.exe
+https://visualstudio.microsoft.com/downloads/
 
-Use command-line parameters to install Visual Studio 2017 : https://docs.microsoft.com/en-us/visualstudio/install/use-command-line-parameters-to-install-visual-studio
+https://visualstudio.microsoft.com/vs/compare/
 
-Visual Studio 2017 workload and component IDs : https://docs.microsoft.com/en-us/visualstudio/install/workload-and-component-ids?view=vs-2017
+https://docs.microsoft.com/en-us/visualstudio/install/create-an-offline-installation-of-visual-studio?view=vs-2019
 
-Visual Studio Community 2017 component directory : https://docs.microsoft.com/en-us/visualstudio/install/workload-component-id-vs-community?view=vs-2017
+https://docs.microsoft.com/en-us/visualstudio/install/workload-and-component-ids?view=vs-2019
+
+https://docs.microsoft.com/en-us/visualstudio/install/workload-component-id-vs-community?view=vs-2019
