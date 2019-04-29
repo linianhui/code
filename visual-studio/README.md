@@ -1,26 +1,39 @@
-# Install Visual Studio 2019
+# Install Visual Studio
 
-下载离线安装包 : 
+下载离线安装包 : `vs_community.exe --layout d:\vs_community`。
+
+## Visual Studio Community
 ```powershell
 ./vs_community.exe `
-  --layout d:\vs_community_2019 `
+  --layout d:\vs_community `
   --lang en-US `
   --includeRecommended `
   --includeOptional `
-  --add Microsoft.VisualStudio.Component.CoreEditor `
+  --add Microsoft.VisualStudio.Workload.CoreEditor `
   --add Microsoft.VisualStudio.Workload.ManagedDesktop `
   --add Microsoft.VisualStudio.Workload.NetCoreTools `
   --add Microsoft.VisualStudio.Workload.NetWeb `
-  --add Microsoft.VisualStudio.Workload.ManagedDesktopBuildTools `
-  --add Microsoft.VisualStudio.Workload.MSBuildTools `
-  --add Microsoft.VisualStudio.Workload.NetCoreBuildTools `
-  --add Microsoft.VisualStudio.Workload.WebBuildTools `
+  --add Microsoft.VisualStudio.Workload.VisualStudioExtension `
+  --add Microsoft.VisualStudio.Component.Git `
   --add Component.GitHub.VisualStudio `
   --add Microsoft.Component.HelpViewer `
   --add Microsoft.VisualStudio.Component.DependencyValidation.Community `
   --add Microsoft.VisualStudio.Component.GraphDocument `
-  --add Microsoft.VisualStudio.Component.LinqToSql `
-  --add Microsoft.VisualStudio.Component.TestTools.MicrosoftTestManager 
+  --add Microsoft.VisualStudio.Component.LinqToSql
+```
+
+## Visual Studio Build Tools
+
+```powershell
+./vs_buildtools.exe `
+  --layout d:\vs_buildtools `
+  --lang en-US `
+  --includeRecommended `
+  --includeOptional `
+  --add Microsoft.VisualStudio.Workload.ManagedDesktopBuildTools `
+  --add Microsoft.VisualStudio.Workload.MSBuildTools `
+  --add Microsoft.VisualStudio.Workload.NetCoreBuildTools `
+  --add Microsoft.VisualStudio.Workload.WebBuildTools
 ```
 
 # 参考
