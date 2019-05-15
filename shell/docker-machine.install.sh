@@ -1,3 +1,6 @@
+# wget https://raw.githubusercontent.com/linianhui/code/master/shell/docker-machine.install.sh
+# sudo bash docker.compose.install
+
 set -x
 
 curl -L https://github.com/docker/machine/releases/download/v0.16.1/docker-machine-$(uname -s)-$(uname -m) \

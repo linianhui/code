@@ -1,5 +1,5 @@
-# wget https://raw.githubusercontent.com/linianhui/code/master/shell/ubuntu/static-ip.sh
-# sudo bash static-ip.sh 201
+# wget https://raw.githubusercontent.com/linianhui/code/master/shell/ubuntu.network.static-ip.sh
+# sudo bash ubuntu.network.static-ip.sh 201
 
 set -x
 

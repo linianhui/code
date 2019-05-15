@@ -1,5 +1,5 @@
-# wget https://raw.githubusercontent.com/linianhui/code/master/shell/ubuntu/install-docker.sh
-# sudo bash install-docker.sh
+# wget https://raw.githubusercontent.com/linianhui/code/master/shell/ubuntu.docker.install.sh
+# sudo bash ubuntu.docker.install.sh
 
 set -x
 

@@ -1,3 +1,6 @@
+# wget https://raw.githubusercontent.com/linianhui/code/master/shell/centos.yum.163.sh
+# sudo bash centos.yum.163.sh
+
 set -x
 
 cat /etc/yum.repos.d/CentOS-Base.repo

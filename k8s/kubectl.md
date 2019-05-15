@@ -45,4 +45,4 @@ https://kubernetes.io/docs/tasks/tools/install-kubectl
 
 [env.ps1]:../powershell/env.ps1
 
-[env.sh]:../shell/env.sh
+[env.sh]:../shell/_env.sh

@@ -48,6 +48,6 @@ https://kubernetes.io/docs/setup/minikube/
 https://github.com/kubernetes/minikube/blob/master/docs/drivers.md
 
 
-[env.sh]:../shell/env.sh
+[env.sh]:../shell/_env.sh
 
 [env.ps1]:../powershell/env.ps1

@@ -1,3 +1,6 @@
+# wget https://raw.githubusercontent.com/linianhui/code/master/shell/centos.k8s.kubeadm.install.sh
+# sudo bash centos.k8s.kubeadm.install.sh
+
 set -x
 
 cat <<-EOF > /etc/yum.repos.d/kubernetes.repo

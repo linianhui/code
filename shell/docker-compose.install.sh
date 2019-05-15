@@ -1,3 +1,6 @@
+# wget https://raw.githubusercontent.com/linianhui/code/master/shell/docker-compose.install.sh
+# sudo bash docker.compose.install
+
 set -x
 
 curl -L https://github.com/docker/compose/releases/download/1.24.0/docker-compose-$(uname -s)-$(uname -m) \

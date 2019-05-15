@@ -46,7 +46,7 @@
 
 # 参考
 
-[/shell/ubuntu/install-docker.sh]
+[/shell/ubuntu.docker.install.sh]
 
 https://docs.docker.com/install/linux/docker-ce/ubuntu/
 
@@ -54,4 +54,4 @@ https://www.docker-cn.com/registry-mirror
 
 https://opsx.alibaba.com/mirror
 
-[/shell/ubuntu/install-docker.sh]:../shell/ubuntu/install-docker.sh
+[/shell/ubuntu.docker.install.sh]:../shell/ubuntu.docker.install.sh

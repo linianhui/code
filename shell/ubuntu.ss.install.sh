@@ -1,5 +1,5 @@
-# wget https://raw.githubusercontent.com/linianhui/code/master/shell/ubuntu/install-ss.sh
-# sudo bash install-ss.sh SHADOW_SOCKS_PORT SHADOW_SOCKS_PASSWORD
+# wget https://raw.githubusercontent.com/linianhui/code/master/shell/ubuntu.ss.install.sh
+# sudo bash ubuntu.ss.install.sh SHADOW_SOCKS_PORT SHADOW_SOCKS_PASSWORD
 
 set -x
 

@@ -1,5 +1,5 @@
-# wget https://raw.githubusercontent.com/linianhui/code/master/shell/centos/install-docker.sh
-# sudo bash install-docker.sh
+# wget https://raw.githubusercontent.com/linianhui/code/master/shell/centos.docker.install.sh
+# sudo bash centos.docker.install.sh
 
 set -x
 

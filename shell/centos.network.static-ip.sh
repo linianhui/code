@@ -1,5 +1,5 @@
-# wget https://raw.githubusercontent.com/linianhui/code/master/shell/centos/static-ip.sh
-# sudo bash static-ip.sh 202
+# wget https://raw.githubusercontent.com/linianhui/code/master/shell/centos.network.static-ip.sh
+# sudo bash centos.network.static-ip.sh 202
 
 set -x
 

@@ -1,5 +1,5 @@
-# wget https://raw.githubusercontent.com/linianhui/code/master/shell/ubuntu/install-v2ray.sh
-# sudo bash install-v2ray.sh VMESS_PORT VMESS_CLIENT_ID
+# wget https://raw.githubusercontent.com/linianhui/code/master/shell/ubuntu.v2ray.install.sh
+# sudo bash ubuntu.v2ray.install.sh VMESS_PORT VMESS_CLIENT_ID
 
 set -x
 

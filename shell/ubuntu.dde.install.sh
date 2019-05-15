@@ -1,3 +1,6 @@
+# wget https://raw.githubusercontent.com/linianhui/code/master/shell/ubuntu.dde.install.sh
+# sudo bash ubuntu.dde.install.sh
+
 set -x
 
 # 1. 添加 PPA Repository https://launchpad.net/~leaeasy/+archive/ubuntu/dde

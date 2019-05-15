@@ -1,7 +1,5 @@
 # Ubuntu
 
-[/shell/ubuntu](../shell/ubuntu)
-
 | name           | link                                              |
 | -------------- | ------------------------------------------------- |
 |                | http://releases.ubuntu.com                        |
@@ -13,9 +11,6 @@
 | dde            | https://www.deepin.org/original/deepin-boot-maker |
 
 # CentOS
-
-[/shell/centos](../shell/centos)
-
 
 | name           | link                                     |
 | -------------- | ---------------------------------------- |

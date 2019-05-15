@@ -46,7 +46,7 @@ docker-machine --debug create --driver virtualbox default
 
 # 参考
 
-[/shell/docker/install-docker-machine.sh]
+[/shell/docker-machine.install.sh]
 
 https://docs.docker.com/machine
 
@@ -54,4 +54,4 @@ https://github.com/docker/machine/releases/
 
 https://github.com/boot2docker/boot2docker/releases
 
-[/shell/docker/install-docker-machine.sh]:../shell/docker/install-docker-machine.sh
+[/shell/docker-machine.install.sh]:../shell/docker-machine.install.sh
