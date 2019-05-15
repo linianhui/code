@@ -3,10 +3,12 @@
 
 set -x
 
+
 # 下载镜像
 kubeadm config images list | \
 sed -e 's/^/docker pull /g' -e 's#k8s.gcr.io#registry.cn-hangzhou.aliyuncs.com/google_containers#g' | \
 sh -x
+
 
 # 重命名镜像
 docker images | \
@@ -15,8 +17,13 @@ awk '{print "docker tag ",$1":"$2,$1":"$2}' | \
 sed -e 's#registry.cn-hangzhou.aliyuncs.com/google_containers#k8s.gcr.io#2' | \
 sh -x
 
+
 # 删除google_containers镜像
 docker images | \
 grep google_containers | \
 awk '{print "docker rmi ", $1":"$2}' | \
 sh -x
+
+
+# 查看k8s镜像
+docker images | grep k8s
