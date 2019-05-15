@@ -1,5 +1,5 @@
-# wget https://raw.githubusercontent.com/linianhui/code/master/shell/ubuntu.k8s.kubeadm.install.sh
-# sudo bash ubuntu.k8s.kubeadm.install.sh
+# wget https://raw.githubusercontent.com/linianhui/code/master/shell/ubuntu.k8s.1.kubeadm.install.sh
+# sudo bash ubuntu.k8s.1.kubeadm.install.sh
 
 set -x
 

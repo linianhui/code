@@ -1,5 +1,5 @@
-# wget https://raw.githubusercontent.com/linianhui/code/master/shell/ubuntu.k8s.kubeadm.init.sh
-# sudo bash ubuntu.k8s.init.sh
+# wget https://raw.githubusercontent.com/linianhui/code/master/shell/ubuntu.k8s.0.pre-setting.sh
+# sudo bash ubuntu.k8s.0.pre-setting.sh
 
 set -x
 
