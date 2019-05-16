@@ -47,7 +47,7 @@ net.bridge.bridge-nf-call-iptables=1
 EOF
 modprobe br_netfilter
 cp /etc/rc.local /etc/rc.local.bak
-cat <<-EOF > /etc/rc.local
+tee <<-EOF /etc/rc.local
 modprobe br_netfilter
 EOF
 sysctl --system
