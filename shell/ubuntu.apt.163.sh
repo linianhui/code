@@ -1,5 +1,6 @@
 # wget https://raw.githubusercontent.com/linianhui/code/master/shell/ubuntu.apt.163.sh
 # sudo bash ubuntu.apt.163.sh
+# sh -c "$(curl -fsSL https://raw.githubusercontent.com/linianhui/code/master/shell/ubuntu.apt.163.sh)"
 
 set -x
 
