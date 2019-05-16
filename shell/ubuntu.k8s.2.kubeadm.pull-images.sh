@@ -1,5 +1,6 @@
-# wget https://raw.githubusercontent.com/linianhui/code/master/shell/ubuntu.k8s.kubeadm.2.pull-images.sh
+# wget https://raw.githubusercontent.com/linianhui/code/master/shell/ubuntu.k8s.2.kubeadm.pull-images.sh
 # sudo bash ubuntu.k8s.2.kubeadm.pull-images.sh
+# sh -c "$(curl -fsSL https://raw.githubusercontent.com/linianhui/code/master/shell/ubuntu.k8s.2.kubeadm.pull-images.sh)"
 
 set -x
 
