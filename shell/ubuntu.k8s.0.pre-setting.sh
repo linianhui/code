@@ -1,5 +1,6 @@
 # wget https://raw.githubusercontent.com/linianhui/code/master/shell/ubuntu.k8s.0.pre-setting.sh
 # sudo bash ubuntu.k8s.0.pre-setting.sh
+# sh -c "$(curl -fsSL https://raw.githubusercontent.com/linianhui/code/master/shell/ubuntu.k8s.0.pre-setting.sh)"
 
 set -x
 
@@ -37,14 +38,9 @@ systemctl restart docker
 docker info | grep -i cgroup
 
 
-# 开启IPv4转发
-sed -i 's/#net.ipv4.ip_forward=1/net.ipv4.ip_forward=1/g' /etc/sysctl.conf
-cat /etc/sysctl.conf | grep 'net.ipv4.ip_forward'
-sysctl -p
-
-
-# 配置iptables
+# 配置内核参数
 tee <<-EOF /etc/sysctl.d/k8s.conf
+net.ipv4.ip_forward=1
 net.bridge.bridge-nf-call-ip6tables=1
 net.bridge.bridge-nf-call-iptables=1
 EOF
