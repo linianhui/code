@@ -7,7 +7,7 @@ set -x
 
 # 下载镜像
 kubeadm config images list | \
-sed -e 's/^/docker pull /g' -e 's#k8s.gcr.io#registry.cn-hangzhou.aliyuncs.com/google_containers#g' | \
+sed -e 's/^/docker pull /g' -e 's#k8s.gcr.io#registry.aliyuncs.com/google_containers#g' | \
 sh -x
 
 
@@ -15,7 +15,7 @@ sh -x
 docker images | \
 grep google_containers | \
 awk '{print "docker tag ",$1":"$2,$1":"$2}' | \
-sed -e 's#registry.cn-hangzhou.aliyuncs.com/google_containers#k8s.gcr.io#2' | \
+sed -e 's#registry.aliyuncs.com/google_containers#k8s.gcr.io#2' | \
 sh -x
 
 
