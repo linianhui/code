@@ -28,6 +28,7 @@ tee <<-EOF /etc/docker/daemon.json
 {
   "iptables": false,
   "storage-driver": "overlay2",
+  "exec-opts": ["native.cgroupdriver=systemd"],
   "registry-mirrors": [
     "https://registry.docker-cn.com"
   ]
