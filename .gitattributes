@@ -1,1 +1,5 @@
-*.reg text working-tree-encoding=UTF-16 eol=CRLF
+*     text=auto
+*.sh  text
+*.ps1 text
+*.md  text
+*.reg text eol=CRLF
