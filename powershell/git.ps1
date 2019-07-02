@@ -151,6 +151,11 @@ function Git-SetGlobalAlias () {
 
     # head
     git config --global alias.head 'symbolic-ref HEAD'
+
+    # proxy
+    git config --global alias.hsp-set "config --global https.proxy 'socks5://127.0.0.1:10001'"
+    git config --global alias.hsp-unset "config --global --unset https.proxy"
+    git config --global alias.hsp-get "config --global --get https.proxy"
 }
 
 # set global config
