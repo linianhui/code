@@ -16,8 +16,6 @@ Set-Alias -Name e -Value Gui-OpenExplorer
 
 Set-Alias -Name g -Value git
 
-Set-Alias -Name gi -Value git
-
 Set-Alias -Name gti -Value git
 
 Set-Alias -Name hs -Value http-server

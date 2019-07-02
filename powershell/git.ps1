@@ -94,9 +94,9 @@ function Git-GetBigFiles([int]$top = 20) {
     Log-Debug "begin..." $begin
 
     Git-GetAllBlobObjects | 
-        Sort-Object size -Descending | 
-        Select-Object -First $top | 
-        Format-Table -Property sha, @{Label = "size"; Expression = {($_.size / 1MB).ToString(('0.000')) + 'MB'} }, path -Wrap
+    Sort-Object size -Descending | 
+    Select-Object -First $top | 
+    Format-Table -Property sha, @{Label = "size"; Expression = { ($_.size / 1MB).ToString(('0.000')) + 'MB' } }, path -Wrap
 
     $end = Get-Date
     Log-Debug "end..." $end
@@ -151,11 +151,6 @@ function Git-SetGlobalAlias () {
 
     # head
     git config --global alias.head 'symbolic-ref HEAD'
-
-    # proxy
-    git config --global alias.hsp-set "config --global https.proxy 'socks5://127.0.0.1:10001'"
-    git config --global alias.hsp-unset "config --global --unset https.proxy"
-    git config --global alias.hsp-get "config --global --get https.proxy"
 }
 
 # set global config
@@ -213,5 +208,26 @@ function Git-GetConfig ([string]$Name) {
     }
     else {
         git config --list | Sort-Object
+    }
+}
+
+function Git-Proxy(
+    [switch]$set = $False,
+    [switch]$get = $True,
+    [switch]$unset = $False
+) {
+    if ($set) {
+        git config --global http.proxy 'socks5://127.0.0.1:10001'
+        git config --global https.proxy 'socks5://127.0.0.1:10001'
+    }
+
+    if ($unset) {
+        git config --global --unset http.proxy
+        git config --global --unset https.proxy
+    }
+    
+    if ($get) {
+        git config --global --get http.proxy
+        git config --global --get https.proxy
     }
 }
