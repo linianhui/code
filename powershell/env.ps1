@@ -302,7 +302,7 @@ function Env-SetMinikubeEnvironmentVariable() {
 function Env-SetDockerEnvironmentVariable() {
     $APP_DOCKER_PATH = $APP_PATH + '.docker\';
 
-    Env-TrySetVariable -Variable 'DOCKER_HOST' -Value 'tcp://0.0.0.0:2375'
+    Env-TrySetVariable -Variable 'DOCKER_HOST' -Value 'tcp://127.0.0.1:2375'
     Env-TryAppendPathVariable -Value $APP_DOCKER_PATH
 }
 
