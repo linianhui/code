@@ -70,4 +70,4 @@ export V2RAY_HOME=$MY_APP_HOME/_v2ray
 export PATH=$PATH:$V2RAY_HOME
 
 # https://docs.docker.com/engine/reference/commandline/dockerd/#daemon-socket-option
-export DOCKER_HOST='tcp://0.0.0.0:2375'
+export DOCKER_HOST='tcp://127.0.0.1:2375'
