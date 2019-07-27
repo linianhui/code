@@ -103,9 +103,7 @@ function Env-SetShadowsocksEnvironmentVariable() {
     Env-TryAppendPathVariable -Value $APP_SHADOWSOCKS_PATH
 }
 
-# http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
-# https://github.com/ojdkbuild/ojdkbuild
-# http://openjdk.java.net/install/
+# https://developers.redhat.com/products/openjdk/download
 function Env-SetJavaEnvironmentVariable() {
     $APP_JAVA_JDK_PATH = $APP_PATH + '.java\';
     $APP_JAVA_JDK_BIN_PATH = $APP_JAVA_JDK_PATH + 'bin\';
