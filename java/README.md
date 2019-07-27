@@ -2,12 +2,7 @@
 
 ## 1 安装Java
 
->JDK下载地址  
-  http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html  
-
->Open JDK:  
-  http://openjdk.java.net/install/  
-  https://github.com/ojdkbuild/ojdkbuild
+https://developers.redhat.com/products/openjdk/download
 
 1. 设置环境变量：
     ```powershell
@@ -20,9 +15,9 @@
 
 ## 2 安装Maven
 
->Maven 官方网站：https://maven.apache.org/
+https://maven.apache.org/download.cgi
 
-1. 下载二进制包：`apache-maven-3.5.3-bin.zip`解压至`d:\.app\.tools\.maven\`目录下。
+1. 下载二进制包：`apache-maven-3.6.1-bin.zip`解压至`d:\.app\.tools\.maven\`目录下。
 2. 设置环境变量：
     ```powershell
     Env-SetMavenEnvironmentVariable
@@ -35,9 +30,9 @@
 
 ## 3 安装Gradle
 
->Gradle 官方网站：https://gradle.org/releases/
+https://gradle.org/releases/
 
-1. 下载二进制包：`gradle-4.6-bin.zip`解压至`d:\.app\.tools\.gradle\`目录下。
+1. 下载二进制包：`gradle-5.5.1-bin.zip`解压至`d:\.app\.tools\.gradle\`目录下。
 2. 设置环境变量：
     ```powershell
     Env-SetGradleEnvironmentVariable
@@ -49,9 +44,9 @@
 
 ## 4 安装Spring Boot Cli
 
->Spring Boot 官方网站：https://projects.spring.io/spring-boot/
+https://repo.spring.io/release/org/springframework/boot/spring-boot-cli/2.1.6.RELEASE/
 
-1. 下载二进制包：`spring-boot-cli-2.0.1.RELEASE-bin.zip`解压至`d:\.app\.tools\.spring-boot-cli\`目录下。
+1. 下载二进制包：`spring-boot-cli-2.1.6.RELEASE-bin.zip`解压至`d:\.app\.tools\.spring-boot-cli\`目录下。
 2. 设置环境变量：
     ```powershell
     Env-SetSpringBootCliEnvironmentVariable
