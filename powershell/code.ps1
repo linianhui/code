@@ -14,11 +14,13 @@ $CODE_PATH_ALIAS = @{
     c   = $MY_CODE_PATH + 'code';
     cg  = $MY_CODE_PATH + 'code.guide';
     d   = $MY_CODE_PATH + 'docker';
+    gw  = $MY_CODE_PATH + 'git.web';
+    hb  = $MY_CODE_PATH + 'http.benchmark';
+    j   = $MY_CODE_PATH + 'jvm';
+    l   = $MY_CODE_PATH + 'linianhui.github.io';
+    n   = $MY_CODE_PATH + 'networking';
     ns  = $MY_CODE_PATH + 'nuget.server';
     oe  = $MY_CODE_PATH + 'oidc.example';
-    gw  = $MY_CODE_PATH + 'git.web';
-    n   = $MY_CODE_PATH + 'networking';
-    hb  = $MY_CODE_PATH + 'http.benchmark';
 }
 
 function Code-ChangeDirectory ([string] $Alias) {
