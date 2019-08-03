@@ -385,3 +385,10 @@ function Env-SetRufusEnvironmentVariable() {
 
     Env-TryAppendPathVariable -Value $APP_RUFUS_PATH
 }
+
+# https://github.com/FFmpeg/FFmpeg
+function Env-SetFFmpegEnvironmentVariable() {
+    $APP_FFMPEG_PATH = $APP_PATH + '.ffmpeg\bin';
+
+    Env-TryAppendPathVariable -Value $APP_FFMPEG_PATH
+}
