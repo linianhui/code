@@ -46,3 +46,5 @@ if ($Init) {
 Git-ImportPoshGit
 
 UI-SetDisplayOptions
+
+Write-Host "Get-ExecutionPolicy $(Get-ExecutionPolicy)" -ForegroundColor Green
