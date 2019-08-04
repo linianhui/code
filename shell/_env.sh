@@ -71,3 +71,13 @@ export PATH=$PATH:$V2RAY_HOME
 
 # https://docs.docker.com/engine/reference/commandline/dockerd/#daemon-socket-option
 export DOCKER_HOST='tcp://127.0.0.1:2375'
+
+
+# https://www.rust-lang.org/
+# https://github.com/rust-lang/rustup.rs#environment-variables
+export RUSTUP_HOME=$MY_APP_HOME/_rustup
+export RUSTUP_DIST_SERVER=http://mirrors.ustc.edu.cn/rust-static
+export RUSTUP_UPDATE_ROOT=http://mirrors.ustc.edu.cn/rust-static/rustup
+# https://github.com/rust-lang/cargo/blob/master/src/doc/src/reference/environment-variables.md
+export CARGO_HOME=$MY_APP_HOME/_cargo
+export PATH=$PATH:$CARGO_HOME/bin
