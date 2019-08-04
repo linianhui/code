@@ -392,3 +392,20 @@ function Env-SetFFmpegEnvironmentVariable() {
 
     Env-TryAppendPathVariable -Value $APP_FFMPEG_PATH
 }
+
+# https://www.rust-lang.org/
+function Env-SetRustEnvironmentVariable() {
+    $APP_RUSTUP_PATH = $APP_PATH + '.rustup\';
+    $APP_CARGO_PATH = $APP_PATH + '.cargo\';
+    $APP_CARGO_BIN_PATH = $APP_CARGO_PATH + 'bin\';
+
+    # https://github.com/rust-lang/rustup.rs#environment-variables
+    Env-TrySetVariable -Variable 'RUSTUP_HOME' -Value $APP_RUSTUP_PATH
+    Env-TrySetVariable -Variable 'RUSTUP_DIST_SERVER' -Value 'http://mirrors.ustc.edu.cn/rust-static'
+    Env-TrySetVariable -Variable 'RUSTUP_UPDATE_ROOT' -Value 'http://mirrors.ustc.edu.cn/rust-static/rustup'
+    
+    # https://github.com/rust-lang/cargo/blob/master/src/doc/src/reference/environment-variables.md
+    Env-TrySetVariable -Variable 'CARGO_HOME' -Value $APP_CARGO_PATH
+
+    Env-TryAppendPathVariable -Value $APP_CARGO_BIN_PATH
+}
