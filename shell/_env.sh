@@ -1,7 +1,7 @@
 # my home
 export MY_HOME=$HOME
-export MY_APP_HOME=$MY_HOME/_apps
-export MY_CACHE_HOME=$MY_HOME/_caches
+export MY_APP_HOME=$MY_HOME/_app
+export MY_CACHE_HOME=$MY_HOME/_cache
 
 # https://docs.microsoft.com/en-us/dotnet/core/tools/telemetry
 # https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-tool-install
