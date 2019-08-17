@@ -1,7 +1,7 @@
 # my home
 export MY_HOME=$HOME
-export MY_APP_HOME=$MY_HOME/_apps
-export MY_CACHE_HOME=$MY_HOME/_caches
+export MY_APP_HOME=$MY_HOME/_app
+export MY_CACHE_HOME=$MY_HOME/_cache
 
 # https://docs.microsoft.com/en-us/dotnet/core/tools/telemetry
 # https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-tool-install
@@ -22,14 +22,14 @@ export M2_HOME=$MAVEN_HOME_HOME
 export PATH=$PATH:$MAVEN_HOME_BIN
 
 # https://projects.spring.io/spring-boot/
-export SPRING_BOOT_CLI_HOME=$MY_APP_HOME/_spring-boot-cli
-export SPRING_BOOT_CLI_HOME_BIN=$SPRING_BOOT_CLI_HOME/bin
-export PATH=$PATH:$SPRING_BOOT_CLI_HOME_BIN
+# export SPRING_BOOT_CLI_HOME=$MY_APP_HOME/_spring-boot-cli
+# export SPRING_BOOT_CLI_HOME_BIN=$SPRING_BOOT_CLI_HOME/bin
+# export PATH=$PATH:$SPRING_BOOT_CLI_HOME_BIN
 
 # https://www.mono-project.com/
-export MONO_HOME=/Library/Frameworks/Mono.framework/Versions/5.0.1
-export MONO_HOME_BIN=$MONO_HOME/bin
-export PATH=$PATH:$MONO_HOME_BIN
+# export MONO_HOME=/Library/Frameworks/Mono.framework/Versions/5.0.1
+# export MONO_HOME_BIN=$MONO_HOME/bin
+# export PATH=$PATH:$MONO_HOME_BIN
 
 # https://docs.docker.com/machine/
 # https://docs.docker.com/machine/drivers/virtualbox/
