@@ -407,7 +407,7 @@ function Env-SetRustEnvironmentVariable() {
     # https://github.com/rust-lang/cargo/blob/master/src/doc/src/reference/environment-variables.md
     Env-TrySetVariable -Variable 'CARGO_HOME' -Value $APP_CARGO_PATH
 
-    Env-TrySetVariable -Variable 'RUST_BACKTRACE' -Value '0'
+    Env-TrySetVariable -Variable 'RUST_BACKTRACE' -Value 'full'
     Env-TrySetVariable -Variable 'RUST_TEST_NOCAPTURE' -Value '0'
 
     Env-TryAppendPathVariable -Value $APP_CARGO_BIN_PATH
