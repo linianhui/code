@@ -408,6 +408,7 @@ function Env-SetRustEnvironmentVariable() {
     Env-TrySetVariable -Variable 'CARGO_HOME' -Value $APP_CARGO_PATH
 
     Env-TrySetVariable -Variable 'RUST_BACKTRACE' -Value '0'
+    Env-TrySetVariable -Variable 'RUST_TEST_NOCAPTURE' -Value '0'
 
     Env-TryAppendPathVariable -Value $APP_CARGO_BIN_PATH
 }
