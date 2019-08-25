@@ -412,3 +412,10 @@ function Env-SetRustEnvironmentVariable() {
 
     Env-TryAppendPathVariable -Value $APP_CARGO_BIN_PATH
 }
+
+# https://github.com/gohugoio/hugo
+function Env-SetHugoEnvironmentVariable() {
+    $APP_HUGO_PATH = $APP_PATH + '.hugo\';
+
+    Env-TryAppendPathVariable -Value $APP_HUGO_PATH
+}

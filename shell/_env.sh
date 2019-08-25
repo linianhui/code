@@ -81,3 +81,7 @@ export RUSTUP_UPDATE_ROOT=http://mirrors.ustc.edu.cn/rust-static/rustup
 # https://github.com/rust-lang/cargo/blob/master/src/doc/src/reference/environment-variables.md
 export CARGO_HOME=$MY_APP_HOME/_cargo
 export PATH=$PATH:$CARGO_HOME/bin
+
+# https://github.com/gohugoio/hugo
+export HUGO_HOME=$MY_APP_HOME/_hugo
+export PATH=$PATH:$HUGO_HOME/
