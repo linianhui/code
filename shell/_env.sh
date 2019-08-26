@@ -85,3 +85,8 @@ export PATH=$PATH:$CARGO_HOME/bin
 # https://github.com/gohugoio/hugo
 export HUGO_HOME=$MY_APP_HOME/_hugo
 export PATH=$PATH:$HUGO_HOME/
+
+# https://nodejs.org/en/download/
+export NODE_HOME=$MY_APP_HOME/_node
+export NODE_HOME_BIN=$NODE_HOME/bin
+export PATH=$PATH:$NODE_HOME_BIN/
