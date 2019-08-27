@@ -54,3 +54,5 @@ alias shell='echo $SHELL'
 alias shells='cat /etc/shells'
 
 alias i18n='locale'
+
+alias hugo='hugo --config .hugo.yml'
