@@ -10,10 +10,10 @@ export DOTNET_TOOLS_HOME=$HOME/.dotnet/tools
 export PATH=$PATH:$DOTNET_TOOLS_HOME
 
 # https://gradle.org/releases/ 
-export GRADLE_HOME=$MY_APP_HOME/_gradle
-export GRADLE_HOME_BIN=$GRADLE_HOME/bin
-export GRADLE_USER_HOME=$MY_CACHE_HOME/_gradle
-export PATH=$PATH:$GRADLE_HOME/bin
+# export GRADLE_HOME=$MY_APP_HOME/_gradle
+# export GRADLE_HOME_BIN=$GRADLE_HOME/bin
+# export GRADLE_USER_HOME=$MY_CACHE_HOME/_gradle
+# export PATH=$PATH:$GRADLE_HOME/bin
 
 # https://maven.apache.org/
 export MAVEN_HOME_HOME=$MY_APP_HOME/_maven
