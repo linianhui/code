@@ -24,22 +24,10 @@ yum-config-manager \
 
 yum install -y docker-ce
 
-cat <<-EOF > /etc/docker/daemon.json
-{
-  "registry-mirrors": [
-    "https://registry.docker-cn.com"
-  ]
-}
-EOF
-
-cat /etc/docker/daemon.json
-
 groupadd docker 
 usermod -aG docker lnh
 
 systemctl enable docker
-systemctl daemon-reload
-systemctl restart docker
 
 docker version
 
