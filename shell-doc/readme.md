@@ -1,6 +1,6 @@
 # Ubuntu
 
-| name     | url                                           |
+| iso      | url                                           |
 | -------- | --------------------------------------------- |
 | official | http://releases.ubuntu.com                    |
 | 163      | http://mirrors.163.com/ubuntu-releases        |
