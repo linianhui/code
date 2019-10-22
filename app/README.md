@@ -4,7 +4,7 @@
     * https://download.microsoft.com/download/C/4/8/C48F6E20-FE20-41C6-8C1C-408FE7B49A3A/Windows7-USB-DVD-Download-Tool-Installer-en-US.exe
 
 2. Rufus ：https://github.com/pbatard/rufus
-    * https://github.com/pbatard/rufus/releases/download/v3.5/rufus-3.5p.exe
+    * https://github.com/pbatard/rufus/releases/download/v3.8/rufus-3.8p.exe
 
 4. Etcher ：https://github.com/resin-io/etcher
     * https://github.com/resin-io/etcher/releases/download/v1.4.4/Etcher-Portable-1.4.4-x86.exe
