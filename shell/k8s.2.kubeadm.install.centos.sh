@@ -1,6 +1,3 @@
-# wget https://raw.githubusercontent.com/linianhui/code/master/shell/centos.k8s.kubeadm.install.sh
-# sudo bash centos.k8s.kubeadm.install.sh
-
 set -x
 
 cat <<-EOF > /etc/yum.repos.d/kubernetes.repo
@@ -12,9 +9,11 @@ gpgcheck=1
 repo_gpgcheck=1
 gpgkey=https://mirrors.aliyun.com/kubernetes/yum/doc/yum-key.gpg https://mirrors.aliyun.com/kubernetes/yum/doc/rpm-package-key.gpg
 EOF
+cat /etc/yum.repos.d/kubernetes.repo
+
 
 yum install -y kubelet kubeadm kubectl
 
-systemctl enable kubelet
 
+systemctl enable kubelet
 systemctl start kubelet
