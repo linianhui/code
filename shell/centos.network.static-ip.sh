@@ -28,15 +28,16 @@ EOF
 cat /etc/sysconfig/network-scripts/ifcfg-eth0
 
 
-cat /etc/resolv.conf
+cat /etc/sysconfig/network
 
-cat <<-EOF > /etc/resolv.conf
+cat <<-EOF > /etc/sysconfig/network
 # systemctl restart network
-nameserver 192.168.2.1
+NETWORKING=yes
+GATEWAY=192.168.2.1
+DNS1=192.168.2.1
 EOF
 
-cat /etc/resolv.conf
-
+cat /etc/sysconfig/network
 
 systemctl restart network
 
