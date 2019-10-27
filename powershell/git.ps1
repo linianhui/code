@@ -165,7 +165,8 @@ function Git-SetGlobalConfig () {
     
     # editor
     git config --global core.editor "code -w"
-    git config --global core.autocrlf input
+    git config --global core.autocrlf false
+    git config --global core.safecrlf warn
 
     # color
     git config --global color.ui true
