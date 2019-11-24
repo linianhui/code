@@ -245,14 +245,14 @@ function Env-SetMavenEnvironmentVariable() {
 # https://docs.gradle.org/current/userguide/installation.html
 # https://docs.gradle.org/current/userguide/build_environment.html#sec:gradle_environment_variables
 function Env-SetGradleEnvironmentVariable() {
-    #$APP_GRADLE_PATH = $APP_PATH + '.gradle\';
-    #$APP_GRADLE_BIN_PATH = $APP_GRADLE_PATH + 'bin\';
+    $APP_GRADLE_PATH = $APP_PATH + '.gradle\';
+    $APP_GRADLE_BIN_PATH = $APP_GRADLE_PATH + 'bin\';
 
     $CACHE_GRADLE_PATH = $CACHE_PATH + '.gradle\';
 
-    #Env-TrySetVariable -Variable 'GRADLE_HOME' -Value $APP_GRADLE_PATH
+    Env-TrySetVariable -Variable 'GRADLE_HOME' -Value $APP_GRADLE_PATH
     Env-TrySetVariable -Variable 'GRADLE_USER_HOME' -Value $CACHE_GRADLE_PATH
-    #Env-TryAppendPathVariable -Value $APP_GRADLE_BIN_PATH
+    Env-TryAppendPathVariable -Value $APP_GRADLE_BIN_PATH
 }
 
 # https://projects.spring.io/spring-boot/
