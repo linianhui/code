@@ -235,6 +235,9 @@ function Env-SetMavenEnvironmentVariable() {
     # for maven 2 or 3
     Env-TrySetVariable -Variable 'M2_HOME' -Value $APP_MAVEN_PATH
 
+    # for maven-wrapper https://github.com/takari/maven-wrapper
+    Env-TrySetVariable -Variable 'MAVEN_USER_HOME' -Value $APP_MAVEN_PATH
+
     Env-TryAppendPathVariable -Value $APP_MAVEN_BIN_PATH
 }
 
