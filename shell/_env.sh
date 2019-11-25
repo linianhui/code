@@ -20,6 +20,7 @@ export MAVEN_HOME_HOME=$MY_APP_HOME/_maven
 export MAVEN_HOME_BIN=$MAVEN_HOME_HOME/bin
 export M2_HOME=$MAVEN_HOME_HOME
 export MAVEN_USER_HOME=$MAVEN_HOME_HOME
+export MAVEN_REPOSITORY_HOME=$MY_CACHE_HOME/_maven
 export PATH=$PATH:$MAVEN_HOME_BIN
 
 # https://projects.spring.io/spring-boot/

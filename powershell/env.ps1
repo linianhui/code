@@ -228,6 +228,7 @@ function Env-SetPIEnvironmentVariable() {
 function Env-SetMavenEnvironmentVariable() {
     $APP_MAVEN_PATH = $APP_PATH + '.maven\'
     $APP_MAVEN_BIN_PATH = $APP_MAVEN_PATH + 'bin\'
+    $CACHE_MAVEN_PATH = $CACHE_PATH + '.maven\'
 
     # for maven 1
     Env-TrySetVariable -Variable 'MAVEN_HOME' -Value $APP_MAVEN_PATH
@@ -237,6 +238,8 @@ function Env-SetMavenEnvironmentVariable() {
 
     # for maven-wrapper https://github.com/takari/maven-wrapper
     Env-TrySetVariable -Variable 'MAVEN_USER_HOME' -Value $APP_MAVEN_PATH
+
+    Env-TrySetVariable -Variable 'MAVEN_REPOSITORY_HOME' -Value $CACHE_MAVEN_PATH
 
     Env-TryAppendPathVariable -Value $APP_MAVEN_BIN_PATH
 }
