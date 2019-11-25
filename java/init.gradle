@@ -27,9 +27,9 @@ gradle.allprojects {
         mirrorUrl = findMavenRepositoryMirrorUrl(originalUrl)
         if(mirrorUrl){
           repository.setUrl(mirrorUrl)
-          println "${type} : use '${repository.url}' replace '${originalUrl}'"
+          println "${type} : use ${repository.url} replace ${originalUrl}"
         }else{
-          println "${type} : use '${repository.url}'"
+          println "${type} : use ${repository.url}"
         }
       }
     }
