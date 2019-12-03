@@ -22,6 +22,7 @@ $CODE_PATH_ALIAS = @{
     n   = $MY_CODE_PATH + 'networking';
     ns  = $MY_CODE_PATH + 'nuget.server';
     oe  = $MY_CODE_PATH + 'oidc.example';
+    ske = $MY_CODE_PATH + 'spring-k8s.example';
 }
 
 function Code-ChangeDirectory ([string] $Alias) {
