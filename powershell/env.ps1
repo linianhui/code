@@ -283,7 +283,7 @@ function Env-SetNginxEnvironmentVariable() {
 # https://kubernetes.io/docs/tasks/tools/install-kubectl
 function Env-SetKubectlEnvironmentVariable() {
     $APP_KUBECTL_PATH = $APP_PATH + '.kubectl\';
-    $APP_KUBECTL_CONFIG_FILE = $APP_KUBECTL_PATH + 'kubectl.config';
+    $APP_KUBECTL_CONFIG_FILE = $APP_KUBECTL_PATH + 'kubectl-config.yml';
 
     Env-TrySetVariable -Variable 'KUBECONFIG' -Value $APP_KUBECTL_CONFIG_FILE
     Env-TryAppendPathVariable -Value $APP_KUBECTL_PATH

@@ -40,7 +40,7 @@ export VIRTUALBOX_DISK_SIZE=5120
 
 # https://kubernetes.io/docs/tasks/tools/install-kubectl/
 export KUBECTL_HOME=$APP_HOME/_kubectl
-export KUBECONFIG=$KUBECTL_HOME/kubectl.config
+export KUBECONFIG=$KUBECTL_HOME/kubectl-config.yml
 export KUBECONFIG_SAVED=$KUBECONFIG
 export PATH=$PATH:$KUBECTL_HOME
 
