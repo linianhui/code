@@ -2,7 +2,7 @@
 
 ## 1.1 Windows
 
-http://kubernetes.oss-cn-hangzhou.aliyuncs.com/minikube/releases/v1.3.0/minikube-windows-amd64.exe
+http://kubernetes.oss-cn-hangzhou.aliyuncs.com/minikube/releases/v1.4.0/minikube-windows-amd64.exe
 
 ```powershell
 Env-SetMinikubeEnvironmentVariable
@@ -10,24 +10,20 @@ Env-SetMinikubeEnvironmentVariable
 
 ## 1.2 Linux
 
-http://kubernetes.oss-cn-hangzhou.aliyuncs.com/minikube/releases/v1.3.0/minikube-linux-amd64
-
 ```sh
-curl -Lo minikube http://kubernetes.oss-cn-hangzhou.aliyuncs.com/minikube/releases/v1.3.0/minikube-linux-amd64 \
+curl -Lo minikube http://kubernetes.oss-cn-hangzhou.aliyuncs.com/minikube/releases/v1.4.0/minikube-linux-amd64 \
 && chmod +x minikube \
-&& mkdir -p $HOME/_apps/_minikube \
-&& mv minikube $HOME/_apps/_minikube
+&& mkdir -p /usr/local/bin/ \
+&& mv minikube /usr/local/bin/
 ```
 
 ## 1.3 macOS
 
-http://kubernetes.oss-cn-hangzhou.aliyuncs.com/minikube/releases/v1.3.0/minikube-darwin-amd64
-
 ```sh
-curl -Lo minikube http://kubernetes.oss-cn-hangzhou.aliyuncs.com/minikube/releases/v1.3.0/minikube-darwin-amd64 \
+curl -Lo minikube http://kubernetes.oss-cn-hangzhou.aliyuncs.com/minikube/releases/v1.4.0/minikube-darwin-amd64 \
 && chmod +x minikube \
-&& mkdir -p $HOME/_apps/_minikube \
-&& mv minikube $HOME/_apps/_minikube
+&& mkdir -p $HOME/_app/_minikube \
+&& mv minikube $HOME/_app/_minikube
 ```
 
 # 参考
