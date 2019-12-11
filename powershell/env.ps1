@@ -2,8 +2,8 @@
 # powershell env functions
 ################################
 
-[string]$APP_PATH = 'd:\-app\';
-[string]$CACHE_PATH = 'd:\-cache\';
+[string]$APP_PATH = 'd:\.app\';
+[string]$CACHE_PATH = 'd:\.cache\';
 
 function script:Env-TrySetVariable (
     [string]$Variable = $(throw "Variable is null!"),
@@ -77,35 +77,35 @@ function Env-GetPathVariavle() {
 
 # https://github.com/MicrosoftArchive/redis/releases
 function Env-SetRedisEnvironmentVariable() {
-    $APP_REDIS_PATH = $APP_PATH + '-redis\';
+    $APP_REDIS_PATH = $APP_PATH + '.redis\';
 
     Env-TryAppendPathVariable -Value $APP_REDIS_PATH
 }
 
 # https://www.mongodb.org/dl/win32/x86_64-2008plus-ssl
 function Env-SetMongoDBEnvironmentVariable() {
-    $APP_MONGO_PATH = $APP_PATH + '-mongo\';
+    $APP_MONGO_PATH = $APP_PATH + '.mongo\';
 
     Env-TryAppendPathVariable -Value $APP_MONGO_PATH
 }
 
 # https://www.putty.org/
 function Env-SetPuttyEnvironmentVariable() {
-    $APP_PUTTY_PATH = $APP_PATH + '-putty\';
+    $APP_PUTTY_PATH = $APP_PATH + '.putty\';
 
     Env-TryAppendPathVariable -Value $APP_PUTTY_PATH
 }
 
 # https://github.com/shadowsocks/shadowsocks-windows
 function Env-SetShadowsocksEnvironmentVariable() {
-    $APP_SHADOWSOCKS_PATH = $APP_PATH + '-shadowsocks\';
+    $APP_SHADOWSOCKS_PATH = $APP_PATH + '.shadowsocks\';
 
     Env-TryAppendPathVariable -Value $APP_SHADOWSOCKS_PATH
 }
 
 # https://developers.redhat.com/products/openjdk/download
 function Env-SetJavaEnvironmentVariable() {
-    $APP_JAVA_JDK_PATH = $APP_PATH + '-java\';
+    $APP_JAVA_JDK_PATH = $APP_PATH + '.java\';
     $APP_JAVA_JDK_BIN_PATH = $APP_JAVA_JDK_PATH + 'bin\';
     $APP_JAVA_JDK_LIB_PATH = $APP_JAVA_JDK_PATH + 'lib\';
     $APP_JAVA_JDK_LIB_TOOLS_JAR = $APP_JAVA_JDK_LIB_PATH + 'tools.jar';
@@ -117,10 +117,10 @@ function Env-SetJavaEnvironmentVariable() {
 
 # https://golang.org/doc/install
 function Env-SetGoEnvironmentVariable() {
-    $APP_GO_PATH = $APP_PATH + '-go\';
+    $APP_GO_PATH = $APP_PATH + '.go\';
     $APP_GO_BIN_PATH = $APP_GO_PATH + 'bin\';
 
-    $CACHE_GO_PATH = $CACHE_PATH + '-go\';
+    $CACHE_GO_PATH = $CACHE_PATH + '.go\';
 
     Env-TrySetVariable -Variable 'GOROOT' -Value $APP_GO_PATH
     Env-TrySetVariable -Variable 'GOCACHE' -Value $CACHE_GO_PATH
@@ -129,7 +129,7 @@ function Env-SetGoEnvironmentVariable() {
 
 # https://rubyinstaller.org/downloads/
 function Env-SetRubyEnvironmentVariable() {
-    $APP_RUBY_PATH = $APP_PATH + '-ruby\';
+    $APP_RUBY_PATH = $APP_PATH + '.ruby\';
     $APP_RUBY_BIN_PATH = $APP_RUBY_PATH + 'bin\';
 
     Env-TrySetVariable -Variable 'RUBY_HOME' -Value $APP_RUBY_PATH
@@ -138,10 +138,10 @@ function Env-SetRubyEnvironmentVariable() {
 
 # https://nodejs.org/en/download/
 function Env-SetNodeEnvironmentVariable() {
-    $APP_NODE_PATH = $APP_PATH + '-node\';
+    $APP_NODE_PATH = $APP_PATH + '.node\';
     $APP_NODE_MODULES_PATH = $APP_NODE_PATH + 'node_modules\';
 
-    $CACHE_NODE_PATH = $CACHE_PATH + '-node\';
+    $CACHE_NODE_PATH = $CACHE_PATH + '.node\';
 
     Env-TrySetVariable -Variable 'NODE_PATH' -Value $APP_NODE_MODULES_PATH
     Env-TryAppendPathVariable -Value $APP_NODE_PATH
@@ -154,7 +154,7 @@ function Env-SetNodeEnvironmentVariable() {
 
 # https://kotlinlang.org/docs/tutorials/command-line.html
 function Env-SetKotlinEnvironmentVariable() {
-    $APP_KOTLIN_PATH = $APP_PATH + '-kotlin\'
+    $APP_KOTLIN_PATH = $APP_PATH + '.kotlin\'
     $APP_KOTLIN_BIN_PATH = $APP_KOTLIN_PATH + 'bin\'
 
     Env-TryAppendPathVariable -Value $APP_KOTLIN_BIN_PATH
@@ -171,7 +171,7 @@ function Env-SetNetEnvironmentVariable() {
 # https://www.python.org/downloads/windows/
 # Windows x86-64 embeddable zip file
 function Env-SetPythonEnvironmentVariable() {
-    $APP_PYTHON_PATH = $APP_PATH + '-python\';
+    $APP_PYTHON_PATH = $APP_PATH + '.python\';
     $APP_PYTHON_SCRIPTS_PATH = $APP_PYTHON_PATH + 'scripts\';
 
     Env-TryAppendPathVariable -Value $APP_PYTHON_PATH
@@ -180,7 +180,7 @@ function Env-SetPythonEnvironmentVariable() {
 
 # https://github.com/icsharpcode/ILSpy/releases
 function Env-SetILSpyEnvironmentVariable() {
-    $APP_ILSPY_PATH = $APP_PATH + '-ilspy\';
+    $APP_ILSPY_PATH = $APP_PATH + '.ilspy\';
 
     Env-TryAppendPathVariable -Value $APP_ILSPY_PATH
 }
@@ -188,9 +188,9 @@ function Env-SetILSpyEnvironmentVariable() {
 # https://www.nuget.org/downloads 
 # https://docs.microsoft.com/en-us/nuget/tools/cli-ref-environment-variables
 function Env-SetNugetEnvironmentVariable() {
-    $APP_NUGET_PATH = $APP_PATH + '-nuget\';
+    $APP_NUGET_PATH = $APP_PATH + '.nuget\';
 
-    $CACHE_NUGET_PATH = $CACHE_PATH + '-nuget\';
+    $CACHE_NUGET_PATH = $CACHE_PATH + '.nuget\';
 
     Env-TrySetVariable -Variable 'NUGET_PACKAGES' -Value $CACHE_NUGET_PATH
     Env-TryAppendPathVariable -Value $APP_NUGET_PATH
@@ -198,37 +198,37 @@ function Env-SetNugetEnvironmentVariable() {
 
 # https://developer.android.com/studio/releases/platform-tools.html
 function Env-SetADBEnvironmentVariable() {
-    $APP_ADB_PATH = $APP_PATH + '-adb\';
+    $APP_ADB_PATH = $APP_PATH + '.adb\';
 
     Env-TryAppendPathVariable -Value $APP_ADB_PATH
 }
 
 # https://www.cpuid.com/softwares/cpu-z.html
 function Env-SetCPUZEnvironmentVariable() {
-    $APP_CPU_Z_PATH = $APP_PATH + '-cpu-z\';
+    $APP_CPU_Z_PATH = $APP_PATH + '.cpu-z\';
 
     Env-TryAppendPathVariable -Value $APP_CPU_Z_PATH
 }
 
 # https://www.techpowerup.com/gpuz/
 function Env-SetGPUZEnvironmentVariable() {
-    $APP_GPU_Z_PATH = $APP_PATH + '-gpu-z\';
+    $APP_GPU_Z_PATH = $APP_PATH + '.gpu-z\';
 
     Env-TryAppendPathVariable -Value $APP_GPU_Z_PATH
 }
 
 # http://www.superpi.net/Download/
 function Env-SetPIEnvironmentVariable() {
-    $APP_PI_PATH = $APP_PATH + '-pi\';
+    $APP_PI_PATH = $APP_PATH + '.pi\';
 
     Env-TryAppendPathVariable -Value $APP_PI_PATH
 }
 
 # https://maven.apache.org/
 function Env-SetMavenEnvironmentVariable() {
-    $APP_MAVEN_PATH = $APP_PATH + '-maven\'
+    $APP_MAVEN_PATH = $APP_PATH + '.maven\'
     $APP_MAVEN_BIN_PATH = $APP_MAVEN_PATH + 'bin\'
-    $CACHE_MAVEN_PATH = $CACHE_PATH + '-maven\'
+    $CACHE_MAVEN_PATH = $CACHE_PATH + '.maven\'
 
     # for maven 1
     Env-TrySetVariable -Variable 'MAVEN_HOME' -Value $APP_MAVEN_PATH
@@ -248,10 +248,10 @@ function Env-SetMavenEnvironmentVariable() {
 # https://docs.gradle.org/current/userguide/installation.html
 # https://docs.gradle.org/current/userguide/build_environment.html#sec:gradle_environment_variables
 function Env-SetGradleEnvironmentVariable() {
-    $APP_GRADLE_PATH = $APP_PATH + '-gradle\';
+    $APP_GRADLE_PATH = $APP_PATH + '.gradle\';
     $APP_GRADLE_BIN_PATH = $APP_GRADLE_PATH + 'bin\';
 
-    $CACHE_GRADLE_PATH = $CACHE_PATH + '-gradle\';
+    $CACHE_GRADLE_PATH = $CACHE_PATH + '.gradle\';
 
     Env-TrySetVariable -Variable 'GRADLE_HOME' -Value $APP_GRADLE_PATH
     Env-TrySetVariable -Variable 'GRADLE_USER_HOME' -Value $CACHE_GRADLE_PATH
@@ -260,7 +260,7 @@ function Env-SetGradleEnvironmentVariable() {
 
 # https://projects.spring.io/spring-boot/
 function Env-SetSpringBootCliEnvironmentVariable() {
-    $APP_SPRING_BOOT_CLI_PATH = $APP_PATH + '-spring-boot-cli\';
+    $APP_SPRING_BOOT_CLI_PATH = $APP_PATH + '.spring-boot-cli\';
     $APP_SPRING_BOOT_CLI_BIN_PATH = $APP_SPRING_BOOT_CLI_PATH + 'bin\';
 
     Env-TryAppendPathVariable -Value $APP_SPRING_BOOT_CLI_BIN_PATH
@@ -268,21 +268,21 @@ function Env-SetSpringBootCliEnvironmentVariable() {
 
 # http://httpd.apache.org/download.cgi
 function Env-SetHttpdEnvironmentVariable() {
-    $APP_HTTPD_PATH = $APP_PATH + '-httpd\';
+    $APP_HTTPD_PATH = $APP_PATH + '.httpd\';
 
     Env-TryAppendPathVariable -Value $APP_HTTPD_PATH
 }
 
 # http://nginx.org/en/download.html
 function Env-SetNginxEnvironmentVariable() {
-    $APP_NGINX_PATH = $APP_PATH + '-nginx\';
+    $APP_NGINX_PATH = $APP_PATH + '.nginx\';
 
     Env-TryAppendPathVariable -Value $APP_NGINX_PATH
 }
 
 # https://kubernetes.io/docs/tasks/tools/install-kubectl
 function Env-SetKubectlEnvironmentVariable() {
-    $APP_KUBECTL_PATH = $APP_PATH + '-kubectl\';
+    $APP_KUBECTL_PATH = $APP_PATH + '.kubectl\';
     $APP_KUBECTL_CONFIG_FILE = $APP_KUBECTL_PATH + 'kubectl-config.yml';
 
     Env-TrySetVariable -Variable 'KUBECONFIG' -Value $APP_KUBECTL_CONFIG_FILE
@@ -291,8 +291,8 @@ function Env-SetKubectlEnvironmentVariable() {
 
 # https://github.com/kubernetes/minikube/releases
 function Env-SetMinikubeEnvironmentVariable() {
-    $APP_MINIKUBE_PATH = $APP_PATH + '-minikube\';
-    $CACHE_MINIKUBE_PATH = 'e:\-minikube\';
+    $APP_MINIKUBE_PATH = $APP_PATH + '.minikube\';
+    $CACHE_MINIKUBE_PATH = 'e:\.minikube\';
 
     Env-TrySetVariable -Variable 'MINIKUBE_HOME' -Value $CACHE_MINIKUBE_PATH
     Env-TrySetVariable -Variable 'MINIKUBE_WANTUPDATENOTIFICATION' -Value 'false'
@@ -304,7 +304,7 @@ function Env-SetMinikubeEnvironmentVariable() {
 # https://docs.docker.com/engine/reference/commandline/cli/#environment-variables
 # https://docs.docker.com/engine/reference/commandline/dockerd/#daemon-socket-option
 function Env-SetDockerEnvironmentVariable() {
-    $APP_DOCKER_PATH = $APP_PATH + '-docker\';
+    $APP_DOCKER_PATH = $APP_PATH + '.docker\';
 
     Env-TrySetVariable -Variable 'DOCKER_HOST' -Value 'tcp://127.0.0.1:2375'
     Env-TryAppendPathVariable -Value $APP_DOCKER_PATH
@@ -313,9 +313,9 @@ function Env-SetDockerEnvironmentVariable() {
 # https://docs.docker.com/machine
 # https://docs.docker.com/machine/drivers/hyper-v/
 function Env-SetDockerMachineEnvironmentVariable() {
-    $APP_DOCKER_PATH = $APP_PATH + '-docker\';
+    $APP_DOCKER_PATH = $APP_PATH + '.docker\';
     $BOOT2DOCKER_ISO_PATH = 'file://' + $APP_DOCKER_PATH + 'boot2docker.iso';
-    $CACHE_DOCKER_PATH = 'e:\-docker\';
+    $CACHE_DOCKER_PATH = 'e:\.docker\';
 
     Env-TrySetVariable -Variable 'MACHINE_STORAGE_PATH' -Value $CACHE_DOCKER_PATH
     Env-TrySetVariable -Variable 'MACHINE_NATIVE_SSH' -Value 1
@@ -331,7 +331,7 @@ function Env-SetDockerMachineEnvironmentVariable() {
 # https://docs.helm.sh
 # https://github.com/helm/helm/releases
 function Env-SetHelmEnvironmentVariable() {
-    $APP_HLEM_PATH = $APP_PATH + '-helm\';
+    $APP_HLEM_PATH = $APP_PATH + '.helm\';
 
     Env-TryAppendPathVariable -Value $APP_HLEM_PATH
 }
@@ -339,8 +339,8 @@ function Env-SetHelmEnvironmentVariable() {
 # https://github.com/mholt/caddy
 # https://caddyserver.com/docs/cli
 function Env-SetCaddyEnvironmentVariable() {
-    $APP_CADDY_PATH = $APP_PATH + '-caddy\';
-    $CACHE_CADDY_PATH = $CACHE_PATH + '-caddy\';
+    $APP_CADDY_PATH = $APP_PATH + '.caddy\';
+    $CACHE_CADDY_PATH = $CACHE_PATH + '.caddy\';
 
     Env-TrySetVariable -Variable 'CADDYPATH' -Value $CACHE_CADDY_PATH
     Env-TryAppendPathVariable -Value $APP_CADDY_PATH
@@ -349,7 +349,7 @@ function Env-SetCaddyEnvironmentVariable() {
 # https://coreos.com/os/docs/1911.5.0/overview-of-ct.html
 # https://github.com/coreos/container-linux-config-transpiler
 function Env-SetCoreOSEnvironmentVariable() {
-    $APP_COREOS_PATH = $APP_PATH + '-coreos\';
+    $APP_COREOS_PATH = $APP_PATH + '.coreos\';
 
     Env-TryAppendPathVariable -Value $APP_COREOS_PATH
 }
@@ -361,7 +361,7 @@ function Env-SetPowerShellEnvironmentVariable() {
 
 # https://github.com/v2ray/v2ray-core
 function Env-SetV2RayEnvironmentVariable() {
-    $APP_V2RAY_PATH = $APP_PATH + '-v2ray\';
+    $APP_V2RAY_PATH = $APP_PATH + '.v2ray\';
 
     Env-TryAppendPathVariable -Value $APP_V2RAY_PATH
 }
@@ -373,36 +373,36 @@ function Env-SetLocaleEnvironmentVariable() {
 
 # https://www.alex-is.de/PHP/fusion/downloads.php?cat_id=4&download_id=9
 function Env-SetASSSDBenchmarkEnvironmentVariable() {
-    $APP_AS_SSD_BENCHMARK_PATH = $APP_PATH + '-as-ssd-benchmark\';
+    $APP_AS_SSD_BENCHMARK_PATH = $APP_PATH + '.as-ssd-benchmark\';
 
     Env-TryAppendPathVariable -Value $APP_AS_SSD_BENCHMARK_PATH
 }
 
 # https://crystalmark.info/en/download/
 function Env-SetDiskInfoEnvironmentVariable() {
-    $APP_DISK_INFO_PATH = $APP_PATH + '-disk-info\';
+    $APP_DISK_INFO_PATH = $APP_PATH + '.disk-info\';
 
     Env-TryAppendPathVariable -Value $APP_DISK_INFO_PATH
 }
 
 # https://github.com/pbatard/rufus
 function Env-SetRufusEnvironmentVariable() {
-    $APP_RUFUS_PATH = $APP_PATH + '-rufus\';
+    $APP_RUFUS_PATH = $APP_PATH + '.rufus\';
 
     Env-TryAppendPathVariable -Value $APP_RUFUS_PATH
 }
 
 # https://github.com/FFmpeg/FFmpeg
 function Env-SetFFmpegEnvironmentVariable() {
-    $APP_FFMPEG_PATH = $APP_PATH + '-ffmpeg\bin';
+    $APP_FFMPEG_PATH = $APP_PATH + '.ffmpeg\bin';
 
     Env-TryAppendPathVariable -Value $APP_FFMPEG_PATH
 }
 
 # https://www.rust-lang.org/
 function Env-SetRustEnvironmentVariable() {
-    $APP_RUSTUP_PATH = $APP_PATH + '-rustup\';
-    $APP_CARGO_PATH = $APP_PATH + '-cargo\';
+    $APP_RUSTUP_PATH = $APP_PATH + '.rustup\';
+    $APP_CARGO_PATH = $APP_PATH + '.cargo\';
     $APP_CARGO_BIN_PATH = $APP_CARGO_PATH + 'bin\';
 
     # https://github.com/rust-lang/rustup.rs#environment-variables
@@ -421,7 +421,7 @@ function Env-SetRustEnvironmentVariable() {
 
 # https://github.com/gohugoio/hugo
 function Env-SetHugoEnvironmentVariable() {
-    $APP_HUGO_PATH = $APP_PATH + '-hugo\';
+    $APP_HUGO_PATH = $APP_PATH + '.hugo\';
 
     Env-TryAppendPathVariable -Value $APP_HUGO_PATH
 }
