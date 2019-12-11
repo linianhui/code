@@ -28,7 +28,7 @@ function vhd-create(
 # https://docs.microsoft.com/en-us/powershell/module/hyper-v/set-vmdvddrive?view=win10-ps
 function vm-create(
     [string] $VMName,
-    [string] $Path = 'e:\.vm',
+    [string] $Path = 'e:\-vm',
     [string] $ISO
 ) {
 
