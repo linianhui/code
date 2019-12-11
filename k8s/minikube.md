@@ -22,8 +22,8 @@ curl -Lo minikube http://kubernetes.oss-cn-hangzhou.aliyuncs.com/minikube/releas
 ```sh
 curl -Lo minikube http://kubernetes.oss-cn-hangzhou.aliyuncs.com/minikube/releases/v1.4.0/minikube-darwin-amd64 \
 && chmod +x minikube \
-&& mkdir -p $HOME/_app/_minikube \
-&& mv minikube $HOME/_app/_minikube
+&& mkdir -p $HOME/-app/-minikube \
+&& mv minikube $HOME/-app/-minikube
 ```
 
 # 参考
@@ -44,6 +44,6 @@ https://kubernetes.io/docs/setup/minikube/
 https://github.com/kubernetes/minikube/blob/master/docs/drivers.md
 
 
-[env.sh]:../shell/_env.sh
+[env.sh]:../shell/-env.sh
 
 [env.ps1]:../powershell/env.ps1

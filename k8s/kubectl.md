@@ -18,8 +18,8 @@ https://storage.googleapis.com/kubernetes-release/release/v1.16.3/bin/linux/amd6
 ```sh
 curl -Lo kubectl https://storage.googleapis.com/kubernetes-release/release/v1.16.3/bin/linux/amd64/kubectl \
 && chmod +x kubectl \
-&& mkdir -p $HOME/_app/_kubectl \
-&& mv kubectl $HOME/_app/_kubectl
+&& mkdir -p $HOME/-app/-kubectl \
+&& mv kubectl $HOME/-app/-kubectl
 ```
 
 ## 1.3 macOS
@@ -29,8 +29,8 @@ https://storage.googleapis.com/kubernetes-release/release/v1.16.3/bin/darwin/amd
 ```sh
 curl -Lo kubectl https://storage.googleapis.com/kubernetes-release/release/v1.16.3/bin/darwin/amd64/kubectl \
 && chmod +x kubectl \
-&& mkdir -p $HOME/_app/_kubectl \
-&& mv kubectl $HOME/_app/_kubectl
+&& mkdir -p $HOME/-app/-kubectl \
+&& mv kubectl $HOME/-app/-kubectl
 ```
 
 # 2 参考
@@ -45,4 +45,4 @@ https://kubernetes.io/docs/tasks/tools/install-kubectl
 
 [env.ps1]:../powershell/env.ps1
 
-[env.sh]:../shell/_env.sh
+[env.sh]:../shell/-env.sh
