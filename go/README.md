@@ -2,7 +2,7 @@
 
 ## 1 安装Go
 
-1. 下载二进制包：`go1.10.1.windows-amd64.zip`解压至`d:\.app\.skd\.go\`目录下。
+1. 下载二进制包：`go1.10.1.windows-amd64.zip`解压至`d:\.app\.go\`目录下。
 2. 设置环境变量：
     ```powershell
     Env-SetGoEnvironmentVariable
