@@ -28,3 +28,14 @@
 | ------ | ---------------------------------------- |
 | 163    | http://mirrors.163.com/.help/centos.html |
 | aliyun | http://mirrors.aliyun.com/centos/        |
+
+# LC_COLLATE
+
+ls排序
+
+```bash
+# ASCII
+export LC_COLLATE=C
+# ASCII+中文
+export LC_COLLATE=C.UTF-8
+```
