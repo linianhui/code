@@ -10,8 +10,10 @@ cat <<-EOF > /etc/docker/daemon.json
     "https://registry.docker-cn.com",
     "https://dockerhub.azk8s.cn",
     "https://reg-mirror.qiniu.com",
-    "https://docker.mirrors.ustc.edu.cn",
-    "http://hub-mirror.c.163.com"
+    "https://docker.mirrors.ustc.edu.cn"
+  ],
+  "insecure-registries": [
+    "registry.test"
   ]
 }
 EOF
