@@ -56,3 +56,7 @@ alias shells='cat /etc/shells'
 alias i18n='locale'
 
 alias hugo='hugo --config .hugo.yml'
+
+alias mvn-wrapper='mvn --non-recursive --debug io.takari:maven:wrapper -Dmaven=3.6.3'
+
+alias gradle-wrapper='gradle wrapper --gradle-version 6.0.1 --distribution-type all'
