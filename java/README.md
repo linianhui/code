@@ -27,6 +27,11 @@ https://maven.apache.org/download.cgi
     ```powershell
     mvn -v
     ```
+5. wrapper: 
+    ```sh
+    # https://github.com/takari/maven-wrapper
+    mvn --non-recursive --debug io.takari:maven:wrapper -Dmaven=3.6.3
+    ```
 
 ## 3 安装Gradle
 
@@ -40,6 +45,11 @@ https://gradle.org/releases/
 3. 查看版本信息：
     ```powershell
     gradle -v
+    ```
+4. wrapper
+    ```sh
+    # https://docs.gradle.org/current/userguide/gradle_wrapper.html
+    gradle wrapper --gradle-version 6.0.1 --distribution-type all
     ```
 
 ## 4 安装Spring Boot Cli
