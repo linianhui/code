@@ -13,9 +13,11 @@ export GRADLE_USER_HOME=$CACHE_HOME/_gradle
 export PATH=$PATH:$GRADLE_HOME/bin
 
 # https://maven.apache.org/
+# http://maven.apache.org/configure.html
 export MAVEN_HOME=$APP_HOME/_maven
 export MAVEN_REPOSITORY_HOME=$CACHE_HOME/_maven
 export M2_HOME=$MAVEN_HOME
+export MAVEN_OPTS=‘-Dfile.encoding=UTF-8’
 export MAVEN_USER_HOME=$MAVEN_HOME
 export PATH=$PATH:$MAVEN_HOME/bin
 
