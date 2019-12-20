@@ -1,7 +1,7 @@
 # wget https://raw.githubusercontent.com/linianhui/code/master/shell/ubuntu.network.static-ip.sh
 # sudo bash ubuntu.network.static-ip.sh 201
 
-set -x
+set -euxo pipefail
 
 IP=$1
 

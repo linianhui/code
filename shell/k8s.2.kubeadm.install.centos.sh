@@ -1,4 +1,4 @@
-set -x
+set -euxo pipefail
 
 cat <<-EOF > /etc/yum.repos.d/kubernetes.repo
 [kubernetes]

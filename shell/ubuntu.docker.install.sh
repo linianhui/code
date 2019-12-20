@@ -1,7 +1,7 @@
 # wget https://raw.githubusercontent.com/linianhui/code/master/shell/ubuntu.docker.install.sh
 # sudo bash ubuntu.docker.install.sh
 
-set -x
+set -euxo pipefail
 
 apt-get remove -y \
         docker \

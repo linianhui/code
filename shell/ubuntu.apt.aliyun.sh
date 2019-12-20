@@ -2,7 +2,7 @@
 # sudo bash ubuntu.apt.aliyun.sh
 # sh -c "$(curl -fsSL https://raw.githubusercontent.com/linianhui/code/master/shell/ubuntu.apt.aliyun.sh)"
 
-set -x
+set -euxo pipefail
 
 cat /etc/apt/sources.list
 

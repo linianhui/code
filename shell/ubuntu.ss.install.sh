@@ -1,7 +1,7 @@
 # wget https://raw.githubusercontent.com/linianhui/code/master/shell/ubuntu.ss.install.sh
 # sudo bash ubuntu.ss.install.sh SHADOW_SOCKS_PORT SHADOW_SOCKS_PASSWORD
 
-set -x
+set -euxo pipefail
 
 SHADOW_SOCKS_PORT=$1
 SHADOW_SOCKS_PASSWORD=$2

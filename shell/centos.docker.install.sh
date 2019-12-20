@@ -1,7 +1,7 @@
 # wget https://raw.githubusercontent.com/linianhui/code/master/shell/centos.docker.install.sh
 # sudo bash centos.docker.install.sh
 
-set -x
+set -euxo pipefail
 
 yum remove -y docker \
               docker-client \

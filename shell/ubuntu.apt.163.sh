@@ -2,7 +2,7 @@
 # sudo bash ubuntu.apt.163.sh
 # sh -c "$(curl -fsSL https://raw.githubusercontent.com/linianhui/code/master/shell/ubuntu.apt.163.sh)"
 
-set -x
+set -euxo pipefail
 
 cat /etc/apt/sources.list
 

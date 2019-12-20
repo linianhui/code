@@ -1,4 +1,4 @@
-set -x
+set -euxo pipefail
 # https://docs.docker.com/engine/reference/commandline/dockerd//#daemon-configuration-file
 
 cat <<-EOF > /etc/docker/daemon.json
