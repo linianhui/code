@@ -1,6 +1,6 @@
 # https://kubernetes.io/docs/setup/production-environment/container-runtimes/#containerd
 
-set -euxo pipefail
+set -eux
 
 
 cat /etc/modules-load.d/containerd.conf

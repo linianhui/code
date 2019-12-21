@@ -1,4 +1,4 @@
-set -euxo pipefail
+set -eux
 
 
 apt-get update -y

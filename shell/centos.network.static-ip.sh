@@ -1,7 +1,7 @@
 # wget https://raw.githubusercontent.com/linianhui/code/master/shell/centos.network.static-ip.sh
 # sudo bash centos.network.static-ip.sh 202
 
-set -euxo pipefail
+set -eux
 
 IP=$1
 

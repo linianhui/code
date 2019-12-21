@@ -1,7 +1,7 @@
 # wget https://raw.githubusercontent.com/linianhui/code/master/shell/ubuntu.v2ray.install.sh
 # sudo bash ubuntu.v2ray.install.sh VMESS_PORT VMESS_CLIENT_ID
 
-set -euxo pipefail
+set -eux
 
 VMESS_PORT=$1
 VMESS_CLIENT_ID=$2

@@ -1,4 +1,4 @@
-set -euxo pipefail
+set -eux
 
 
 # 禁用防火墙

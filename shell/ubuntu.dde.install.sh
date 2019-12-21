@@ -1,7 +1,7 @@
 # wget https://raw.githubusercontent.com/linianhui/code/master/shell/ubuntu.dde.install.sh
 # sudo bash ubuntu.dde.install.sh
 
-set -euxo pipefail
+set -eux
 
 # 1. 添加 PPA Repository https://launchpad.net/~leaeasy/+archive/ubuntu/dde
 add-apt-repository ppa:leaeasy/dde
