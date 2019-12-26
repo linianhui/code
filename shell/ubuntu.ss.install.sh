@@ -29,6 +29,9 @@ ssserver -c /etc/ss.json -d stop
 
 ssserver -c /etc/ss.json -d start
 
+# /etc/rc.local
+# /usr/bin/python /usr/local/bin/ssserver -c /etc/ss.json -d start
+
 lsof -i:$SHADOW_SOCKS_PORT
 
 # https://shadowsocks.org
