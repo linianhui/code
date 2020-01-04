@@ -11,26 +11,34 @@ export XDG_DATA_HOME=$DATA_DIR
 # https://docs.microsoft.com/en-us/dotnet/core/tools/telemetry
 # https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-tool-install
 export DOTNET_CLI_TELEMETRY_OPTOUT=false
-export DOTNET_TOOLS_HOME=$HOME/.dotnet/tools
-export PATH=$PATH:$DOTNET_TOOLS_HOME
+DOTNET_TOOLS_DIR=$HOME/.dotnet/tools
+export PATH=$PATH:$DOTNET_TOOLS_DIR
 
-# https://gradle.org/releases/ 
-export GRADLE_HOME=$APP_DIR/_gradle
-export GRADLE_USER_HOME=$CACHE_DIR/_gradle
-export PATH=$PATH:$GRADLE_HOME/bin
+# https://gradle.org/releases/
+APP_GRADLE_DIR=$APP_DIR/_gradle
+APP_GRADLE_BIN_DIR=$APP_GRADLE_DIR/bin
+CACHE_GRADLE_DIR=$CACHE_DIR/_gradle
+export GRADLE_HOME=$APP_GRADLE_DIR
+export GRADLE_USER_HOME=$CACHE_GRADLE_DIR
+export PATH=$PATH:$APP_GRADLE_BIN_DIR
 
 # https://maven.apache.org/
 # http://maven.apache.org/configure.html
-export MAVEN_HOME=$APP_DIR/_maven
-export MAVEN_REPOSITORY_HOME=$CACHE_DIR/_maven
+
+APP_MAVEN_DIR=$APP_DIR/_maven
+APP_MAVEN_BIN_DIR=$APP_MAVEN_DIR/bin
+CACHE_MAVEN_DIR=$CACHE_DIR/_maven
+export MAVEN_HOME=$APP_MAVEN_DIR
 export M2_HOME=$MAVEN_HOME
-export MAVEN_OPTS=-Dfile.encoding=UTF-8
 export MAVEN_USER_HOME=$MAVEN_HOME
-export PATH=$PATH:$MAVEN_HOME/bin
+export MAVEN_REPOSITORY_HOME=$CACHE_MAVEN_DIR
+export MAVEN_OPTS=-Dfile.encoding=UTF-8
+export PATH=$PATH:$APP_MAVEN_BIN_DIR
 
 # https://projects.spring.io/spring-boot/
-export SPRING_BOOT_CLI_HOME=$APP_DIR/_spring-boot-cli
-export PATH=$PATH:$SPRING_BOOT_CLI_HOME/bin
+SPRING_BOOT_CLI_DIR=$APP_DIR/_spring-boot-cli
+SPRING_BOOT_CLI_BIN_DIR=$SPRING_BOOT_CLI_DIR/bin
+export PATH=$PATH:$SPRING_BOOT_CLI_BIN_DIR
 
 # https://www.mono-project.com/
 # export MONO_HOME=/Library/Frameworks/Mono.framework/Versions/5.0.1
@@ -39,8 +47,10 @@ export PATH=$PATH:$SPRING_BOOT_CLI_HOME/bin
 
 # https://docs.docker.com/machine/
 # https://docs.docker.com/machine/drivers/virtualbox/
-export DOCKER_HOME=$APP_DIR/_docker
-export MACHINE_STORAGE_PATH=$DATA_DIR/_docker
+APP_DOCKER_DIR=$APP_DIR/_docker
+DATA_DOCKER_DIR=$DATA_DIR/_docker
+export DOCKER_HOME=$APP_DOCKER_DIR
+export MACHINE_STORAGE_PATH=$DATA_DOCKER_DIR
 export VIRTUALBOX_BOOT2DOCKER_URL=$DOCKER_HOME/boot2docker.iso
 export VIRTUALBOX_UI_TYPE=headless
 export VIRTUALBOX_CPU_COUNT=1
@@ -48,34 +58,35 @@ export VIRTUALBOX_MEMORY_SIZE=512
 export VIRTUALBOX_DISK_SIZE=5120
 
 # https://kubernetes.io/docs/tasks/tools/install-kubectl/
-export KUBECTL_HOME=$APP_DIR/_kubectl
-export CONFIG_KUBECTL_DIR=$CONFIG_DIR/_kubectl
-export KUBECONFIG=$CONFIG_KUBECTL_DIR/kubectl-config.yml
-export KUBECONFIG_SAVED=$KUBECONFIG
-export PATH=$PATH:$KUBECTL_HOME
+APP_KUBECTL_DIR=$APP_DIR/_kubectl
+CONFIG_KUBECTL_DIR=$CONFIG_DIR/_kubectl
+CONFIG_KUBECTL_CONFIG_FILE=$CONFIG_KUBECTL_DIR/config.yml
+export KUBECONFIG=$CONFIG_KUBECTL_CONFIG_FILE
+export PATH=$PATH:$APP_KUBECTL_DIR
 
 # https://kubernetes.io/docs/tasks/tools/install-minikube/
-export MINIKUBE_BIN=$APP_DIR/_minikube
-export MINIKUBE_HOME=$DATA_DIR/_minikube
+APP_MINIKUBE_DIR=$APP_DIR/_minikube
+DATA_MINIKUBE_DIR=$DATA_DIR/_minikube
+export MINIKUBE_HOME=$DATA_MINIKUBE_DIR
 export MINIKUBE_WANTUPDATENOTIFICATION=false
 export MINIKUBE_WANTREPORTERRORPROMPT=false
 export CHANGE_MINIKUBE_NONE_USER=true
-export PATH=$PATH:$MINIKUBE_BIN
+export PATH=$PATH:$APP_MINIKUBE_DIR
 
 # https://helm.sh/docs
 # https://github.com/helm/helm-www
 # https://github.com/helm/helm/releases
-export HELM_BIN=$APP_DIR/_helm
-export PATH=$PATH:$HELM_BIN
+APP_HELM_DIR=$APP_DIR/_helm
+export PATH=$PATH:$APP_HELM_DIR
 
 # https://github.com/mholt/caddy
 # https://caddyserver.com/docs/cli
-export CADDY_HOME=$APP_DIR/_caddy
-export PATH=$PATH:$CADDY_HOME
+APP_CADDY_DIR=$APP_DIR/_caddy
+export PATH=$PATH:$APP_CADDY_DIR
 
 # https://github.com/v2ray/v2ray-core
-export V2RAY_HOME=$APP_DIR/_v2ray
-export PATH=$PATH:$V2RAY_HOME
+APP_V2RAY_DIR=$APP_DIR/_v2ray
+export PATH=$PATH:$APP_V2RAY_DIR
 
 # https://docs.docker.com/engine/reference/commandline/dockerd/#daemon-socket-option
 export DOCKER_HOST='tcp://127.0.0.1:2375'
@@ -83,17 +94,21 @@ export DOCKER_HOST='tcp://127.0.0.1:2375'
 
 # https://www.rust-lang.org/
 # https://github.com/rust-lang/rustup.rs#environment-variables
-export RUSTUP_HOME=$APP_DIR/_rustup
+APP_RUSTUP_DIR=$APP_DIR/_rustup
+export RUSTUP_HOME=$APP_RUSTUP_DIR
 export RUSTUP_DIST_SERVER=http://mirrors.ustc.edu.cn/rust-static
 export RUSTUP_UPDATE_ROOT=http://mirrors.ustc.edu.cn/rust-static/rustup
 # https://github.com/rust-lang/cargo/blob/master/src/doc/src/reference/environment-variables.md
-export CARGO_HOME=$APP_DIR/_cargo
-export PATH=$PATH:$CARGO_HOME/bin
+APP_CARGO_DIR=$APP_DIR/_cargo
+APP_CARGO_BIN_DIR=$APP_CARGO_DIR/bin
+export CARGO_HOME=$APP_CARGO_DIR
+export PATH=$PATH:$APP_CARGO_BIN_DIR
 
 # https://github.com/gohugoio/hugo
-export HUGO_HOME=$APP_DIR/_hugo
-export PATH=$PATH:$HUGO_HOME
+APP_HUGO_DIR=$APP_DIR/_hugo
+export PATH=$PATH:$APP_HUGO_DIR
 
 # https://nodejs.org/en/download/
-export NODE_HOME=$APP_DIR/_node
-export PATH=$PATH:$NODE_HOME/bin
+APP_NODE_DIR=$APP_DIR/_node
+APP_NODE_BIN_DIR=$APP_NODE_DIR/bin
+export PATH=$PATH:$APP_NODE_BIN_DIR
