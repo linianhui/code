@@ -3,7 +3,7 @@
 ################################
 
 [string]$APP_DIR    = 'd:\.app\';
-[string]$CACHE_PATH = 'd:\.cache\';
+[string]$CACHE_DIR  = 'd:\.cache\';
 [string]$CONFIG_DIR = 'd:\.config\';
 [string]$DATA_DIR   = 'd:\.data\';
 
@@ -80,7 +80,7 @@ function Env-GetPathVariavle() {
 # https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html
 function Env-SetXDGEnvironmentVariable() {
     Env-TrySetVariable -Variable 'XDG_CONFIG_HOME' -Value $CONFIG_DIR
-    Env-TrySetVariable -Variable 'XDG_CACHE_HOME' -Value $CACHE_PATH
+    Env-TrySetVariable -Variable 'XDG_CACHE_HOME' -Value $CACHE_DIR
     Env-TrySetVariable -Variable 'XDG_DATA_HOME' -Value $DATA_DIR
 }
 
@@ -129,7 +129,7 @@ function Env-SetGoEnvironmentVariable() {
     $APP_GO_PATH = $APP_DIR + '.go\';
     $APP_GO_BIN_PATH = $APP_GO_PATH + 'bin\';
 
-    $CACHE_GO_PATH = $CACHE_PATH + '.go\';
+    $CACHE_GO_PATH = $CACHE_DIR + '.go\';
 
     Env-TrySetVariable -Variable 'GOROOT' -Value $APP_GO_PATH
     Env-TrySetVariable -Variable 'GOCACHE' -Value $CACHE_GO_PATH
@@ -150,7 +150,7 @@ function Env-SetNodeEnvironmentVariable() {
     $APP_NODE_PATH = $APP_DIR + '.node\';
     $APP_NODE_MODULES_PATH = $APP_NODE_PATH + 'node_modules\';
 
-    $CACHE_NODE_PATH = $CACHE_PATH + '.node\';
+    $CACHE_NODE_PATH = $CACHE_DIR + '.node\';
 
     Env-TrySetVariable -Variable 'NODE_PATH' -Value $APP_NODE_MODULES_PATH
     Env-TryAppendPathVariable -Value $APP_NODE_PATH
@@ -199,7 +199,7 @@ function Env-SetILSpyEnvironmentVariable() {
 function Env-SetNugetEnvironmentVariable() {
     $APP_NUGET_PATH = $APP_DIR + '.nuget\';
 
-    $CACHE_NUGET_PATH = $CACHE_PATH + '.nuget\';
+    $CACHE_NUGET_PATH = $CACHE_DIR + '.nuget\';
 
     Env-TrySetVariable -Variable 'NUGET_PACKAGES' -Value $CACHE_NUGET_PATH
     Env-TryAppendPathVariable -Value $APP_NUGET_PATH
@@ -237,7 +237,7 @@ function Env-SetPIEnvironmentVariable() {
 function Env-SetMavenEnvironmentVariable() {
     $APP_MAVEN_PATH = $APP_DIR + '.maven\'
     $APP_MAVEN_BIN_PATH = $APP_MAVEN_PATH + 'bin\'
-    $CACHE_MAVEN_PATH = $CACHE_PATH + '.maven\'
+    $CACHE_MAVEN_PATH = $CACHE_DIR + '.maven\'
 
     # for maven 1
     Env-TrySetVariable -Variable 'MAVEN_HOME' -Value $APP_MAVEN_PATH
@@ -264,7 +264,7 @@ function Env-SetGradleEnvironmentVariable() {
     $APP_GRADLE_PATH = $APP_DIR + '.gradle\';
     $APP_GRADLE_BIN_PATH = $APP_GRADLE_PATH + 'bin\';
 
-    $CACHE_GRADLE_PATH = $CACHE_PATH + '.gradle\';
+    $CACHE_GRADLE_PATH = $CACHE_DIR + '.gradle\';
 
     Env-TrySetVariable -Variable 'GRADLE_HOME' -Value $APP_GRADLE_PATH
     Env-TrySetVariable -Variable 'GRADLE_USER_HOME' -Value $CACHE_GRADLE_PATH
@@ -354,7 +354,7 @@ function Env-SetHelmEnvironmentVariable() {
 # https://caddyserver.com/docs/cli
 function Env-SetCaddyEnvironmentVariable() {
     $APP_CADDY_PATH = $APP_DIR + '.caddy\';
-    $CACHE_CADDY_PATH = $CACHE_PATH + '.caddy\';
+    $CACHE_CADDY_PATH = $CACHE_DIR + '.caddy\';
 
     Env-TrySetVariable -Variable 'CADDYPATH' -Value $CACHE_CADDY_PATH
     Env-TryAppendPathVariable -Value $APP_CADDY_PATH
