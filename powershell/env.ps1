@@ -297,7 +297,7 @@ function Env-SetKubectlEnvironmentVariable() {
     $APP_KUBECTL_DIR = $APP_DIR + '.kubectl\';
 
     $CONFIG_KUBECTL_DIR = $CONFIG_DIR + '.kubectl\';
-    $CONFIG_KUBECTL_CONFIG_FILE = $CONFIG_KUBECTL_DIR + 'kubectl-config.yml';
+    $CONFIG_KUBECTL_CONFIG_FILE = $CONFIG_KUBECTL_DIR + 'config.yml';
 
     Env-TrySetVariable -Variable 'KUBECONFIG' -Value $CONFIG_KUBECTL_CONFIG_FILE
     Env-TryAppendPathVariable -Value $APP_KUBECTL_DIR
