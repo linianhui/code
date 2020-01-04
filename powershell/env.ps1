@@ -4,6 +4,8 @@
 
 [string]$APP_PATH = 'd:\.app\';
 [string]$CACHE_PATH = 'd:\.cache\';
+[string]$CONFIG_DIR = 'd:\.config\';
+[string]$DATA_DIR   = 'd:\.data\';
 
 function script:Env-TrySetVariable (
     [string]$Variable = $(throw "Variable is null!"),
@@ -73,6 +75,13 @@ function Env-GetAllVariable() {
 
 function Env-GetPathVariavle() {
     $ENV:PATH.Split(';')
+}
+
+# https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html
+function Env-SetXDGEnvironmentVariable() {
+    Env-TrySetVariable -Variable 'XDG_CONFIG_HOME' -Value $CONFIG_DIR
+    Env-TrySetVariable -Variable 'XDG_CACHE_HOME' -Value $CACHE_PATH
+    Env-TrySetVariable -Variable 'XDG_DATA_HOME' -Value $DATA_DIR
 }
 
 # https://github.com/MicrosoftArchive/redis/releases

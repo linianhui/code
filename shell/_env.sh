@@ -1,5 +1,12 @@
 APP_HOME=$HOME/_app
 CACHE_HOME=$HOME/_cache
+COFIG_DIR=$HOME/_config
+DATA_DIR=$HOME/_data
+
+# https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html
+export XDG_CACHE_HOME=$CACHE_HOME
+export XDG_CONFIG_HOME=$COFIG_DIR
+export XDG_DATA_HOME=$DATA_DIR
 
 # https://docs.microsoft.com/en-us/dotnet/core/tools/telemetry
 # https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-tool-install
