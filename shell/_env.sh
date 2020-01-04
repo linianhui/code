@@ -54,9 +54,11 @@ export MINIKUBE_WANTREPORTERRORPROMPT=false
 export CHANGE_MINIKUBE_NONE_USER=true
 export PATH=$PATH:$MINIKUBE_BIN
 
-# https://docs.helm.sh/using_helm/#installing-helm
-export HELM_HOME=$APP_HOME/_helm
-export PATH=$PATH:$HELM_HOME
+# https://helm.sh/docs
+# https://github.com/helm/helm-www
+# https://github.com/helm/helm/releases
+export HELM_BIN=$APP_HOME/_helm
+export PATH=$PATH:$HELM_BIN
 
 # https://github.com/mholt/caddy
 # https://caddyserver.com/docs/cli
