@@ -40,7 +40,7 @@ export PATH=$PATH:$SPRING_BOOT_CLI_HOME/bin
 # https://docs.docker.com/machine/
 # https://docs.docker.com/machine/drivers/virtualbox/
 export DOCKER_HOME=$APP_DIR/_docker
-export MACHINE_STORAGE_PATH=$CACHE_DIR/_docker
+export MACHINE_STORAGE_PATH=$DATA_DIR/_docker
 export VIRTUALBOX_BOOT2DOCKER_URL=$DOCKER_HOME/boot2docker.iso
 export VIRTUALBOX_UI_TYPE=headless
 export VIRTUALBOX_CPU_COUNT=1
@@ -49,13 +49,14 @@ export VIRTUALBOX_DISK_SIZE=5120
 
 # https://kubernetes.io/docs/tasks/tools/install-kubectl/
 export KUBECTL_HOME=$APP_DIR/_kubectl
-export KUBECONFIG=$KUBECTL_HOME/kubectl-config.yml
+export CONFIG_KUBECTL_DIR=$CONFIG_DIR/_kubectl
+export KUBECONFIG=$CONFIG_KUBECTL_DIR/kubectl-config.yml
 export KUBECONFIG_SAVED=$KUBECONFIG
 export PATH=$PATH:$KUBECTL_HOME
 
 # https://kubernetes.io/docs/tasks/tools/install-minikube/
 export MINIKUBE_BIN=$APP_DIR/_minikube
-export MINIKUBE_HOME=$CACHE_DIR/_minikube
+export MINIKUBE_HOME=$DATA_DIR/_minikube
 export MINIKUBE_WANTUPDATENOTIFICATION=false
 export MINIKUBE_WANTREPORTERRORPROMPT=false
 export CHANGE_MINIKUBE_NONE_USER=true
@@ -70,7 +71,6 @@ export PATH=$PATH:$HELM_BIN
 # https://github.com/mholt/caddy
 # https://caddyserver.com/docs/cli
 export CADDY_HOME=$APP_DIR/_caddy
-export CADDYPATh=$CACHE_DIR/_caddy
 export PATH=$PATH:$CADDY_HOME
 
 # https://github.com/v2ray/v2ray-core

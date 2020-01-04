@@ -295,18 +295,20 @@ function Env-SetNginxEnvironmentVariable() {
 # https://kubernetes.io/docs/tasks/tools/install-kubectl
 function Env-SetKubectlEnvironmentVariable() {
     $APP_KUBECTL_DIR = $APP_DIR + '.kubectl\';
-    $APP_KUBECTL_CONFIG_FILE = $APP_KUBECTL_DIR + 'kubectl-config.yml';
 
-    Env-TrySetVariable -Variable 'KUBECONFIG' -Value $APP_KUBECTL_CONFIG_FILE
+    $CONFIG_KUBECTL_DIR = $CONFIG_DIR + '.kubectl\';
+    $CONFIG_KUBECTL_CONFIG_FILE = $CONFIG_KUBECTL_DIR + 'kubectl-config.yml';
+
+    Env-TrySetVariable -Variable 'KUBECONFIG' -Value $CONFIG_KUBECTL_CONFIG_FILE
     Env-TryAppendPathVariable -Value $APP_KUBECTL_DIR
 }
 
 # https://github.com/kubernetes/minikube/releases
 function Env-SetMinikubeEnvironmentVariable() {
     $APP_MINIKUBE_DIR = $APP_DIR + '.minikube\';
-    $CACHE_MINIKUBE_DIR = 'e:\.minikube\';
+    $DATA_MINIKUBE_DIR = 'e:\.minikube\';
 
-    Env-TrySetVariable -Variable 'MINIKUBE_HOME' -Value $CACHE_MINIKUBE_DIR
+    Env-TrySetVariable -Variable 'MINIKUBE_HOME' -Value $DATA_MINIKUBE_DIR
     Env-TrySetVariable -Variable 'MINIKUBE_WANTUPDATENOTIFICATION' -Value 'false'
     Env-TrySetVariable -Variable 'MINIKUBE_WANTREPORTERRORPROMPT' -Value 'false'
     Env-TrySetVariable -Variable 'CHANGE_MINIKUBE_NONE_USER' -Value 'true'
@@ -327,9 +329,10 @@ function Env-SetDockerEnvironmentVariable() {
 function Env-SetDockerMachineEnvironmentVariable() {
     $APP_DOCKER_DIR = $APP_DIR + '.docker\';
     $BOOT2DOCKER_ISO_DIR = 'file://' + $APP_DOCKER_DIR + 'boot2docker.iso';
-    $CACHE_DOCKER_DIR = 'e:\.docker\';
 
-    Env-TrySetVariable -Variable 'MACHINE_STORAGE_PATH' -Value $CACHE_DOCKER_DIR
+    $DATA_DOCKER_DIR = 'e:\.docker\';
+
+    Env-TrySetVariable -Variable 'MACHINE_STORAGE_PATH' -Value $DATA_DOCKER_DIR
     Env-TrySetVariable -Variable 'MACHINE_NATIVE_SSH' -Value 1
     Env-TrySetVariable -Variable 'HYPERV_BOOT2DOCKER_URL' -Value $BOOT2DOCKER_ISO_DIR
     Env-TrySetVariable -Variable 'HYPERV_VIRTUAL_SWITCH' -Value 'HVS'
@@ -353,9 +356,7 @@ function Env-SetHelmEnvironmentVariable() {
 # https://caddyserver.com/docs/cli
 function Env-SetCaddyEnvironmentVariable() {
     $APP_CADDY_DIR = $APP_DIR + '.caddy\';
-    $CACHE_CADDY_DIR = $CACHE_DIR + '.caddy\';
 
-    Env-TrySetVariable -Variable 'CADDYPATH' -Value $CACHE_CADDY_DIR
     Env-TryAppendPathVariable -Value $APP_CADDY_DIR
 }
 
