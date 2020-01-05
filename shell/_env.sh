@@ -24,7 +24,6 @@ export PATH=$PATH:$APP_GRADLE_BIN_DIR
 
 # https://maven.apache.org/
 # http://maven.apache.org/configure.html
-
 APP_MAVEN_DIR=$APP_DIR/_maven
 APP_MAVEN_BIN_DIR=$APP_MAVEN_DIR/bin
 CACHE_MAVEN_DIR=$CACHE_DIR/_maven
