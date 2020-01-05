@@ -36,9 +36,9 @@ export MAVEN_OPTS=-Dfile.encoding=UTF-8
 export PATH=$PATH:$APP_MAVEN_BIN_DIR
 
 # https://projects.spring.io/spring-boot/
-SPRING_BOOT_CLI_DIR=$APP_DIR/_spring-boot-cli
-SPRING_BOOT_CLI_BIN_DIR=$SPRING_BOOT_CLI_DIR/bin
-export PATH=$PATH:$SPRING_BOOT_CLI_BIN_DIR
+APP_SPRING_BOOT_CLI_DIR=$APP_DIR/_spring-boot-cli
+APP_SPRING_BOOT_CLI_BIN_DIR=$APP_SPRING_BOOT_CLI_DIR/bin
+export PATH=$PATH:$APP_SPRING_BOOT_CLI_BIN_DIR
 
 # https://www.mono-project.com/
 # export MONO_HOME=/Library/Frameworks/Mono.framework/Versions/5.0.1
