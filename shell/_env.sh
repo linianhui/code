@@ -1,11 +1,11 @@
 APP_DIR=$HOME/_app
 CACHE_DIR=$HOME/_cache
-COFIG_DIR=$HOME/_config
+CONFIG_DIR=$HOME/_config
 DATA_DIR=$HOME/_data
 
 # https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html
 export XDG_CACHE_HOME=$CACHE_DIR
-export XDG_CONFIG_HOME=$COFIG_DIR
+export XDG_CONFIG_HOME=$CONFIG_DIR
 export XDG_DATA_HOME=$DATA_DIR
 
 # https://docs.microsoft.com/en-us/dotnet/core/tools/telemetry
