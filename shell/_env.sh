@@ -111,3 +111,9 @@ export PATH=$PATH:$APP_HUGO_DIR
 APP_NODE_DIR=$APP_DIR/_node
 APP_NODE_BIN_DIR=$APP_NODE_DIR/bin
 export PATH=$PATH:$APP_NODE_BIN_DIR
+
+
+# https://brew.sh
+# https://github.com/Homebrew/brew
+# https://developer.aliyun.com/mirror/homebrew
+export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.aliyun.com/homebrew/homebrew-bottles
