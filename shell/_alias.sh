@@ -64,4 +64,4 @@ alias gradle-wrapper='gradle wrapper --distribution-type all --gradle-version 6.
 alias mvn-help='./mvnw help:describe -Ddetail'
 
 alias java-x='java -X'
-alias java-xx='java -XX:+PrintFlagsFinal -version'
+alias java-xx='java -XX:+UnlockDiagnosticVMOptions -XX:+UnlockExperimentalVMOptions -XX:+PrintFlagsFinal -version'
