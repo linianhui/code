@@ -112,15 +112,13 @@ function Env-SetShadowsocksEnvironmentVariable() {
     Env-TryAppendPathVariable -Value $APP_SHADOWSOCKS_DIR
 }
 
+# https://adoptopenjdk.net/upstream.html
 # https://developers.redhat.com/products/openjdk/download
 function Env-SetJavaEnvironmentVariable() {
     $APP_JAVA_DIR = $APP_DIR + '.java\';
     $APP_JAVA_BIN_DIR = $APP_JAVA_DIR + 'bin\';
-    $APP_JAVA_LIB_DIR = $APP_JAVA_DIR + 'lib\';
-    $APP_JAVA_LIB_TOOLS_JAR = $APP_JAVA_LIB_DIR + 'tools.jar';
 
     Env-TrySetVariable -Variable 'JAVA_HOME' -Value $APP_JAVA_DIR
-    Env-TrySetVariable -Variable 'CLASSPATH' -Value ".;$APP_JAVA_LIB_DIR;$APP_JAVA_LIB_TOOLS_JAR"
     Env-TryAppendPathVariable -Value $APP_JAVA_BIN_DIR
 }
 

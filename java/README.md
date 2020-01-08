@@ -2,6 +2,8 @@
 
 ## 1 安装Java
 
+https://adoptopenjdk.net/upstream.html
+
 https://developers.redhat.com/products/openjdk/download
 
 1. 设置环境变量：
