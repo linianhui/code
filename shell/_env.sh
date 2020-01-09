@@ -38,7 +38,7 @@ export MAVEN_HOME=$APP_MAVEN_DIR
 export M2_HOME=$MAVEN_HOME
 export MAVEN_USER_HOME=$MAVEN_HOME
 export MAVEN_REPOSITORY_HOME=$CACHE_MAVEN_DIR
-export MAVEN_OPTS=-Dfile.encoding=UTF-8
+export MAVEN_OPTS='-Xms256m -Xmx1024m'
 export PATH=$PATH:$APP_MAVEN_BIN_DIR
 
 # https://projects.spring.io/spring-boot/

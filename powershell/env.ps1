@@ -247,9 +247,9 @@ function Env-SetMavenEnvironmentVariable() {
 
     # for maven-wrapper https://github.com/takari/maven-wrapper
     Env-TrySetVariable -Variable 'MAVEN_USER_HOME' -Value $APP_MAVEN_DIR
-    
+
     # http://maven.apache.org/configure.html
-    Env-TrySetVariable -Variable 'MAVEN_OPTS' -Value '-Dfile.encoding=UTF-8'
+    Env-TrySetVariable -Variable 'MAVEN_OPTS' -Value '-Xms256m -Xmx1024m'
 
     # custom
     Env-TrySetVariable -Variable 'MAVEN_REPOSITORY_HOME' -Value $CACHE_MAVEN_DIR
