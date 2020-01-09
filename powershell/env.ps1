@@ -118,7 +118,10 @@ function Env-SetJavaEnvironmentVariable() {
     $APP_JAVA_DIR = $APP_DIR + '.java\';
     $APP_JAVA_BIN_DIR = $APP_JAVA_DIR + 'bin\';
 
+    Env-TrySetVariable -Variable 'JAVA_TOOL_OPTIONS' -Value '-Dfile.encoding=UTF-8'
+
     Env-TrySetVariable -Variable 'JAVA_HOME' -Value $APP_JAVA_DIR
+
     Env-TryAppendPathVariable -Value $APP_JAVA_BIN_DIR
 }
 
