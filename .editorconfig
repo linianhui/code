@@ -1,21 +1,30 @@
 # http://editorconfig.org
 
-# VS Code : (Ctrl+E) ext install editorconfig
-
 root = true
 
 [*]
-charset      = utf-8
-end_of_line  = lf
-indent_style = space
-indent_size  = 2
+charset                  = utf-8
+end_of_line              = lf
+indent_size              = 2
+indent_style             = space
+trim_trailing_whitespace = true
 
 [*.md]
 trim_trailing_whitespace = false
 
-[*.ps1]
-indent_size  = 4
+[*.{bat,cmd,ps1}]
+end_of_line = crlf
+indent_size = 4
+
+[*.gradle]
+indent_size = 4
+
+[*.js]
+indent_size = 4
+
+[*.sql]
+indent_size = 4
 
 [*.reg]
-charset      = utf-16le
-end_of_line  = crlf
+charset     = utf-16le
+end_of_line = crlf
